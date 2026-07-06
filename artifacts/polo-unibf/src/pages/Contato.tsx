@@ -13,7 +13,7 @@ export default function Contato() {
         <div className="container mx-auto relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Contato</h1>
           <p className="text-white/80 text-lg max-w-2xl mx-auto">
-            Fale com a equipe do Polo Campos Lindos. Estamos prontos para ajudar você a dar o próximo passo.
+            Fale com a equipe do UniBF Cristalina-GO. Estamos prontos para ajudar você a dar o próximo passo.
           </p>
         </div>
       </div>

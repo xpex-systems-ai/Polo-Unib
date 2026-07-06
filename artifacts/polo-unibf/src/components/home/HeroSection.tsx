@@ -39,7 +39,7 @@ export function HeroSection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-lg md:text-xl text-white/80 max-w-2xl mb-10 leading-relaxed"
         >
-          Ensino superior de qualidade no Polo UniBF Campos Lindos. 
+          Ensino superior de qualidade no UniBF Cristalina-GO. 
           Estude com orientação local, suporte personalizado e prepare-se para o mercado.
         </motion.p>
         
@@ -51,7 +51,7 @@ export function HeroSection() {
         >
           <Button 
             size="xl" 
-            onClick={() => openWhatsApp('Olá, vim do site e gostaria de saber mais sobre as opções de estudo no Polo Campos Lindos.')}
+            onClick={() => openWhatsApp('Olá, vim do site e gostaria de saber mais sobre as opções de estudo no UniBF Cristalina-GO.')}
             className="w-full sm:w-auto shadow-lg shadow-primary/25 rounded-full bg-primary hover:bg-primary/90"
           >
             Falar com o polo

@@ -26,7 +26,7 @@ export default function Graduacao() {
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Graduação</h1>
             <p className="text-lg text-white/80 max-w-xl mb-8 leading-relaxed">
-              O primeiro grande passo da sua carreira. Construa uma base sólida com cursos reconhecidos pelo MEC e metodologia adaptada ao seu ritmo, com todo o suporte do Polo Campos Lindos.
+              O primeiro grande passo da sua carreira. Construa uma base sólida com cursos reconhecidos pelo MEC e metodologia adaptada ao seu ritmo, com todo o suporte do UniBF Cristalina-GO.
             </p>
             <div className="flex gap-4">
               <Button size="lg" onClick={() => openWhatsApp('Olá, quero saber mais sobre os cursos de Graduação.')}>

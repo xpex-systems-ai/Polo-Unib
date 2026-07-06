@@ -34,7 +34,7 @@ export function AuthoritySection() {
             Atendimento local conectado a uma instituição de ensino
           </h2>
           <p className="text-muted-foreground">
-            O Polo UniBF Campos Lindos orienta interessados com base nas informações oficiais da instituição e nos canais autorizados.
+            O UniBF Cristalina-GO orienta interessados com base nas informações oficiais da instituição e nos canais autorizados.
           </p>
         </div>
 
@@ -62,7 +62,7 @@ export function AuthoritySection() {
             size="lg"
             onClick={() =>
               openWhatsApp(
-                'Olá! Gostaria de confirmar informações oficiais sobre cursos e modalidades do Polo UniBF Campos Lindos.'
+                'Olá! Gostaria de confirmar informações oficiais sobre cursos e modalidades do UniBF Cristalina-GO.'
               )
             }
             className="bg-navy hover:bg-navy/90 text-white rounded-full px-8"

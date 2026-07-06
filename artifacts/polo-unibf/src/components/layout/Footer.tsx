@@ -13,7 +13,7 @@ export function Footer() {
                 UniBF
               </span>
               <span className="text-sm font-semibold tracking-wider text-primary uppercase">
-                Campos Lindos
+                Cristalina-GO
               </span>
             </div>
             <p className="text-navy-foreground/70 text-sm leading-relaxed mb-6">
@@ -56,6 +56,7 @@ export function Footer() {
               <li className="flex items-start gap-3 text-sm text-navy-foreground/70">
                 <Phone size={18} className="shrink-0 text-primary mt-0.5" />
                 <div className="flex flex-col gap-1">
+                  <a href="tel:+5561981571394" className="hover:text-white">(61) 9 8157-1394</a>
                   <a href="tel:+5561982367003" className="hover:text-white">(61) 9 8236-7003</a>
                 </div>
               </li>
@@ -71,8 +72,8 @@ export function Footer() {
         </div>
 
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-navy-foreground/50">
-          <p>© {new Date().getFullYear()} Polo UniBF Campos Lindos. Todos os direitos reservados.</p>
-          <p>Consulte condições no atendimento oficial do polo.</p>
+          <p>© {new Date().getFullYear()} UniBF Cristalina-GO. Todos os direitos reservados.</p>
+          <p>Consulte cursos, valores, condições, modalidades e formas de ingresso diretamente com o atendimento oficial da UniBF Cristalina-GO.</p>
         </div>
       </div>
     </footer>

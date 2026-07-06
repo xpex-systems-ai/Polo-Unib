@@ -13,7 +13,7 @@ export default function Sobre() {
          <div className="container mx-auto px-4 relative z-10 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Nossa História</h1>
             <p className="text-lg text-white/80 max-w-2xl mx-auto">
-               Acreditamos que a educação transforma comunidades. Conheça o Polo UniBF Campos Lindos.
+               Acreditamos que a educação transforma comunidades. Conheça o UniBF Cristalina-GO.
             </p>
          </div>
       </div>
@@ -28,7 +28,7 @@ export default function Sobre() {
                   Sabemos que a rotina de quem busca uma faculdade nem sempre é fácil. Trabalho, família e outras responsabilidades tomam tempo. Por isso, oferecemos o modelo EAD da UniBF com um diferencial crucial: o apoio de um polo físico acolhedor.
                </p>
                <p>
-                  Aqui no Polo Campos Lindos, você não fala apenas com sistemas automáticos. Nossa equipe está sempre pronta para ajudar com sua matrícula, tirar dúvidas sobre o portal do aluno ou simplesmente oferecer um ambiente tranquilo para os seus estudos.
+                  Aqui no UniBF Cristalina-GO, você não fala apenas com sistemas automáticos. Nossa equipe está sempre pronta para ajudar com sua matrícula, tirar dúvidas sobre o portal do aluno ou simplesmente oferecer um ambiente tranquilo para os seus estudos.
                </p>
             </div>
 
@@ -38,7 +38,7 @@ export default function Sobre() {
                      <MapPin className="w-6 h-6" />
                   </div>
                   <h3 className="font-bold text-navy mb-2">Presença Local</h3>
-                  <p className="text-sm text-muted-foreground">Enraizados em Campos Lindos para atender a região de Cristalina.</p>
+                  <p className="text-sm text-muted-foreground">Com atendimento local em Cristalina-GO e região.</p>
                </div>
                <div className="bg-muted/50 p-6 rounded-2xl text-center border border-border">
                   <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-primary shadow-sm">

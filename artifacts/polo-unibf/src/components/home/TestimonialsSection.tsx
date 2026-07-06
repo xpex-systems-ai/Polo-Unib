@@ -28,7 +28,7 @@ export function TestimonialsSection() {
           <div className="mt-2">
             <Button
               onClick={() =>
-                openWhatsApp('Olá! Sou aluno do Polo UniBF Campos Lindos e gostaria de compartilhar minha experiência.')
+                openWhatsApp('Olá! Sou aluno do UniBF Cristalina-GO e gostaria de compartilhar minha experiência.')
               }
               variant="outline"
               className="rounded-full border-navy text-navy hover:bg-navy hover:text-white"

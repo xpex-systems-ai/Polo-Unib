@@ -27,7 +27,7 @@ export function CourseHighlights() {
         <div className="max-w-2xl">
           <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">Cursos em Destaque</h2>
           <p className="text-lg text-muted-foreground">
-            Explore algumas das opções mais procuradas pelos alunos do Polo Campos Lindos.
+            Explore algumas das opções mais procuradas pelos alunos do UniBF Cristalina-GO.
           </p>
         </div>
         <div className="flex items-center gap-3">

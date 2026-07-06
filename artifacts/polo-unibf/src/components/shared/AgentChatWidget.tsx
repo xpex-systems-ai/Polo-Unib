@@ -11,7 +11,7 @@ const QUICK_ACTIONS = [
   { label: 'Quero saber sobre extensão', icon: BookOpen, message: 'Olá, Professora Kelle! Quero saber mais sobre cursos de extensão.' },
   { label: 'Consultar valores e condições', icon: Wallet, message: 'Olá, Professora Kelle! Quero consultar valores, modalidades e condições disponíveis.' },
   { label: 'Quero visitar o polo', icon: MapPin, message: 'Olá, Professora Kelle! Quero agendar uma visita ao polo.' },
-  { label: 'Falar com atendimento humano', icon: MessageCircle, message: 'Olá! Quero falar com o atendimento oficial do Polo UniBF Campos Lindos.' },
+  { label: 'Falar com atendimento humano', icon: MessageCircle, message: 'Olá! Quero falar com o atendimento oficial do UniBF Cristalina-GO.' },
 ];
 
 const SESSION_KEY = 'kelle_auto_opened';

@@ -53,7 +53,7 @@ const faqItems: FaqItem[] = [
     category: 'Atendimento',
     question: 'Como confirmo valores e promoções?',
     answer:
-      'Valores, promoções e condições comerciais devem ser confirmados diretamente com a equipe oficial do Polo UniBF Campos Lindos.',
+      'Valores, promoções e condições comerciais devem ser confirmados diretamente com a equipe oficial do UniBF Cristalina-GO.',
   },
   {
     category: 'Atendimento',
@@ -232,7 +232,7 @@ export default function Faq() {
             <Button
               size="lg"
               onClick={() =>
-                openWhatsApp('Olá! Tenho dúvidas sobre cursos e atendimento do Polo UniBF Campos Lindos.')
+                openWhatsApp('Olá! Tenho dúvidas sobre cursos e atendimento do UniBF Cristalina-GO.')
               }
               className="bg-primary hover:bg-primary/90 text-white font-bold px-8 py-4 rounded-full text-lg"
             >

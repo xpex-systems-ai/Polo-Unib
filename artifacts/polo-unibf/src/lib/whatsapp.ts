@@ -13,7 +13,7 @@ export function openWhatsApp(message?: string): void {
 }
 
 export function getCourseMessage(courseName: string): string {
-  return `Olá! Vi o curso de ${courseName} no site do Polo Campos Lindos e gostaria de consultar a disponibilidade e obter mais informações.`;
+  return `Olá! Vi o curso de ${courseName} no site do UniBF Cristalina-GO e gostaria de consultar a disponibilidade e obter mais informações.`;
 }
 
 export function getAgentHandoffMessage(nome: string, telefone: string, modalidade: string, curso?: string): string {

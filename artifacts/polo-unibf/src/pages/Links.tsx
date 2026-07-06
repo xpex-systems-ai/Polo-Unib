@@ -51,7 +51,7 @@ export default function Links() {
           </div>
         </div>
         
-        <h1 className="text-xl font-bold text-navy mb-1 text-center">Polo UniBF Campos Lindos</h1>
+        <h1 className="text-xl font-bold text-navy mb-1 text-center">UniBF Cristalina-GO</h1>
         <p className="text-muted-foreground text-sm mb-8 text-center px-4">
           Ensino superior de qualidade em Cristalina-GO. Graduação, Pós e Tecnólogo.
         </p>

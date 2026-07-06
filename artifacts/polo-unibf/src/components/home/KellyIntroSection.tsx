@@ -25,7 +25,7 @@ const quickActions = [
   {
     label: 'Falar com atendimento',
     icon: MessageCircle,
-    message: 'Olá! Quero falar com a equipe do Polo UniBF Campos Lindos.',
+    message: 'Olá! Quero falar com a equipe do UniBF Cristalina-GO.',
   },
 ];
 
@@ -84,14 +84,14 @@ export function KellyIntroSection() {
 
               <div className="flex flex-col sm:flex-row gap-3 mt-6">
                 <Button
-                  onClick={() => openWhatsApp('Olá! Quero falar com a Professora Kelle do Polo UniBF Campos Lindos.')}
+                  onClick={() => openWhatsApp('Olá! Quero falar com a Professora Kelle do UniBF Cristalina-GO.')}
                   className="bg-primary hover:bg-primary/90 text-white font-bold rounded-full px-6"
                 >
                   Falar com a Professora Kelle
                 </Button>
                 <Button
                   variant="outline"
-                  onClick={() => openWhatsApp('Olá! Quero falar com o atendimento oficial do Polo UniBF Campos Lindos.')}
+                  onClick={() => openWhatsApp('Olá! Quero falar com o atendimento oficial do UniBF Cristalina-GO.')}
                   className="border-white/30 text-white hover:bg-white/10 rounded-full px-6"
                 >
                   Atendimento oficial

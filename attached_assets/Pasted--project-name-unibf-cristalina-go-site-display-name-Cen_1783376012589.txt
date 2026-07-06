@@ -1,0 +1,547 @@
+{
+  "project": {
+    "name": "unibf-cristalina-go-site",
+    "display_name": "Centro Universitário UniBF — Cristalina-GO",
+    "short_display_name": "UniBF Cristalina-GO",
+    "version": "3.0-professora-kelle",
+    "language": "pt-BR",
+    "type": "institutional_lead_generation_website",
+    "mission": "Criar um site institucional premium, moderno, responsivo e com assistente virtual para o Centro Universitário UniBF — Cristalina-GO, com foco em captação de interessados via WhatsApp, catálogo de cursos e atendimento local.",
+    "main_goal": "Transformar visitantes em leads qualificados para atendimento oficial do polo.",
+    "status": "ready_for_replit_codex_update"
+  },
+  "official_identity": {
+    "official_name_on_facade": "Centro Universitário UniBF — Cristalina-GO",
+    "public_site_name": "UniBF Cristalina-GO",
+    "polo_name": "Polo UniBF Cristalina-GO",
+    "old_names_to_replace": [
+      "Polo UniBF Campos Lindos",
+      "UniBF Campos Lindos",
+      "Polo Campos Lindos",
+      "Campos Lindos"
+    ],
+    "new_standard_name": "UniBF Cristalina-GO",
+    "location": {
+      "city": "Cristalina",
+      "state": "GO",
+      "display": "Cristalina-GO",
+      "local_area": "Campo Lindo",
+      "address": "R. Sem Nome, Qd. 1, Lt. 25, Sala 2, Setor D, Campo Lindo, Cristalina-GO, CEP 73850-000"
+    },
+    "modalities_on_facade": [
+      "Graduação",
+      "Pós-graduação",
+      "Tecnólogo",
+      "Extensão"
+    ]
+  },
+  "brand": {
+    "primary_name": "UniBF Cristalina-GO",
+    "official_full_name": "Centro Universitário UniBF — Cristalina-GO",
+    "assistant_name": "Professora Kelle",
+    "assistant_role": "Assistente Virtual do Polo UniBF Cristalina-GO",
+    "tone": [
+      "profissional",
+      "acolhedor",
+      "educacional",
+      "local",
+      "confiável",
+      "moderno",
+      "direto"
+    ],
+    "colors": {
+      "primary_dark_blue": "#003B5C",
+      "deep_navy": "#002F4B",
+      "secondary_green": "#00B050",
+      "neon_green_cta": "#7CFF2B",
+      "white": "#FFFFFF",
+      "soft_gray": "#F5F7FA",
+      "text_dark": "#0F172A",
+      "text_muted": "#64748B",
+      "border": "#E2E8F0"
+    },
+    "visual_style": {
+      "inspiration": "Identidade visual oficial UniBF: azul escuro, verde nos CTAs, cards limpos, aparência institucional e educacional.",
+      "keywords": [
+        "premium",
+        "institucional",
+        "educacional",
+        "moderno",
+        "limpo",
+        "alta conversão",
+        "atendimento inteligente"
+      ],
+      "avoid": [
+        "badges do Replit",
+        "texto placeholder",
+        "informações inventadas",
+        "promessas não autorizadas",
+        "depoimentos falsos",
+        "layout poluído"
+      ]
+    },
+    "logos": {
+      "main_logo": {
+        "path": "/assets/logos/unibf-cristalina-go-logo.svg",
+        "alt": "Logo UniBF Cristalina-GO",
+        "fallback_text": "UniBF Cristalina-GO"
+      },
+      "footer_logo": {
+        "path": "/assets/logos/unibf-cristalina-go-logo-white.svg",
+        "alt": "Logo UniBF Cristalina-GO"
+      }
+    },
+    "images": {
+      "facade": {
+        "path": "/assets/polo/fachada-unibf-cristalina-go.jpg",
+        "alt": "Fachada do Centro Universitário UniBF Cristalina-GO",
+        "source": "Foto enviada pelo usuário",
+        "usage": [
+          "sobre",
+          "home",
+          "contato",
+          "localizacao"
+        ]
+      },
+      "assistant_avatar": {
+        "path": "/assets/avatars/professora-kelle-avatar.png",
+        "alt": "Professora Kelle, assistente virtual da UniBF Cristalina-GO",
+        "usage": [
+          "widget_flutuante",
+          "home_section",
+          "faq_cta",
+          "contato"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "primary_whatsapp": {
+      "number": "5561981571394",
+      "display": "(61) 9 8157-1394",
+      "usage": "principal"
+    },
+    "secondary_whatsapp": {
+      "number": "5561982367003",
+      "display": "(61) 9 8236-7003",
+      "usage": "secundario"
+    },
+    "address": "R. Sem Nome, Qd. 1, Lt. 25, Sala 2, Setor D, Campo Lindo, Cristalina-GO, CEP 73850-000",
+    "business_hours": {
+      "weekdays": "Segunda a sexta: 08h às 18h",
+      "saturday": "Sábado: 08h às 12h"
+    },
+    "instagram": "@universidadeunibf",
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Centro+Universit%C3%A1rio+UniBF+Cristalina+GO"
+  },
+  "assistant_professora_kelle": {
+    "enabled": true,
+    "name": "Professora Kelle",
+    "public_role": "Assistente Virtual da UniBF Cristalina-GO",
+    "subtitle": "Agora online",
+    "avatar_path": "/assets/avatars/professora-kelle-avatar.png",
+    "position": "bottom-right",
+    "z_index": 9999,
+    "auto_open": {
+      "enabled": true,
+      "delay_ms": 2500,
+      "only_once_per_session": true,
+      "message": "Oi! Posso te ajudar a escolher seu curso?"
+    },
+    "floating_launcher": {
+      "show_avatar": true,
+      "show_green_status_dot": true,
+      "show_pulse_animation": true,
+      "label": "Professora Kelle",
+      "sub_label": "Agora online",
+      "style": "avatar_circle_with_glow"
+    },
+    "panel": {
+      "title": "Professora Kelle",
+      "subtitle": "Assistente Virtual da UniBF Cristalina-GO",
+      "welcome_message": "Olá! Eu sou a Professora Kelle. Posso te ajudar a escolher o melhor caminho para sua formação. Escolha uma opção abaixo ou fale direto com o atendimento oficial.",
+      "disclaimer": "A Professora Kelle é uma assistente virtual de orientação. Cursos, valores, condições e disponibilidade devem ser confirmados no atendimento oficial."
+    },
+    "quick_actions": [
+      {
+        "id": "graduacao",
+        "label": "Quero graduação",
+        "icon": "graduation-cap",
+        "whatsapp_message": "Olá, Professora Kelle! Tenho interesse em graduação na UniBF Cristalina-GO. Pode me orientar?"
+      },
+      {
+        "id": "pos_graduacao",
+        "label": "Quero pós-graduação",
+        "icon": "award",
+        "whatsapp_message": "Olá, Professora Kelle! Tenho interesse em pós-graduação na UniBF Cristalina-GO. Pode me orientar?"
+      },
+      {
+        "id": "tecnologo",
+        "label": "Quero tecnólogo",
+        "icon": "briefcase",
+        "whatsapp_message": "Olá, Professora Kelle! Quero saber mais sobre cursos tecnólogos na UniBF Cristalina-GO."
+      },
+      {
+        "id": "extensao",
+        "label": "Quero extensão",
+        "icon": "book-open",
+        "whatsapp_message": "Olá, Professora Kelle! Quero saber mais sobre cursos de extensão na UniBF Cristalina-GO."
+      },
+      {
+        "id": "valores",
+        "label": "Consultar valores",
+        "icon": "wallet",
+        "whatsapp_message": "Olá, Professora Kelle! Quero consultar valores, modalidades e condições disponíveis na UniBF Cristalina-GO."
+      },
+      {
+        "id": "visita",
+        "label": "Quero visitar o polo",
+        "icon": "map-pin",
+        "whatsapp_message": "Olá, Professora Kelle! Quero agendar uma visita ao polo UniBF Cristalina-GO."
+      },
+      {
+        "id": "atendimento",
+        "label": "Falar com atendimento",
+        "icon": "message-circle",
+        "whatsapp_message": "Olá! Vim pelo site da UniBF Cristalina-GO e quero falar com o atendimento oficial."
+      }
+    ]
+  },
+  "navigation": {
+    "header": {
+      "sticky": true,
+      "logo_text": "UniBF Cristalina-GO",
+      "items": [
+        {
+          "label": "Início",
+          "href": "/"
+        },
+        {
+          "label": "Cursos",
+          "href": "/cursos"
+        },
+        {
+          "label": "Sobre o Polo",
+          "href": "/sobre"
+        },
+        {
+          "label": "Dúvidas",
+          "href": "/faq"
+        },
+        {
+          "label": "Contato",
+          "href": "/contato"
+        }
+      ],
+      "primary_cta": {
+        "label": "Fale conosco",
+        "type": "whatsapp",
+        "message": "Olá! Vim pelo site da UniBF Cristalina-GO e gostaria de receber atendimento."
+      }
+    },
+    "footer": {
+      "brand_text": "UniBF Cristalina-GO",
+      "description": "Trazendo ensino superior de qualidade e atendimento local para Cristalina-GO e região.",
+      "columns": [
+        {
+          "title": "Modalidades",
+          "links": [
+            "Graduação",
+            "Pós-graduação",
+            "Tecnólogo",
+            "Extensão"
+          ]
+        },
+        {
+          "title": "Links Rápidos",
+          "links": [
+            "Catálogo de Cursos",
+            "Sobre o Polo",
+            "Contato",
+            "Perguntas Frequentes",
+            "Links da Bio"
+          ]
+        },
+        {
+          "title": "Contato",
+          "items": [
+            "(61) 9 8157-1394",
+            "(61) 9 8236-7003",
+            "R. Sem Nome, Qd. 1, Lt. 25, Sala 2, Setor D, Campo Lindo, Cristalina-GO"
+          ]
+        }
+      ],
+      "disclaimer": "Consulte cursos, valores, condições, modalidades e formas de ingresso diretamente com o atendimento oficial da UniBF Cristalina-GO."
+    }
+  },
+  "pages": {
+    "home": {
+      "route": "/",
+      "seo_title": "UniBF Cristalina-GO | Graduação, Pós-graduação, Tecnólogo e Extensão",
+      "seo_description": "Fale com a UniBF Cristalina-GO e receba orientação sobre graduação, pós-graduação, tecnólogo, extensão e atendimento local.",
+      "hero": {
+        "badge": "Matrículas e informações em Cristalina-GO",
+        "title": "Seu futuro começa com uma decisão.",
+        "highlight": "uma decisão",
+        "subtitle": "Ensino superior com orientação local, atendimento humanizado e apoio para você dar o próximo passo na sua formação.",
+        "primary_cta": "Falar com a Professora Kelle",
+        "secondary_cta": "Ver cursos"
+      },
+      "assistant_section": {
+        "enabled": true,
+        "badge": "ASSISTENTE VIRTUAL",
+        "title": "Conheça a Professora Kelle",
+        "description": "Uma assistente virtual criada para orientar visitantes e facilitar o contato com a equipe da UniBF Cristalina-GO.",
+        "cta_primary": "Falar com a Professora Kelle",
+        "cta_secondary": "Atendimento oficial"
+      },
+      "modalities": [
+        {
+          "title": "Graduação",
+          "description": "Formação superior para quem deseja iniciar uma carreira com base sólida."
+        },
+        {
+          "title": "Pós-graduação",
+          "description": "Especialização para quem quer crescer profissionalmente."
+        },
+        {
+          "title": "Tecnólogo",
+          "description": "Cursos práticos e objetivos voltados para o mercado."
+        },
+        {
+          "title": "Extensão",
+          "description": "Cursos para ampliar conhecimentos e fortalecer o currículo."
+        }
+      ],
+      "authority_section": {
+        "title": "Atendimento local conectado a uma instituição de ensino",
+        "subtitle": "A UniBF Cristalina-GO orienta interessados com base nas informações oficiais da instituição e nos canais autorizados.",
+        "items": [
+          {
+            "title": "Informações oficiais",
+            "description": "Cursos, condições e modalidades devem ser confirmados diretamente com o atendimento oficial."
+          },
+          {
+            "title": "Referência institucional",
+            "description": "A UniBF Centro Universitário possui informações disponíveis nos canais institucionais e no e-MEC."
+          },
+          {
+            "title": "Orientação segura",
+            "description": "A comunicação prioriza clareza, responsabilidade e atendimento humano."
+          }
+        ]
+      },
+      "location_section": {
+        "title": "Nosso polo em Cristalina",
+        "subtitle": "Estamos de portas abertas para receber você. Venha conhecer nossa estrutura e tirar dúvidas com a equipe.",
+        "image": "/assets/polo/fachada-unibf-cristalina-go.jpg",
+        "address": "R. Sem Nome, Qd. 1, Lt. 25, Sala 2, Setor D, Campo Lindo, Cristalina-GO",
+        "cta": "Abrir no Google Maps"
+      }
+    },
+    "courses": {
+      "route": "/cursos",
+      "title": "Catálogo de Cursos",
+      "subtitle": "Encontre a formação ideal para o seu momento de carreira. Consulte disponibilidade com a equipe.",
+      "filters": [
+        "Todos",
+        "Graduação",
+        "Pós-graduação",
+        "Tecnólogo",
+        "Extensão"
+      ],
+      "course_cta_label": "Consultar disponibilidade",
+      "course_cta_message_template": "Olá, Professora Kelle! Tenho interesse no curso {{course_name}} na UniBF Cristalina-GO. Pode me passar informações?"
+    },
+    "about": {
+      "route": "/sobre",
+      "title": "Nossa História",
+      "subtitle": "Conheça a UniBF Cristalina-GO.",
+      "main_text": [
+        "Nossa missão em Cristalina-GO é conectar pessoas a oportunidades reais de crescimento profissional através de ensino superior acessível, orientação local e atendimento humanizado.",
+        "Sabemos que a rotina de quem busca uma faculdade nem sempre é fácil. Por isso, o polo oferece apoio para orientar interessados sobre cursos, modalidades, matrícula e próximos passos.",
+        "Aqui, você encontra uma equipe preparada para tirar dúvidas e ajudar no caminho da sua formação."
+      ],
+      "values": [
+        "Presença local",
+        "Acolhimento",
+        "Comunidade"
+      ]
+    },
+    "faq": {
+      "route": "/faq",
+      "title": "Perguntas Frequentes",
+      "subtitle": "Encontre respostas rápidas ou fale diretamente com nossa equipe pelo WhatsApp.",
+      "items": [
+        {
+          "question": "Como faço para saber quais cursos estão disponíveis?",
+          "answer": "Fale com o atendimento oficial pelo WhatsApp para confirmar cursos disponíveis no momento."
+        },
+        {
+          "question": "O polo ajuda a escolher o curso?",
+          "answer": "Sim. A equipe pode orientar você sobre modalidades, áreas de interesse e próximos passos."
+        },
+        {
+          "question": "Como confirmo valores e promoções?",
+          "answer": "Valores, condições e promoções devem ser confirmados diretamente com o atendimento oficial."
+        },
+        {
+          "question": "Posso visitar o polo pessoalmente?",
+          "answer": "Sim. Você pode falar com a equipe para combinar o melhor horário de atendimento."
+        }
+      ]
+    },
+    "contact": {
+      "route": "/contato",
+      "title": "Contato",
+      "subtitle": "Fale com a equipe da UniBF Cristalina-GO. Estamos prontos para ajudar você a dar o próximo passo.",
+      "form_fields": [
+        "Nome completo",
+        "Telefone",
+        "WhatsApp",
+        "Cidade",
+        "Modalidade de interesse",
+        "Curso de interesse",
+        "Mensagem"
+      ],
+      "submit_label": "Enviar mensagem"
+    },
+    "links": {
+      "route": "/links",
+      "title": "UniBF Cristalina-GO",
+      "subtitle": "Escolha uma opção e fale com nossa equipe.",
+      "links": [
+        {
+          "label": "Falar no WhatsApp",
+          "type": "whatsapp"
+        },
+        {
+          "label": "Ver Catálogo de Cursos",
+          "href": "/cursos"
+        },
+        {
+          "label": "Graduação",
+          "href": "/cursos?modalidade=graduacao"
+        },
+        {
+          "label": "Pós-graduação",
+          "href": "/cursos?modalidade=pos-graduacao"
+        },
+        {
+          "label": "Tecnólogo",
+          "href": "/cursos?modalidade=tecnologo"
+        },
+        {
+          "label": "Localização",
+          "href": "https://www.google.com/maps/search/?api=1&query=Centro+Universit%C3%A1rio+UniBF+Cristalina+GO"
+        }
+      ]
+    }
+  },
+  "courses_seed": {
+    "warning": "Lista inicial apenas como estrutura. Validar com material oficial antes de publicar.",
+    "items": [
+      {
+        "title": "Administração",
+        "modality": "Graduação",
+        "area": "Gestão e Negócios",
+        "status": "needs_official_validation"
+      },
+      {
+        "title": "Pedagogia",
+        "modality": "Graduação",
+        "area": "Educação",
+        "status": "needs_official_validation"
+      },
+      {
+        "title": "Direito",
+        "modality": "Graduação",
+        "area": "Jurídico",
+        "status": "needs_official_validation"
+      },
+      {
+        "title": "Enfermagem",
+        "modality": "Graduação",
+        "area": "Saúde",
+        "status": "needs_official_validation"
+      },
+      {
+        "title": "Psicologia",
+        "modality": "Graduação",
+        "area": "Saúde",
+        "status": "needs_official_validation"
+      },
+      {
+        "title": "Gestão de Recursos Humanos",
+        "modality": "Tecnólogo",
+        "area": "Gestão",
+        "status": "needs_official_validation"
+      },
+      {
+        "title": "Logística",
+        "modality": "Tecnólogo",
+        "area": "Gestão e Negócios",
+        "status": "needs_official_validation"
+      },
+      {
+        "title": "Cuidador de Idosos",
+        "modality": "Extensão",
+        "area": "Saúde e Bem-estar",
+        "status": "needs_official_validation"
+      }
+    ]
+  },
+  "compliance": {
+    "critical_rules": [
+      "Não inventar cursos.",
+      "Não inventar valores.",
+      "Não inventar promoções.",
+      "Não afirmar bolsa, desconto ou condição sem autorização.",
+      "Não prometer emprego, diploma garantido ou resultado profissional.",
+      "Não usar depoimentos falsos.",
+      "Toda informação comercial deve direcionar para o atendimento oficial.",
+      "Toda informação sobre cursos deve ser validada com material oficial."
+    ],
+    "safe_phrases": [
+      "Consulte as opções disponíveis com a equipe.",
+      "Fale com o atendimento oficial para confirmar cursos, valores e condições.",
+      "As informações podem variar conforme disponibilidade e orientação oficial.",
+      "Nossa equipe orienta você sobre o melhor caminho para sua formação."
+    ],
+    "footer_disclaimer": "Consulte cursos, valores, condições, modalidades e formas de ingresso diretamente com o atendimento oficial da UniBF Cristalina-GO."
+  },
+  "technical": {
+    "frontend": "React ou Next.js",
+    "style": "Tailwind CSS",
+    "icons": "Lucide React",
+    "animation": "Framer Motion",
+    "mvp_storage": "localStorage",
+    "future_database": "Supabase",
+    "future_backend": "Railway",
+    "production_deploy": "Vercel",
+    "required_assets": [
+      "/assets/avatars/professora-kelle-avatar.png",
+      "/assets/polo/fachada-unibf-cristalina-go.jpg",
+      "/assets/logos/unibf-cristalina-go-logo.svg"
+    ]
+  },
+  "replit_codex_instruction": {
+    "prompt": "Atualize todo o site para usar o nome oficial do polo como Centro Universitário UniBF — Cristalina-GO e o nome curto UniBF Cristalina-GO. Substitua todas as ocorrências de Polo UniBF Campos Lindos, UniBF Campos Lindos, Polo Campos Lindos e Campos Lindos por UniBF Cristalina-GO, exceto quando Campo Lindo aparecer como setor/bairro do endereço. Mantenha o endereço como R. Sem Nome, Qd. 1, Lt. 25, Sala 2, Setor D, Campo Lindo, Cristalina-GO. Atualize a assistente para Professora Kelle em todos os pontos do site. Use o avatar em /assets/avatars/professora-kelle-avatar.png. Use a foto da fachada em /assets/polo/fachada-unibf-cristalina-go.jpg. Padronize o WhatsApp principal como (61) 9 8157-1394 e mantenha (61) 9 8236-7003 como secundário. Todos os CTAs devem abrir WhatsApp com mensagens pré-preenchidas. Não inventar cursos, valores, promoções ou promessas. Remover qualquer badge visual do Replit antes da versão final."
+  },
+  "final_checklist": [
+    "Trocar nome público para UniBF Cristalina-GO",
+    "Usar nome oficial Centro Universitário UniBF — Cristalina-GO",
+    "Manter Campo Lindo apenas como setor/bairro do endereço",
+    "Trocar todas as variações da assistente para Professora Kelle",
+    "Padronizar WhatsApp principal",
+    "Adicionar foto da fachada ao site",
+    "Adicionar avatar da Professora Kelle",
+    "Revisar footer",
+    "Revisar SEO",
+    "Revisar CTAs",
+    "Remover badges do Replit",
+    "Testar mobile",
+    "Testar links de WhatsApp",
+    "Validar cursos com material oficial antes de publicar"
+  ]
+}

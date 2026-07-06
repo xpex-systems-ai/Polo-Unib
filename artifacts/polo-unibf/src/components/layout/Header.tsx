@@ -28,7 +28,7 @@ export function Header() {
               UniBF
             </span>
             <span className="text-xs font-semibold tracking-wider text-primary uppercase">
-              Campos Lindos
+              Cristalina-GO
             </span>
           </div>
         </Link>

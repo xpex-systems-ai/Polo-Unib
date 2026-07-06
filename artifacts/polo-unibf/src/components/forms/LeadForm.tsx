@@ -55,7 +55,7 @@ export function LeadForm() {
         </div>
         <h3 className="text-2xl font-bold text-navy mb-2">Mensagem Enviada!</h3>
         <p className="text-muted-foreground mb-6">
-          Nossa equipe do Polo Campos Lindos entrará em contato em breve pelo WhatsApp.
+          Nossa equipe do UniBF Cristalina-GO entrará em contato em breve pelo WhatsApp.
         </p>
         <Button onClick={() => setIsSubmitted(false)} variant="outline">
           Enviar nova mensagem
