@@ -51,10 +51,10 @@ export function HeroSection() {
         >
           <Button 
             size="xl" 
-            onClick={() => openWhatsApp('Olá, vim do site e gostaria de saber mais sobre as opções de estudo no UniBF Cristalina-GO.')}
+            onClick={() => openWhatsApp('Olá, Professora Kelle! Vim pelo site da UniBF Cristalina-GO e gostaria de receber orientação sobre cursos e modalidades.')}
             className="w-full sm:w-auto shadow-lg shadow-primary/25 rounded-full bg-primary hover:bg-primary/90"
           >
-            Falar com o polo
+            Falar com a Professora Kelle
           </Button>
           <Link href="/cursos" className="w-full sm:w-auto">
             <Button size="xl" variant="outline" className="w-full sm:w-auto text-white border-white/30 bg-transparent hover:bg-white/10 rounded-full">

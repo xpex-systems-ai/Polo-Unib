@@ -5,6 +5,8 @@ export interface Course {
   area: string;
   description: string;
   cta: string;
+  icon?: string;
+  whatsappMessage?: string;
 }
 
 export interface Lead {

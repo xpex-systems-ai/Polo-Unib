@@ -1,66 +1,103 @@
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { useState } from 'react';
+import { MapPin, Phone, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { motion } from 'framer-motion';
+
+const FACADE = '/assets/polo/fachada-unibf-cristalina-go.jpg';
+const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=Centro+Universit%C3%A1rio+UniBF+Cristalina+GO';
 
 export function LocationSection() {
+  const [imgError, setImgError] = useState(false);
+
   return (
-    <section className="py-24 bg-white">
-      <div className="container mx-auto px-4">
+    <section className="py-20 px-4 bg-soft-gray">
+      <div className="container mx-auto max-w-6xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent text-primary text-sm font-medium mb-6">
+
+          {/* Info */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
               <MapPin className="w-4 h-4" /> Venha nos visitar
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-navy mb-6">Nosso polo em Cristalina</h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Estamos de portas abertas para receber você. Venha tomar um café, conhecer nossa estrutura e tirar todas as suas dúvidas pessoalmente com nossa equipe.
+            <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">
+              Nosso polo em Cristalina
+            </h2>
+            <p className="text-muted-foreground mb-8 leading-relaxed">
+              Venha conhecer nossa estrutura, tirar dúvidas com a equipe e dar o próximo passo na sua formação. Estamos de portas abertas.
             </p>
-            
-            <div className="space-y-6">
+
+            <div className="space-y-5">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center shrink-0">
-                  <MapPin className="text-navy w-5 h-5" />
+                <div className="w-11 h-11 rounded-xl bg-white border border-border flex items-center justify-center shrink-0 shadow-sm">
+                  <MapPin className="text-primary w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-foreground mb-1">Endereço</h4>
-                  <p className="text-muted-foreground">R. Sem Nome, Qd. 1, Lt. 25, Sala 2, Setor D<br/>Campo Lindo, Cristalina-GO<br/>CEP 73850-000</p>
+                  <h4 className="font-bold text-foreground text-sm mb-0.5">Endereço</h4>
+                  <p className="text-muted-foreground text-sm">R. Sem Nome, Qd. 1, Lt. 25, Sala 2, Setor D<br />Campo Lindo, Cristalina-GO — CEP 73850-000</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center shrink-0">
-                  <Clock className="text-navy w-5 h-5" />
+                <div className="w-11 h-11 rounded-xl bg-white border border-border flex items-center justify-center shrink-0 shadow-sm">
+                  <Clock className="text-primary w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-foreground mb-1">Horário de Atendimento</h4>
-                  <p className="text-muted-foreground">Segunda a Sexta: 08:00 às 18:00<br/>Sábado: 08:00 às 12:00</p>
+                  <h4 className="font-bold text-foreground text-sm mb-0.5">Horário de Atendimento</h4>
+                  <p className="text-muted-foreground text-sm">Segunda a sexta: 08h às 18h<br />Sábado: 08h às 12h</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center shrink-0">
-                  <Phone className="text-navy w-5 h-5" />
+                <div className="w-11 h-11 rounded-xl bg-white border border-border flex items-center justify-center shrink-0 shadow-sm">
+                  <Phone className="text-primary w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-foreground mb-1">Contato Rápido</h4>
-                  <p className="text-muted-foreground">(61) 9 8236-7003 / (61) 9 8157-1394</p>
+                  <h4 className="font-bold text-foreground text-sm mb-0.5">Contato</h4>
+                  <p className="text-muted-foreground text-sm">(61) 9 8157-1394 &nbsp;|&nbsp; (61) 9 8236-7003</p>
                 </div>
               </div>
             </div>
-          </div>
-          
-          <div className="h-[500px] bg-muted rounded-3xl overflow-hidden relative group border border-border shadow-sm flex items-center justify-center flex-col text-center p-8">
-            <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-navy to-transparent"></div>
-            <MapPin className="w-16 h-16 text-primary mb-4 opacity-50" />
-            <h3 className="font-bold text-xl mb-2">Mapa Interativo</h3>
-            <p className="text-muted-foreground mb-6 max-w-sm">Placeholder para incorporação do Google Maps.</p>
-            <a 
-              href="https://maps.google.com/?q=Polo+UniBF+Campos+Lindos+Cristalina+GO" 
-              target="_blank" 
-              rel="noreferrer"
-            >
-              <Button variant="navy">Abrir no Google Maps</Button>
+
+            <a href={MAPS_URL} target="_blank" rel="noreferrer" className="mt-8 inline-block">
+              <Button className="bg-navy hover:bg-navy/90 text-white rounded-full px-6">
+                Abrir no Google Maps
+              </Button>
             </a>
-          </div>
+          </motion.div>
+
+          {/* Facade photo */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="rounded-3xl overflow-hidden border border-border shadow-xl aspect-[4/3] relative"
+          >
+            {!imgError ? (
+              <img
+                src={FACADE}
+                alt="Fachada do Centro Universitário UniBF Cristalina-GO"
+                className="w-full h-full object-cover"
+                onError={() => setImgError(true)}
+              />
+            ) : (
+              <div className="w-full h-full bg-gradient-to-br from-navy to-[#002F4B] flex flex-col items-center justify-center text-white/60 gap-4 p-8 text-center">
+                <MapPin className="w-16 h-16 opacity-30" />
+                <p className="font-semibold text-white/80">Centro Universitário UniBF Cristalina-GO</p>
+                <p className="text-sm">R. Sem Nome, Qd. 1, Lt. 25 — Campo Lindo</p>
+                <a href={MAPS_URL} target="_blank" rel="noreferrer" className="mt-2">
+                  <Button size="sm" variant="outline" className="border-white/30 text-white hover:bg-white/10 rounded-full">
+                    Ver no Google Maps
+                  </Button>
+                </a>
+                <p className="text-xs text-white/30 mt-2">Adicione a foto em /assets/polo/fachada-unibf-cristalina-go.jpg</p>
+              </div>
+            )}
+          </motion.div>
         </div>
       </div>
     </section>
