@@ -4,8 +4,11 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { openWhatsApp } from '@/lib/whatsapp';
 
+const LOGO = '/assets/logos/unibf-cristalina-go-logo.png';
+
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [logoError, setLogoError] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
@@ -18,19 +21,29 @@ export function Header() {
     { href: '/contato', label: 'Contato' },
   ];
 
+  const LogoContent = ({ maxWidth }: { maxWidth: string }) =>
+    !logoError ? (
+      <img
+        src={LOGO}
+        alt="UniBF Cristalina-GO"
+        style={{ maxWidth, height: 'auto', maxHeight: '52px' }}
+        className="object-contain rounded-md"
+        onError={() => setLogoError(true)}
+      />
+    ) : (
+      <div className="flex flex-col">
+        <span className="text-xl font-bold tracking-tight text-navy">UniBF</span>
+        <span className="text-xs font-semibold tracking-wider text-primary uppercase">Cristalina-GO</span>
+      </div>
+    );
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white shadow-sm">
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
+
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="flex flex-col">
-            <span className="text-xl font-bold tracking-tight text-navy">
-              UniBF
-            </span>
-            <span className="text-xs font-semibold tracking-wider text-primary uppercase">
-              Cristalina-GO
-            </span>
-          </div>
+        <Link href="/" className="flex items-center shrink-0">
+          <LogoContent maxWidth="175px" />
         </Link>
 
         {/* Desktop Nav */}
@@ -46,8 +59,8 @@ export function Header() {
           ))}
         </nav>
 
-        {/* Desktop Actions */}
-        <div className="hidden md:flex items-center gap-4">
+        {/* Desktop CTA */}
+        <div className="hidden md:flex items-center gap-4 shrink-0">
           <Button onClick={() => openWhatsApp()} className="bg-primary hover:bg-primary/90 rounded-full">
             Fale conosco
           </Button>
@@ -61,7 +74,7 @@ export function Header() {
 
       {/* Mobile Nav */}
       {isOpen && (
-        <div className="md:hidden absolute top-20 w-full bg-white border-b shadow-lg flex flex-col py-4 px-4 space-y-4">
+        <div className="md:hidden absolute top-20 w-full bg-white border-b shadow-lg flex flex-col py-4 px-4 space-y-4 z-50">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -72,8 +85,8 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          <Button 
-            onClick={() => { openWhatsApp(); closeMenu(); }} 
+          <Button
+            onClick={() => { openWhatsApp(); closeMenu(); }}
             className="w-full mt-4 bg-primary text-white"
             size="lg"
           >

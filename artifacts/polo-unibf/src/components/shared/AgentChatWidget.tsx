@@ -88,7 +88,7 @@ export function AgentChatWidget() {
                   Assistente IA
                 </span>
               </div>
-              <p className="text-xs text-white/60 mt-0.5">Assistente Virtual do Polo UniBF</p>
+              <p className="text-xs text-white/60 mt-0.5">Assistente Virtual da UniBF Cristalina-GO</p>
               <div className="flex items-center gap-1 mt-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
                 <span className="text-[11px] text-green-300 font-medium">Online agora</span>
@@ -138,10 +138,16 @@ export function AgentChatWidget() {
               ))}
             </div>
 
-            {/* Footer disclaimer */}
-            <div className="px-5 py-3 bg-muted/30 border-t border-border/50">
+            {/* Footer: brand signature + disclaimer */}
+            <div className="px-5 pt-3 pb-4 bg-muted/30 border-t border-border/50 flex flex-col items-center gap-2">
+              <img
+                src="/assets/logos/unibf-cristalina-go-logo.png"
+                alt="UniBF Cristalina-GO"
+                style={{ maxWidth: '90px', height: 'auto', maxHeight: '30px' }}
+                className="object-contain rounded-sm opacity-80"
+              />
               <p className="text-[11px] text-muted-foreground leading-snug text-center">
-                A Professora Kelle é uma assistente virtual de orientação e não substitui o atendimento humano oficial do polo.
+                A Professora Kelle é uma assistente virtual de orientação e não substitui o atendimento humano oficial da UniBF Cristalina-GO.
               </p>
             </div>
           </div>

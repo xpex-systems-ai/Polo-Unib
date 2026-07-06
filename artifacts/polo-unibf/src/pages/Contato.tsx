@@ -1,9 +1,13 @@
+import { useState } from 'react';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { LeadForm } from '@/components/forms/LeadForm';
 import { MapPin, Phone, Mail, Instagram, Clock } from 'lucide-react';
 
+const LOGO = '/assets/logos/unibf-cristalina-go-logo.png';
+
 export default function Contato() {
+  const [logoError, setLogoError] = useState(false);
   return (
     <div className="min-h-screen flex flex-col w-full">
       <Header />
@@ -28,6 +32,20 @@ export default function Contato() {
           {/* Info & Map */}
           <div className="flex flex-col gap-8 pt-8 lg:pt-0 lg:pl-8">
             <div className="bg-white rounded-2xl p-8 border border-border shadow-sm">
+              {/* Logo inside contact card */}
+              <div className="mb-5 pb-5 border-b border-border">
+                {!logoError ? (
+                  <img
+                    src={LOGO}
+                    alt="UniBF Cristalina-GO"
+                    style={{ maxWidth: '170px', height: 'auto', maxHeight: '56px' }}
+                    className="object-contain rounded-md"
+                    onError={() => setLogoError(true)}
+                  />
+                ) : (
+                  <span className="text-lg font-bold text-navy">UniBF Cristalina-GO</span>
+                )}
+              </div>
               <h3 className="text-2xl font-bold text-navy mb-6">Informações do Polo</h3>
               
               <ul className="space-y-6">

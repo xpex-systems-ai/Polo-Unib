@@ -220,9 +220,15 @@ export default function Faq() {
         {/* WhatsApp CTA */}
         <section className="py-20 px-4 bg-navy text-white text-center">
           <div className="container mx-auto max-w-xl">
-            <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center">
-                <MessageCircle size={32} className="text-primary" />
+            {/* Brand logo above CTA */}
+            <div className="flex justify-center mb-8">
+              <div className="bg-white rounded-xl px-5 py-3 inline-block">
+                <img
+                  src="/assets/logos/unibf-cristalina-go-logo.png"
+                  alt="UniBF Cristalina-GO"
+                  style={{ maxWidth: '140px', height: 'auto', maxHeight: '46px' }}
+                  className="object-contain block"
+                />
               </div>
             </div>
             <h2 className="text-2xl md:text-3xl font-bold mb-3">Ainda com dúvidas?</h2>

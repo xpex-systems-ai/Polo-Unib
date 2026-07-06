@@ -1,0 +1,254 @@
+Fechado, GX. Aqui vai o **JSON específico para o Replit aplicar a nova logo em pontos exatos do site**, sem bagunçar o layout.
+
+Antes de executar, salva a imagem da logo com este nome dentro do projeto:
+
+```txt
+/public/assets/logos/unibf-cristalina-go-logo.png
+```
+
+E, se quiser versão branca para footer escuro:
+
+```txt
+/public/assets/logos/unibf-cristalina-go-logo-white.png
+```
+
+Agora manda este JSON:
+
+```json
+{
+  "task": "apply_unibf_cristalina_go_logo_specific_places",
+  "version": "1.0-premium-logo-placement",
+  "project": {
+    "name": "unibf-cristalina-go-site",
+    "public_name": "UniBF Cristalina-GO",
+    "official_name": "Centro Universitário UniBF — Cristalina-GO",
+    "assistant_name": "Professora Kelle"
+  },
+  "assets": {
+    "primary_logo": {
+      "path": "/assets/logos/unibf-cristalina-go-logo.png",
+      "alt": "Logo UniBF Cristalina-GO",
+      "usage": "logo principal do site"
+    },
+    "white_logo": {
+      "path": "/assets/logos/unibf-cristalina-go-logo-white.png",
+      "alt": "Logo UniBF Cristalina-GO em versão clara",
+      "usage": "footer e fundos escuros"
+    },
+    "favicon": {
+      "path": "/assets/logos/favicon.png",
+      "alt": "Favicon UniBF Cristalina-GO"
+    },
+    "social_preview": {
+      "path": "/assets/social/unibf-cristalina-go-og.png",
+      "alt": "Imagem de compartilhamento UniBF Cristalina-GO"
+    }
+  },
+  "apply_logo_to": [
+    {
+      "place": "header_desktop",
+      "selector_or_component": "Header / Navbar",
+      "action": "replace_text_logo_with_image_logo",
+      "logo": "/assets/logos/unibf-cristalina-go-logo.png",
+      "link_to": "/",
+      "max_width": "180px",
+      "height": "auto",
+      "position": "top-left",
+      "notes": "Substituir o texto UniBF/Campos Lindos por imagem da logo UniBF Cristalina-GO. Manter menu central e botão Fale conosco à direita."
+    },
+    {
+      "place": "header_mobile",
+      "selector_or_component": "MobileHeader / Navbar mobile",
+      "action": "replace_text_logo_with_image_logo",
+      "logo": "/assets/logos/unibf-cristalina-go-logo.png",
+      "link_to": "/",
+      "max_width": "145px",
+      "height": "auto",
+      "position": "top-left",
+      "notes": "No mobile, a logo deve ficar legível sem quebrar o menu. Não ocupar espaço excessivo."
+    },
+    {
+      "place": "footer",
+      "selector_or_component": "Footer",
+      "action": "replace_footer_brand_text_with_logo",
+      "logo": "/assets/logos/unibf-cristalina-go-logo-white.png",
+      "fallback_logo": "/assets/logos/unibf-cristalina-go-logo.png",
+      "max_width": "190px",
+      "height": "auto",
+      "position": "footer-left",
+      "notes": "Usar versão branca se o footer for azul escuro. Abaixo da logo manter texto institucional curto."
+    },
+    {
+      "place": "home_hero",
+      "selector_or_component": "HomeHero",
+      "action": "add_small_institutional_logo_badge",
+      "logo": "/assets/logos/unibf-cristalina-go-logo.png",
+      "position": "above_badge_or_top_center",
+      "max_width": "160px",
+      "display": "optional",
+      "notes": "Adicionar pequena logo no hero apenas se não poluir. O título principal continua sendo o foco."
+    },
+    {
+      "place": "about_page",
+      "selector_or_component": "AboutPage / Nossa História",
+      "action": "add_logo_to_about_intro",
+      "logo": "/assets/logos/unibf-cristalina-go-logo.png",
+      "max_width": "200px",
+      "position": "above_title_or_side_card",
+      "notes": "Adicionar logo institucional na página Sobre para reforçar autoridade local."
+    },
+    {
+      "place": "contact_page",
+      "selector_or_component": "ContactPage / Informações do Polo",
+      "action": "add_logo_inside_contact_card",
+      "logo": "/assets/logos/unibf-cristalina-go-logo.png",
+      "max_width": "170px",
+      "position": "top_of_contact_info_card",
+      "notes": "Inserir logo no card de informações do polo, acima dos telefones e endereço."
+    },
+    {
+      "place": "faq_page",
+      "selector_or_component": "FAQPage",
+      "action": "add_discreet_logo_in_cta",
+      "logo": "/assets/logos/unibf-cristalina-go-logo.png",
+      "max_width": "140px",
+      "position": "above_final_whatsapp_cta",
+      "notes": "Na seção 'Ainda com dúvidas?', adicionar logo pequena para reforçar a marca antes do CTA."
+    },
+    {
+      "place": "links_bio_page",
+      "selector_or_component": "LinksBioPage",
+      "action": "use_logo_as_main_profile_brand",
+      "logo": "/assets/logos/unibf-cristalina-go-logo.png",
+      "max_width": "210px",
+      "position": "top_center",
+      "notes": "Na página de links da bio, usar logo centralizada no topo."
+    },
+    {
+      "place": "course_cards",
+      "selector_or_component": "CourseCard",
+      "action": "do_not_repeat_full_logo_on_each_card",
+      "logo_usage": "avoid",
+      "notes": "Não colocar a logo completa em todos os cards de curso para não poluir. Usar ícones/imagens por curso. A marca já aparece no header/footer."
+    },
+    {
+      "place": "assistant_widget",
+      "selector_or_component": "ProfessoraKelleWidget",
+      "action": "add_tiny_brand_signature",
+      "logo": "/assets/logos/unibf-cristalina-go-logo.png",
+      "max_width": "90px",
+      "position": "inside_widget_footer",
+      "notes": "Dentro do painel da Professora Kelle, adicionar uma assinatura pequena da UniBF Cristalina-GO no rodapé do widget. Não substituir o avatar da Professora Kelle."
+    },
+    {
+      "place": "seo_open_graph",
+      "selector_or_component": "SEO / meta tags",
+      "action": "apply_logo_and_social_preview",
+      "logo": "/assets/logos/unibf-cristalina-go-logo.png",
+      "og_image": "/assets/social/unibf-cristalina-go-og.png",
+      "notes": "Atualizar favicon, og:image e metadados sociais para UniBF Cristalina-GO."
+    }
+  ],
+  "text_replacements": {
+    "replace_all": [
+      {
+        "from": "UniBF Campos Lindos",
+        "to": "UniBF Cristalina-GO"
+      },
+      {
+        "from": "Polo UniBF Campos Lindos",
+        "to": "UniBF Cristalina-GO"
+      },
+      {
+        "from": "Polo Campos Lindos",
+        "to": "UniBF Cristalina-GO"
+      }
+    ],
+    "do_not_replace_when_address_context": [
+      {
+        "term": "Campo Lindo",
+        "reason": "Campo Lindo é o setor/bairro do endereço e deve permanecer."
+      }
+    ]
+  },
+  "styling_rules": {
+    "header_logo": {
+      "object_fit": "contain",
+      "max_height_desktop": "58px",
+      "max_height_mobile": "46px",
+      "avoid_distortion": true
+    },
+    "footer_logo": {
+      "object_fit": "contain",
+      "max_height": "64px",
+      "use_white_version_on_dark_background": true
+    },
+    "general": {
+      "keep_aspect_ratio": true,
+      "do_not_crop_logo": true,
+      "do_not_add_random_effects": true,
+      "do_not_stretch": true,
+      "maintain_clean_spacing": true
+    }
+  },
+  "pages_to_check_after_apply": [
+    "/",
+    "/cursos",
+    "/sobre",
+    "/faq",
+    "/contato",
+    "/links"
+  ],
+  "quality_checklist": [
+    "Logo aparece no header desktop",
+    "Logo aparece no header mobile sem quebrar layout",
+    "Footer usa logo corretamente",
+    "Página Sobre tem marca institucional",
+    "Página Contato tem logo no card de informações",
+    "Página Links da Bio usa logo centralizada",
+    "Widget da Professora Kelle mantém avatar e só usa logo como assinatura pequena",
+    "Cards de cursos continuam com imagens/ícones, sem repetir logo em excesso",
+    "Favicon e imagem social foram atualizados",
+    "Nome UniBF Cristalina-GO está padronizado",
+    "Campo Lindo permanece apenas no endereço",
+    "Nenhuma logo foi esticada ou cortada",
+    "Nenhum badge do Replit aparece na versão final"
+  ],
+  "replit_codex_instruction": {
+    "prompt": "Aplique a nova logo oficial UniBF Cristalina-GO em pontos específicos do site. Use /assets/logos/unibf-cristalina-go-logo.png como logo principal e /assets/logos/unibf-cristalina-go-logo-white.png no footer escuro. Substitua o texto de marca no header por imagem da logo, mantendo menu e botão Fale conosco. Aplique logo no footer, página Sobre, card de Contato, página Links da Bio e assinatura pequena no widget da Professora Kelle. Não repetir a logo em todos os cards de curso; nos cursos, usar imagens ou ícones próprios. Atualize SEO, favicon e imagem social. Padronize o nome como UniBF Cristalina-GO em todo o site, mantendo Campo Lindo apenas como bairro/setor do endereço. Garanta responsividade, proporção correta da logo e visual premium. Não inventar cursos, valores ou promoções."
+  }
+}
+```
+
+E aqui vai o **comando curto**, caso queira colar rápido no Replit:
+
+```txt
+Aplique a nova logo UniBF Cristalina-GO em pontos específicos do site.
+
+Arquivos:
+- Logo principal: /assets/logos/unibf-cristalina-go-logo.png
+- Logo branca para footer: /assets/logos/unibf-cristalina-go-logo-white.png
+- Favicon: /assets/logos/favicon.png
+- Social preview: /assets/social/unibf-cristalina-go-og.png
+
+Aplicar em:
+1. Header desktop e mobile, substituindo o texto da marca.
+2. Footer, usando versão branca se o fundo for azul escuro.
+3. Página Sobre, acima ou ao lado do bloco “Nossa História”.
+4. Página Contato, dentro do card “Informações do Polo”.
+5. Página FAQ, discretamente acima do CTA final.
+6. Página Links da Bio, centralizada no topo.
+7. Widget da Professora Kelle, apenas como assinatura pequena no rodapé do painel.
+8. SEO, favicon e imagem de compartilhamento.
+
+Não aplicar a logo completa em todos os cards de cursos. Nos cursos, usar imagens ou ícones próprios por área.
+
+Padronizar nome como UniBF Cristalina-GO em todo o site.
+Manter “Campo Lindo” somente no endereço:
+R. Sem Nome, Qd. 1, Lt. 25, Sala 2, Setor D, Campo Lindo, Cristalina-GO.
+
+Garantir que a logo não fique esticada, cortada ou pequena demais.
+Remover badges do Replit antes da versão final.
+```
+
+Esse JSON é cirúrgico: ele diz **onde colocar**, **onde não colocar** e **como preservar o visual premium**.
