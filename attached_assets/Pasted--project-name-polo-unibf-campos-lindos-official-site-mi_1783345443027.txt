@@ -1,0 +1,465 @@
+{
+  "project_name": "polo-unibf-campos-lindos-official-site",
+  "mission": "Construir um site oficial premium, moderno, responsivo e comercial para o Polo UniBF Campos Lindos, com foco em captação de alunos, atendimento via agente inteligente, WhatsApp, apresentação de cursos, fortalecimento da presença digital e preparação futura para tráfego orgânico e pago.",
+  "owner_context": {
+    "operator": "Junior Sena / GXEON",
+    "client": "Polo UniBF Campos Lindos",
+    "business_type": "Polo educacional / captação de alunos / graduação / pós-graduação / tecnólogo / extensão",
+    "main_goal": "Transformar visitantes em interessados reais no WhatsApp, organizar a presença digital do polo e criar uma base profissional para campanhas futuras."
+  },
+  "stack": {
+    "frontend": "Next.js 14+ com TypeScript",
+    "styling": "Tailwind CSS",
+    "ui": "shadcn/ui ou componentes próprios premium",
+    "icons": "lucide-react",
+    "animations": "framer-motion",
+    "forms": "react-hook-form + zod",
+    "deployment_ready": ["Replit", "GitHub", "Vercel", "Railway"],
+    "data_storage_mvp": "local JSON/mock + localStorage",
+    "future_database": "Supabase",
+    "future_agent_backend": "OpenAI API ou OpenRouter"
+  },
+  "branding": {
+    "name": "Polo UniBF Campos Lindos",
+    "short_name": "UniBF Campos Lindos",
+    "visual_identity": {
+      "primary_colors": ["#003B5C", "#00B86B", "#0B1220"],
+      "secondary_colors": ["#EAF7F0", "#FFFFFF", "#09111F"],
+      "style": "institucional premium, educacional, moderno, confiável, limpo e tecnológico",
+      "avoid": [
+        "visual amador",
+        "excesso de texto",
+        "promessas falsas",
+        "informações não autorizadas",
+        "layout poluído"
+      ]
+    },
+    "tone": "profissional, acolhedor, simples, motivacional e direto"
+  },
+  "official_info": {
+    "address": "R. Sem Nome, Qd. 1, Lt. 25, Sala 2, Setor D, Campo Lindo, Cristalina-GO, CEP 73850-000",
+    "phones": [
+      "(61) 9 8157-1394",
+      "(61) 9 8236-7003"
+    ],
+    "whatsapp_primary": "5561982367003",
+    "instagram": "universidadeunibf",
+    "facebook": "",
+    "tiktok": "",
+    "youtube": "",
+    "location_label": "Polo UniBF Campos Lindos - Cristalina-GO"
+  },
+  "compliance_rules": {
+    "critical": [
+      "Não inventar cursos, valores, promoções, bolsas, descontos ou reconhecimento sem informação oficial.",
+      "Toda informação comercial deve aparecer como 'consulte condições no atendimento'.",
+      "Não prometer emprego, aprovação, diploma garantido, renda ou resultado profissional.",
+      "Usar frases seguras como: 'cursos reconhecidos conforme regras e informações oficiais da instituição', apenas se confirmado pelo cliente.",
+      "Criar estrutura editável para equipe atualizar cursos e campanhas.",
+      "O site deve incentivar contato com o polo para confirmação de disponibilidade, valores e condições."
+    ],
+    "safe_copy_examples": [
+      "Dê o próximo passo na sua formação.",
+      "Fale com o polo e conheça as opções disponíveis.",
+      "Graduação, pós-graduação, tecnólogo e extensão com atendimento local.",
+      "Estude com orientação e suporte do Polo UniBF Campos Lindos.",
+      "Consulte cursos, condições e formas de ingresso com nossa equipe."
+    ]
+  },
+  "pages": [
+    {
+      "route": "/",
+      "name": "Home",
+      "goal": "Apresentar o polo, gerar confiança e levar o visitante para WhatsApp ou agente de atendimento.",
+      "sections": [
+        "Hero premium com chamada principal",
+        "Botões: Falar no WhatsApp, Ver cursos, Conhecer o polo",
+        "Cards de modalidades: Graduação, Pós-graduação, Tecnólogo, Extensão",
+        "Bloco 'Por que estudar no Polo UniBF Campos Lindos'",
+        "Bloco de benefícios",
+        "Carrossel de cursos em destaque",
+        "Depoimentos/provas sociais placeholder",
+        "Mapa/localização placeholder",
+        "CTA final para atendimento"
+      ]
+    },
+    {
+      "route": "/cursos",
+      "name": "Cursos",
+      "goal": "Mostrar catálogo inicial de áreas e permitir busca/filtro.",
+      "sections": [
+        "Busca por nome do curso",
+        "Filtros por modalidade",
+        "Cards de cursos editáveis",
+        "Botão 'Tenho interesse' em cada curso",
+        "CTA para WhatsApp com mensagem automática"
+      ]
+    },
+    {
+      "route": "/graduacao",
+      "name": "Graduação",
+      "goal": "Página institucional sobre graduação.",
+      "sections": [
+        "Explicação simples",
+        "Áreas de interesse",
+        "Como falar com o polo",
+        "FAQ"
+      ]
+    },
+    {
+      "route": "/pos-graduacao",
+      "name": "Pós-graduação",
+      "goal": "Página para interessados em especialização.",
+      "sections": [
+        "Benefícios da pós-graduação",
+        "Áreas populares",
+        "CTA para atendimento"
+      ]
+    },
+    {
+      "route": "/tecnologo",
+      "name": "Tecnólogo",
+      "goal": "Explicar cursos tecnólogos de forma simples.",
+      "sections": [
+        "O que é tecnólogo",
+        "Para quem serve",
+        "CTA"
+      ]
+    },
+    {
+      "route": "/extensao",
+      "name": "Extensão",
+      "goal": "Apresentar cursos de extensão e formação complementar.",
+      "sections": [
+        "Explicação",
+        "Benefícios",
+        "CTA"
+      ]
+    },
+    {
+      "route": "/sobre",
+      "name": "Sobre o Polo",
+      "goal": "Gerar confiança local.",
+      "sections": [
+        "História do polo",
+        "Missão",
+        "Atendimento local",
+        "Endereço",
+        "Horários placeholder editável"
+      ]
+    },
+    {
+      "route": "/contato",
+      "name": "Contato",
+      "goal": "Centralizar WhatsApp, endereço, redes e formulário.",
+      "sections": [
+        "WhatsApp principal",
+        "Telefones",
+        "Endereço",
+        "Mapa incorporável",
+        "Formulário de interesse",
+        "Links sociais"
+      ]
+    },
+    {
+      "route": "/admin",
+      "name": "Admin MVP",
+      "goal": "Painel simples local para gerenciar leads e conteúdo mockado.",
+      "protected": true,
+      "sections": [
+        "Dashboard de leads capturados no localStorage",
+        "Lista de interessados",
+        "Status: Novo, Em contato, Matriculado, Perdido",
+        "Exportar CSV",
+        "Configurações do site"
+      ]
+    }
+  ],
+  "premium_frontend_requirements": {
+    "layout": "SaaS premium institucional",
+    "home_design": {
+      "hero": "Tela inicial impactante com fundo gradiente azul escuro, verde institucional, brilho sutil, imagem/ilustração educacional e CTA forte.",
+      "navigation": "Header fixo com logo, links, botão WhatsApp e botão 'Falar com agente'.",
+      "mobile": "Menu mobile limpo com CTA destacado.",
+      "cards": "Cards com bordas suaves, glassmorphism leve, ícones e microcopy objetiva.",
+      "cta": "Botões grandes, claros e orientados para conversão."
+    },
+    "components": [
+      "Header",
+      "Footer",
+      "HeroSection",
+      "CourseCard",
+      "ModalityCard",
+      "BenefitCard",
+      "LeadForm",
+      "WhatsAppButton",
+      "AgentChatWidget",
+      "CourseSearch",
+      "SocialLinks",
+      "AdminLeadTable",
+      "StatsSection",
+      "FAQSection"
+    ],
+    "visual_quality": [
+      "Espaçamento premium",
+      "Tipografia forte",
+      "Responsivo real",
+      "Animações leves",
+      "Nada poluído",
+      "Design limpo estilo startup educacional"
+    ]
+  },
+  "agent_chat_widget": {
+    "name": "Assistente do Polo UniBF Campos Lindos",
+    "position": "Botão flutuante no canto inferior direito",
+    "behavior": {
+      "opening_message": "Olá! Eu sou o assistente do Polo UniBF Campos Lindos. Posso te ajudar a encontrar um curso, tirar dúvidas e te encaminhar para o WhatsApp do polo.",
+      "collect_fields": [
+        "nome",
+        "telefone",
+        "cidade",
+        "modalidade de interesse",
+        "curso de interesse",
+        "melhor horário para contato"
+      ],
+      "safe_answers": [
+        "Posso te orientar com informações gerais, mas valores, promoções e disponibilidade precisam ser confirmados com a equipe oficial do polo.",
+        "Vou te encaminhar para o WhatsApp para atendimento completo.",
+        "O polo atende interessados em graduação, pós-graduação, tecnólogo e extensão."
+      ],
+      "handoff_to_whatsapp": true,
+      "whatsapp_message_template": "Olá, vim pelo site do Polo UniBF Campos Lindos. Tenho interesse em {{modalidade}} / {{curso}}. Meu nome é {{nome}} e meu telefone é {{telefone}}."
+    },
+    "mvp_mode": "Sem IA externa no primeiro deploy. Criar agente simulado com respostas guiadas e formulário. Preparar integração futura com OPENAI_API_KEY ou OPENROUTER_API_KEY.",
+    "future_ai_mode": {
+      "provider_options": ["OpenAI", "OpenRouter"],
+      "rules": [
+        "Não responder valores não cadastrados.",
+        "Não inventar curso.",
+        "Sempre sugerir confirmação pelo WhatsApp.",
+        "Registrar lead antes de encaminhar.",
+        "Responder em português brasileiro."
+      ]
+    }
+  },
+  "lead_capture": {
+    "forms": [
+      {
+        "name": "Formulário de Interesse",
+        "fields": [
+          "nome",
+          "telefone",
+          "whatsapp",
+          "cidade",
+          "curso_interesse",
+          "modalidade",
+          "mensagem"
+        ],
+        "storage_mvp": "localStorage",
+        "future_storage": "Supabase table leads"
+      }
+    ],
+    "lead_status": ["Novo", "Em contato", "Aguardando resposta", "Matriculado", "Perdido"],
+    "export": "CSV"
+  },
+  "course_catalog_mvp": {
+    "note": "Criar catálogo inicial editável com áreas e cursos exemplo. Não afirmar que todos estão disponíveis. Usar CTA para confirmação.",
+    "modalities": [
+      "Graduação",
+      "Pós-graduação",
+      "Tecnólogo",
+      "Extensão"
+    ],
+    "sample_courses": [
+      {
+        "title": "Administração",
+        "modality": "Graduação",
+        "area": "Gestão e Negócios",
+        "description": "Formação para quem busca atuar em gestão, empresas, processos e liderança.",
+        "cta": "Consultar disponibilidade"
+      },
+      {
+        "title": "Pedagogia",
+        "modality": "Graduação",
+        "area": "Educação",
+        "description": "Opção para quem deseja atuar na área educacional.",
+        "cta": "Consultar disponibilidade"
+      },
+      {
+        "title": "Engenharia de Avaliações e Perícias",
+        "modality": "Pós-graduação",
+        "area": "Engenharia",
+        "description": "Especialização para profissionais que desejam ampliar sua atuação técnica.",
+        "cta": "Consultar disponibilidade"
+      },
+      {
+        "title": "Direito Penal e Processo Penal",
+        "modality": "Pós-graduação",
+        "area": "Direito",
+        "description": "Especialização para aprofundamento jurídico.",
+        "cta": "Consultar disponibilidade"
+      },
+      {
+        "title": "Gestão de Recursos Humanos",
+        "modality": "Tecnólogo",
+        "area": "Gestão",
+        "description": "Formação voltada para pessoas, processos e gestão organizacional.",
+        "cta": "Consultar disponibilidade"
+      }
+    ]
+  },
+  "social_media_hub": {
+    "goal": "Preparar site para ser centro das redes sociais e captação orgânica.",
+    "features": [
+      "Página de links na bio em /links",
+      "Botões para Instagram, Facebook, TikTok, YouTube e WhatsApp",
+      "Bloco de posts recentes placeholder",
+      "CTA para seguir o polo",
+      "Área para campanhas futuras"
+    ],
+    "route": "/links"
+  },
+  "seo": {
+    "title": "Polo UniBF Campos Lindos | Graduação, Pós-graduação, Tecnólogo e Extensão",
+    "description": "Conheça o Polo UniBF Campos Lindos em Cristalina-GO. Fale com a equipe, consulte cursos disponíveis e dê o próximo passo na sua formação.",
+    "keywords": [
+      "UniBF Campos Lindos",
+      "Polo UniBF Cristalina",
+      "faculdade em Cristalina GO",
+      "graduação",
+      "pós-graduação",
+      "tecnólogo",
+      "educação a distância",
+      "polo universitário"
+    ],
+    "local_seo": true,
+    "structured_data": "LocalBusiness/EducationalOrganization básico sem promessas comerciais"
+  },
+  "whatsapp_integration": {
+    "primary_number": "5561982367003",
+    "floating_button": true,
+    "templates": {
+      "general": "Olá, vim pelo site do Polo UniBF Campos Lindos e gostaria de mais informações.",
+      "course_interest": "Olá, tenho interesse no curso {{course}}. Pode me passar informações oficiais?",
+      "visit": "Olá, gostaria de saber como visitar o Polo UniBF Campos Lindos."
+    }
+  },
+  "admin_panel": {
+    "route": "/admin",
+    "mvp_security": {
+      "password_env": "ADMIN_ACCESS_TOKEN",
+      "fallback": "Se não houver token configurado, mostrar aviso para configurar variável de ambiente."
+    },
+    "features": [
+      "Visualizar leads capturados",
+      "Filtrar por status",
+      "Atualizar status do lead",
+      "Exportar CSV",
+      "Copiar mensagem para WhatsApp",
+      "Ver resumo de métricas simples"
+    ]
+  },
+  "environment_variables": {
+    "required_for_mvp": [
+      {
+        "name": "NEXT_PUBLIC_SITE_NAME",
+        "example": "Polo UniBF Campos Lindos"
+      },
+      {
+        "name": "NEXT_PUBLIC_WHATSAPP_NUMBER",
+        "example": "5561982367003"
+      },
+      {
+        "name": "ADMIN_ACCESS_TOKEN",
+        "example": "crie-uma-senha-forte-no-replit-secrets"
+      }
+    ],
+    "future_optional": [
+      "OPENAI_API_KEY",
+      "OPENROUTER_API_KEY",
+      "SUPABASE_URL",
+      "SUPABASE_ANON_KEY",
+      "SUPABASE_SERVICE_ROLE_KEY",
+      "RESEND_API_KEY",
+      "META_PIXEL_ID",
+      "GOOGLE_ANALYTICS_ID"
+    ],
+    "security_rule": "Nunca colocar chaves reais no código. Usar Replit Secrets, Vercel Environment Variables ou Railway Variables."
+  },
+  "file_structure": {
+    "create": [
+      "app/page.tsx",
+      "app/cursos/page.tsx",
+      "app/graduacao/page.tsx",
+      "app/pos-graduacao/page.tsx",
+      "app/tecnologo/page.tsx",
+      "app/extensao/page.tsx",
+      "app/sobre/page.tsx",
+      "app/contato/page.tsx",
+      "app/links/page.tsx",
+      "app/admin/page.tsx",
+      "components/site/Header.tsx",
+      "components/site/Footer.tsx",
+      "components/site/HeroSection.tsx",
+      "components/site/CourseCard.tsx",
+      "components/site/LeadForm.tsx",
+      "components/site/AgentChatWidget.tsx",
+      "components/site/WhatsAppButton.tsx",
+      "components/site/FAQSection.tsx",
+      "components/admin/AdminDashboard.tsx",
+      "data/courses.ts",
+      "data/faqs.ts",
+      "lib/whatsapp.ts",
+      "lib/leads.ts",
+      "lib/csv.ts",
+      "README.md",
+      ".env.example"
+    ]
+  },
+  "acceptance_criteria": [
+    "Site abre sem erro no Replit.",
+    "Home premium responsiva funcionando.",
+    "Botão de WhatsApp abre conversa com mensagem pronta.",
+    "Agente flutuante abre, coleta dados e encaminha para WhatsApp.",
+    "Formulário salva leads localmente no MVP.",
+    "Admin mostra leads salvos e permite exportar CSV.",
+    "Catálogo de cursos tem busca e filtro por modalidade.",
+    "Nenhuma chave secreta aparece no código.",
+    "Nenhuma informação comercial falsa é afirmada.",
+    "Layout fica bonito em celular e desktop.",
+    "Projeto pronto para subir no GitHub e depois passar pelo Codex."
+  ],
+  "replit_execution_instructions": {
+    "step_1": "Criar o projeto usando Next.js + TypeScript + Tailwind.",
+    "step_2": "Construir primeiro o MVP funcional com dados mockados.",
+    "step_3": "Garantir responsividade mobile.",
+    "step_4": "Testar npm install, npm run build e npm run dev.",
+    "step_5": "Gerar README com instruções de deploy para Replit, GitHub, Vercel e Railway.",
+    "step_6": "Não implementar integrações pagas ainda. Apenas preparar variáveis e pontos de extensão."
+  },
+  "copywriting": {
+    "hero_title": "Seu futuro começa com uma decisão.",
+    "hero_subtitle": "O Polo UniBF Campos Lindos te ajuda a encontrar o melhor caminho para graduação, pós-graduação, tecnólogo e extensão.",
+    "primary_cta": "Falar com o polo",
+    "secondary_cta": "Ver cursos",
+    "trust_badges": [
+      "Atendimento local",
+      "Orientação para escolher seu curso",
+      "Graduação, pós, tecnólogo e extensão",
+      "Informações confirmadas com a equipe"
+    ],
+    "final_cta_title": "Pronto para dar o próximo passo?",
+    "final_cta_text": "Fale com o Polo UniBF Campos Lindos e consulte as opções disponíveis para sua formação."
+  },
+  "future_roadmap": {
+    "phase_1": "Site premium + WhatsApp + agente MVP + leads locais",
+    "phase_2": "GitHub + Codex auditando código e melhorando UX",
+    "phase_3": "Deploy Vercel/Railway com domínio oficial",
+    "phase_4": "Supabase para leads reais e painel administrativo",
+    "phase_5": "Agente IA real com OpenAI/OpenRouter treinado em FAQs oficiais",
+    "phase_6": "Integração com Senara para gerar vídeos, Reels, Shorts e campanhas",
+    "phase_7": "Funil completo: conteúdo → site → agente → WhatsApp → matrícula",
+    "phase_8": "Tráfego pago com pixel, analytics e relatórios"
+  },
+  "final_instruction_to_replit": "Construa agora o MVP funcional completo com visual premium, código limpo, componentes reutilizáveis, textos em português brasileiro, segurança básica, sem chaves hardcoded, sem promessas comerciais não confirmadas e com foco total em conversão para WhatsApp."
+}

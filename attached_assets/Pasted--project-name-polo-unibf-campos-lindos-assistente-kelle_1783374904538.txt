@@ -1,0 +1,420 @@
+{
+  "project": {
+    "name": "polo-unibf-campos-lindos-assistente-kelle",
+    "version": "1.0.0",
+    "language": "pt-BR",
+    "type": "website_ai_assistant_widget",
+    "status": "ready_for_replit",
+    "goal": "Integrar a Professora Kelle como assistente virtual premium no site do Polo UniBF Campos Lindos, com destaque visual, saudação automática, botões rápidos e redirecionamento para WhatsApp."
+  },
+  "brand": {
+    "site_name": "Polo UniBF Campos Lindos",
+    "institution_name": "UniBF Centro Universitário",
+    "assistant_name": "Professora Kelle",
+    "assistant_display_name": "Professora Kelle",
+    "assistant_role": "Assistente Virtual do Polo UniBF Campos Lindos",
+    "assistant_subtitle": "Atendimento inteligente para orientar visitantes sobre cursos, modalidades e próximos passos.",
+    "tone": [
+      "acolhedora",
+      "profissional",
+      "educacional",
+      "simples",
+      "direta",
+      "humana",
+      "confiável"
+    ],
+    "colors": {
+      "primary": "#003B5C",
+      "primary_dark": "#002F4B",
+      "secondary": "#00B050",
+      "accent": "#7CFF2B",
+      "assistant_blue": "#0B5FFF",
+      "light_bg": "#F5F7FA",
+      "card_bg": "#0A3A5A",
+      "text_dark": "#0F172A",
+      "text_light": "#FFFFFF",
+      "text_muted": "#94A3B8",
+      "border": "#D9E2EC",
+      "success": "#10B981"
+    },
+    "visual_style": {
+      "keywords": [
+        "premium",
+        "institucional",
+        "educacional",
+        "moderno",
+        "limpo",
+        "alta conversão",
+        "assistente inteligente"
+      ],
+      "avatar_shape": "rounded-circle",
+      "widget_style": "glassmorphism-premium",
+      "button_style": "pill-rounded",
+      "shadow": "soft-large"
+    }
+  },
+  "assistant_avatar": {
+    "enabled": true,
+    "name": "Professora Kelle",
+    "alt": "Avatar da Professora Kelle, assistente virtual do Polo UniBF Campos Lindos",
+    "asset_path": "/assets/avatars/professora-kelle-avatar.png",
+    "source_reference_local_path": "",
+    "style_description": "Avatar feminino profissional, cabelo longo escuro, fundo azul institucional, roupa azul, aparência acolhedora, elegante e moderna.",
+    "crop_preference": "head-and-shoulders",
+    "display_sizes": {
+      "floating_button": 84,
+      "widget_header": 72,
+      "home_section": 220,
+      "mobile_floating_button": 72
+    }
+  },
+  "site_context": {
+    "public_name": "Polo UniBF Campos Lindos",
+    "location_display": "Cristalina-GO e região",
+    "address": "R. Sem Nome, Qd. 1, Lt. 25, Sala 2, Setor D, Campo Lindo, Cristalina-GO, CEP 73850-000",
+    "phones": [
+      "(61) 9 8157-1394",
+      "(61) 9 8236-7003"
+    ],
+    "primary_whatsapp_number": "5561981571394",
+    "secondary_whatsapp_number": "5561982367003",
+    "instagram": "@universidadeunibf",
+    "business_hours": {
+      "weekdays": "Segunda a sexta: 08h às 18h",
+      "saturday": "Sábado: 08h às 12h"
+    }
+  },
+  "assistant_behavior": {
+    "auto_open_on_first_visit": true,
+    "auto_open_delay_ms": 2500,
+    "auto_open_only_once_per_session": true,
+    "show_greeting_bubble": true,
+    "show_pulse_animation": true,
+    "enable_typing_effect": true,
+    "enable_quick_replies": true,
+    "minimize_to_avatar": true,
+    "reopen_on_scroll_percentage": 35,
+    "desktop_default_state": "teaser-open",
+    "mobile_default_state": "avatar-bubble",
+    "close_behavior": "remember_until_next_session",
+    "lead_capture_enabled": true,
+    "redirect_priority": "whatsapp",
+    "secondary_action": "lead_form"
+  },
+  "assistant_copy": {
+    "floating_bubble_text": "Oi! Eu sou a Professora Kelle 👋 Posso te ajudar a escolher o melhor caminho para sua formação.",
+    "welcome_title": "Olá! Eu sou a Professora Kelle",
+    "welcome_subtitle": "Assistente Virtual do Polo UniBF Campos Lindos",
+    "welcome_message": "Estou aqui para ajudar você com informações sobre graduação, pós-graduação, tecnólogo, extensão, atendimento local e próximos passos. Se quiser, também posso te encaminhar direto para o WhatsApp da equipe.",
+    "cta_primary_label": "Falar com a Professora Kelle",
+    "cta_secondary_label": "Atendimento oficial",
+    "home_section_badge": "ASSISTENTE VIRTUAL",
+    "home_section_title": "Conheça a Professora Kelle",
+    "home_section_description": "Uma assistente virtual criada para orientar visitantes e facilitar o contato com a equipe do polo. Ela direciona você para informações seguras e para o atendimento oficial quando necessário.",
+    "home_section_note": "A Professora Kelle é uma assistente virtual de orientação e não substitui o atendimento humano oficial do polo."
+  },
+  "quick_actions": [
+    {
+      "id": "graduacao",
+      "label": "Quero fazer graduação",
+      "icon": "graduation-cap",
+      "type": "whatsapp",
+      "message": "Olá, Professora Kelle! Tenho interesse em graduação. Pode me orientar?"
+    },
+    {
+      "id": "pos-graduacao",
+      "label": "Quero fazer pós-graduação",
+      "icon": "award",
+      "type": "whatsapp",
+      "message": "Olá, Professora Kelle! Tenho interesse em pós-graduação. Pode me orientar?"
+    },
+    {
+      "id": "tecnologo",
+      "label": "Quero saber sobre tecnólogo",
+      "icon": "briefcase",
+      "type": "whatsapp",
+      "message": "Olá, Professora Kelle! Quero saber mais sobre cursos tecnólogos."
+    },
+    {
+      "id": "extensao",
+      "label": "Quero saber sobre extensão",
+      "icon": "book-open",
+      "type": "whatsapp",
+      "message": "Olá, Professora Kelle! Quero saber mais sobre cursos de extensão."
+    },
+    {
+      "id": "valores",
+      "label": "Consultar valores e condições",
+      "icon": "wallet",
+      "type": "whatsapp",
+      "message": "Olá, Professora Kelle! Quero consultar valores, modalidades e condições disponíveis."
+    },
+    {
+      "id": "visita",
+      "label": "Quero visitar o polo",
+      "icon": "map-pin",
+      "type": "whatsapp",
+      "message": "Olá, Professora Kelle! Quero agendar uma visita ao polo."
+    },
+    {
+      "id": "human",
+      "label": "Falar com atendimento humano",
+      "icon": "message-circle",
+      "type": "whatsapp",
+      "message": "Olá! Quero falar com o atendimento oficial do Polo UniBF Campos Lindos."
+    }
+  ],
+  "widget_ui": {
+    "enabled": true,
+    "position": "bottom-right",
+    "offset": {
+      "desktop_bottom": 24,
+      "desktop_right": 24,
+      "mobile_bottom": 20,
+      "mobile_right": 16
+    },
+    "z_index": 9999,
+    "launcher": {
+      "type": "avatar-with-label",
+      "show_name": true,
+      "name_label": "Professora Kelle",
+      "status_label": "Online agora",
+      "show_glow": true,
+      "show_badge": true,
+      "badge_text": "Assistente IA",
+      "pulse_ring": true
+    },
+    "panel": {
+      "width_desktop": 380,
+      "width_mobile": "calc(100vw - 24px)",
+      "border_radius": 24,
+      "backdrop_blur": true,
+      "shadow": "0 20px 50px rgba(0,0,0,0.18)",
+      "header": {
+        "show_avatar": true,
+        "show_role": true,
+        "show_status": true,
+        "status_text": "Online",
+        "header_background": "gradient-blue"
+      },
+      "body": {
+        "show_intro_message": true,
+        "show_quick_actions": true,
+        "show_lead_fields": false,
+        "show_whatsapp_button": true
+      },
+      "footer": {
+        "show_disclaimer": true,
+        "disclaimer_text": "Para confirmar cursos, valores e condições, você será direcionado para o atendimento oficial."
+      }
+    }
+  },
+  "home_section": {
+    "enabled": true,
+    "insert_after_section_id": "hero",
+    "component_type": "assistant-highlight-section",
+    "layout": "two-columns",
+    "background": {
+      "type": "gradient",
+      "colors": [
+        "#003B5C",
+        "#002F4B"
+      ]
+    },
+    "left_column": {
+      "badge": "ASSISTENTE VIRTUAL",
+      "title": "Conheça a Professora Kelle",
+      "description": "Uma assistente virtual criada para orientar visitantes e facilitar o contato com a equipe do polo.",
+      "support_text": "Ela direciona você para o atendimento oficial com agilidade e clareza.",
+      "cta_primary": {
+        "label": "Falar com a Professora Kelle",
+        "type": "scroll_to_widget"
+      },
+      "cta_secondary": {
+        "label": "Atendimento oficial",
+        "type": "whatsapp",
+        "message": "Olá! Quero falar com o atendimento oficial do Polo UniBF Campos Lindos."
+      }
+    },
+    "right_column": {
+      "show_avatar": true,
+      "show_chat_mockup": true,
+      "mockup_messages": [
+        {
+          "role": "assistant",
+          "text": "Olá! Eu sou a Professora Kelle. Posso te ajudar a encontrar o melhor caminho para sua formação."
+        },
+        {
+          "role": "assistant",
+          "text": "Escolha uma opção abaixo para começar 👇"
+        }
+      ]
+    }
+  },
+  "lead_capture": {
+    "enabled": true,
+    "mode": "optional",
+    "storage_mvp": "localStorage",
+    "storage_future": "Supabase",
+    "fields": [
+      {
+        "name": "full_name",
+        "label": "Nome",
+        "type": "text",
+        "required": false
+      },
+      {
+        "name": "whatsapp",
+        "label": "WhatsApp",
+        "type": "tel",
+        "required": false
+      },
+      {
+        "name": "interest",
+        "label": "Interesse",
+        "type": "select",
+        "required": false,
+        "options": [
+          "Graduação",
+          "Pós-graduação",
+          "Tecnólogo",
+          "Extensão",
+          "Visita ao polo",
+          "Atendimento humano"
+        ]
+      }
+    ],
+    "capture_points": [
+      "assistant_widget",
+      "contact_page_form",
+      "course_page_cta"
+    ]
+  },
+  "whatsapp_integration": {
+    "enabled": true,
+    "provider": "wa.me",
+    "primary_number": "5561981571394",
+    "fallback_number": "5561982367003",
+    "open_in_new_tab": true,
+    "default_message": "Olá! Vim pelo site do Polo UniBF Campos Lindos e gostaria de receber orientação.",
+    "messages": {
+      "graduacao": "Olá, Professora Kelle! Tenho interesse em graduação. Pode me orientar?",
+      "pos_graduacao": "Olá, Professora Kelle! Tenho interesse em pós-graduação. Pode me orientar?",
+      "tecnologo": "Olá, Professora Kelle! Quero saber mais sobre cursos tecnólogos.",
+      "extensao": "Olá, Professora Kelle! Quero saber mais sobre cursos de extensão.",
+      "valores": "Olá, Professora Kelle! Quero consultar valores e condições disponíveis.",
+      "visita": "Olá, Professora Kelle! Quero agendar uma visita ao polo.",
+      "atendimento_humano": "Olá! Quero falar com o atendimento oficial do Polo UniBF Campos Lindos.",
+      "curso_template": "Olá! Tenho interesse no curso {{course_name}}. Pode me passar mais informações?"
+    }
+  },
+  "assistant_prompt_logic": {
+    "purpose": "Orientar visitantes e levar para atendimento oficial.",
+    "identity": "Você é a Professora Kelle, assistente virtual do Polo UniBF Campos Lindos. Sua função é acolher o visitante, entender o interesse principal e direcioná-lo para o WhatsApp oficial ou para o conteúdo correto dentro do site.",
+    "rules": [
+      "Sempre responder em português do Brasil.",
+      "Seja acolhedora, clara, profissional e objetiva.",
+      "Nunca invente cursos, valores, promoções ou bolsas.",
+      "Nunca prometa emprego, diploma garantido ou reconhecimento sem base oficial.",
+      "Quando perguntarem sobre valores, condições, disponibilidade ou promoções, direcione para o atendimento oficial.",
+      "Quando perguntarem sobre modalidades, explique de forma simples e segura.",
+      "Priorize sempre levar o visitante para o WhatsApp oficial."
+    ],
+    "safe_responses": {
+      "unknown_course": "Posso te ajudar com isso, mas para confirmar cursos disponíveis no momento, o ideal é falar com a equipe oficial do polo pelo WhatsApp.",
+      "values": "Valores e condições podem variar. Para te passar a informação correta, vou te direcionar para o atendimento oficial do polo.",
+      "promotions": "Promoções e condições especiais precisam ser confirmadas diretamente com a equipe oficial.",
+      "recognition": "As informações institucionais e acadêmicas devem ser confirmadas com base nos canais oficiais da UniBF e no atendimento do polo."
+    }
+  },
+  "faq_assistant_support": {
+    "enabled": true,
+    "faq_items": [
+      {
+        "question": "Como faço para saber quais cursos estão disponíveis?",
+        "answer": "Você pode falar com a equipe do polo pelo WhatsApp para confirmar as opções disponíveis no momento."
+      },
+      {
+        "question": "Como confirmo valores e condições?",
+        "answer": "Valores, condições e promoções devem ser confirmados diretamente no atendimento oficial."
+      },
+      {
+        "question": "Posso visitar o polo?",
+        "answer": "Sim. Você pode falar com a equipe para agendar uma visita."
+      },
+      {
+        "question": "O polo ajuda a escolher o curso?",
+        "answer": "Sim. A equipe pode orientar você sobre modalidades, áreas de interesse e próximos passos."
+      }
+    ]
+  },
+  "compliance": {
+    "assistant_disclaimer": "A Professora Kelle é uma assistente virtual de orientação e não substitui o atendimento humano oficial do Polo UniBF Campos Lindos.",
+    "critical_rules": [
+      "Não inventar cursos.",
+      "Não inventar valores.",
+      "Não inventar promoções.",
+      "Não afirmar bolsas sem autorização.",
+      "Não usar depoimentos falsos.",
+      "Não prometer resultados acadêmicos ou profissionais.",
+      "Sempre direcionar assuntos comerciais para o atendimento oficial."
+    ],
+    "safe_cta": "Fale com a equipe oficial pelo WhatsApp para confirmar cursos, valores, condições e próximos passos."
+  },
+  "integration_points": {
+    "replace_existing_assistant_name": {
+      "from": "Assistente Kelly",
+      "to": "Professora Kelle"
+    },
+    "replace_existing_home_section_title": {
+      "from": "Conheça a Assistente Kelly",
+      "to": "Conheça a Professora Kelle"
+    },
+    "insert_points": [
+      {
+        "page": "home",
+        "section": "hero",
+        "action": "insert assistant section after hero"
+      },
+      {
+        "page": "all",
+        "section": "floating-widget",
+        "action": "enable global assistant widget"
+      }
+    ],
+    "pages_using_assistant": [
+      "home",
+      "cursos",
+      "sobre",
+      "faq",
+      "contato"
+    ]
+  },
+  "analytics": {
+    "enabled": true,
+    "events": [
+      "assistant_widget_open",
+      "assistant_widget_close",
+      "assistant_quick_action_click",
+      "assistant_whatsapp_redirect",
+      "assistant_home_section_cta_click",
+      "assistant_auto_open_seen"
+    ]
+  },
+  "replit_codex_instruction": {
+    "task": "Substituir a assistente atual pelo módulo premium da Professora Kelle.",
+    "prompt": "Atualize o site do Polo UniBF Campos Lindos para substituir toda ocorrência de 'Assistente Kelly' por 'Professora Kelle'. Use o avatar em /assets/avatars/professora-kelle-avatar.png. Crie um widget flutuante premium no canto inferior direito com grande destaque visual, avatar redondo, glow/pulse, etiqueta 'Assistente IA', status 'Online', saudação automática após 2.5 segundos, botões rápidos e redirecionamento para WhatsApp. Adicione também uma seção premium na home chamada 'Conheça a Professora Kelle', logo abaixo do hero, com fundo azul institucional, texto de apresentação, mockup de conversa e CTAs. Todos os botões devem abrir WhatsApp com mensagens pré-preenchidas. Preserve a identidade visual do site, usando azul UniBF, verde nos CTAs, tipografia premium e layout limpo. Não inventar cursos, valores ou promoções. Mostrar disclaimer de que a assistente não substitui o atendimento oficial."
+  },
+  "final_checklist": [
+    "Trocar nome 'Assistente Kelly' para 'Professora Kelle'",
+    "Salvar o avatar final em /assets/avatars/professora-kelle-avatar.png",
+    "Ativar widget flutuante em todas as páginas",
+    "Ativar auto saudação na primeira visita",
+    "Configurar botões rápidos",
+    "Configurar redirecionamento para WhatsApp oficial",
+    "Adicionar seção premium da Professora Kelle na home",
+    "Revisar responsividade mobile",
+    "Remover qualquer badge do Replit na versão final",
+    "Testar todos os links e CTAs"
+  ]
+}

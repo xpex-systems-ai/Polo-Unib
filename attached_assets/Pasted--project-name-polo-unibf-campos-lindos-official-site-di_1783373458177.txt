@@ -1,0 +1,1497 @@
+{
+  "project": {
+    "name": "polo-unibf-campos-lindos-official-site",
+    "display_name": "Polo UniBF Campos Lindos",
+    "version": "2.0-premium-ai",
+    "type": "institutional_lead_generation_website",
+    "language": "pt-BR",
+    "mission": "Criar um site institucional premium, moderno, responsivo e com inteligência artificial para captar interessados em cursos do Polo UniBF Campos Lindos via WhatsApp, formulário e Assistente Kelly.",
+    "main_goal": "Transformar visitantes em leads qualificados para atendimento humano no WhatsApp.",
+    "public_positioning": "Polo educacional local com atendimento acolhedor, orientação personalizada e conexão com oportunidades de formação.",
+    "internal_engine": "Senara Media Engine + XpeX EduTech",
+    "status": "ready_for_replit_codex_refactor"
+  },
+  "brand": {
+    "official_public_name": "Polo UniBF Campos Lindos",
+    "short_name": "UniBF Campos Lindos",
+    "institution_reference": "UniBF Centro Universitário",
+    "tone": [
+      "profissional",
+      "acolhedor",
+      "educacional",
+      "local",
+      "confiável",
+      "moderno",
+      "direto",
+      "humano"
+    ],
+    "visual_style": {
+      "inspiration": "Site oficial UniBF",
+      "style_keywords": [
+        "premium",
+        "educacional",
+        "limpo",
+        "institucional",
+        "moderno",
+        "alta conversão",
+        "tecnologia com IA"
+      ],
+      "avoid": [
+        "visual poluído",
+        "promessas exageradas",
+        "excesso de texto",
+        "informações não autorizadas",
+        "depoimentos falsos",
+        "badges do Replit",
+        "marcas de builder",
+        "layout genérico"
+      ]
+    },
+    "colors": {
+      "primary_dark_blue": "#003B5C",
+      "deep_navy": "#002F4B",
+      "secondary_green": "#00B050",
+      "neon_green_cta": "#7CFF2B",
+      "light_blue": "#EAF6FF",
+      "white": "#FFFFFF",
+      "soft_gray": "#F5F7FA",
+      "text_dark": "#0F172A",
+      "text_muted": "#64748B",
+      "border": "#E2E8F0",
+      "success": "#10B981",
+      "warning": "#F59E0B"
+    },
+    "typography": {
+      "heading_font": "Inter, Poppins, system-ui, sans-serif",
+      "body_font": "Inter, system-ui, sans-serif",
+      "heading_weight": "700-800",
+      "body_weight": "400-500",
+      "button_weight": "700"
+    },
+    "logo": {
+      "primary_logo": {
+        "type": "image",
+        "alt": "Logo UniBF Campos Lindos",
+        "path": "/assets/logos/unibf-campos-lindos-logo.svg",
+        "fallback_text": "UniBF Campos Lindos",
+        "usage": [
+          "header",
+          "footer",
+          "social_preview",
+          "link_bio"
+        ]
+      },
+      "official_institution_logo": {
+        "type": "image",
+        "alt": "Logo UniBF Centro Universitário",
+        "path": "/assets/logos/unibf-centro-universitario.svg",
+        "usage": [
+          "institutional_authority_section",
+          "footer",
+          "mec_reference_section"
+        ]
+      },
+      "assistant_kelly_avatar": {
+        "type": "image",
+        "alt": "Assistente Kelly IA",
+        "path": "/assets/avatars/assistente-kelly.png",
+        "style": "avatar educacional feminino, simpático, moderno, profissional, pequeno widget flutuante, sem parecer funcionária real",
+        "usage": [
+          "floating_ai_widget",
+          "home_ai_section",
+          "faq_cta"
+        ]
+      },
+      "senara_presenter_avatar": {
+        "type": "image",
+        "alt": "Senara Apresentadora Digital",
+        "path": "/assets/avatars/senara-presenter.png",
+        "style": "apresentadora digital de conteúdo educacional, moderna, tecnológica, institucional",
+        "usage": [
+          "content_engine_section",
+          "future_video_section"
+        ]
+      }
+    },
+    "image_library": {
+      "hero_images": [
+        {
+          "id": "hero_students_future",
+          "path": "/assets/images/hero-estudantes-futuro.jpg",
+          "alt": "Estudantes planejando o futuro com apoio educacional",
+          "usage": "home_hero",
+          "prompt_if_missing": "Imagem premium educacional com jovens e adultos brasileiros estudando, atmosfera moderna, azul escuro e verde, sensação de futuro, carreira e oportunidade, sem marcas de terceiros."
+        },
+        {
+          "id": "hero_local_polo",
+          "path": "/assets/images/polo-local-atendimento.jpg",
+          "alt": "Atendimento local no Polo UniBF Campos Lindos",
+          "usage": "about_polo",
+          "prompt_if_missing": "Foto realista de atendimento educacional local, mesa organizada, consultora atendendo aluno, ambiente simples e acolhedor, cores azul e verde."
+        }
+      ],
+      "section_images": [
+        {
+          "id": "courses_catalog",
+          "path": "/assets/images/catalogo-cursos.jpg",
+          "alt": "Catálogo de cursos e modalidades",
+          "usage": "courses_section"
+        },
+        {
+          "id": "whatsapp_support",
+          "path": "/assets/images/atendimento-whatsapp.jpg",
+          "alt": "Atendimento pelo WhatsApp",
+          "usage": "contact_cta"
+        },
+        {
+          "id": "mec_authority",
+          "path": "/assets/images/registro-mec-emec.jpg",
+          "alt": "Referência institucional e-MEC",
+          "usage": "authority_section"
+        },
+        {
+          "id": "academy_bridge",
+          "path": "/assets/images/xpex-academy-bridge.jpg",
+          "alt": "Trilhas gratuitas e oportunidades de formação",
+          "usage": "future_xpex_academy_section"
+        }
+      ],
+      "real_polo_photos_required": [
+        {
+          "id": "fachada_polo",
+          "path": "/assets/polo/fachada.jpg",
+          "required": true,
+          "alt": "Fachada do Polo UniBF Campos Lindos"
+        },
+        {
+          "id": "sala_atendimento",
+          "path": "/assets/polo/sala-atendimento.jpg",
+          "required": true,
+          "alt": "Sala de atendimento do Polo UniBF Campos Lindos"
+        },
+        {
+          "id": "equipe_polo",
+          "path": "/assets/polo/equipe.jpg",
+          "required": false,
+          "alt": "Equipe do Polo UniBF Campos Lindos"
+        },
+        {
+          "id": "mapa_localizacao",
+          "path": "/assets/polo/mapa-localizacao.png",
+          "required": false,
+          "alt": "Localização do Polo UniBF Campos Lindos"
+        }
+      ]
+    }
+  },
+  "official_data": {
+    "polo": {
+      "name": "Polo UniBF Campos Lindos",
+      "city_display": "Cristalina-GO e região",
+      "address": "R. Sem Nome, Qd. 1, Lt. 25, Sala 2, Setor D, Campo Lindo, Cristalina-GO, CEP 73850-000",
+      "phones": [
+        "(61) 8 236-7003",
+        "(61) 9 8157-1394"
+      ],
+      "primary_whatsapp": "5561981571394",
+      "secondary_whatsapp": "556182367003",
+      "instagram": "@universidadeunibf",
+      "facebook": "",
+      "tiktok": "",
+      "youtube": "",
+      "business_hours": {
+        "weekdays": "Segunda a sexta: 08h às 18h",
+        "saturday": "Sábado: 08h às 12h"
+      },
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=R.+Sem+Nome,+Qd.+1,+Lt.+25,+Sala+2,+Setor+D,+Campo+Lindo,+Cristalina-GO"
+    },
+    "institution": {
+      "name": "UniBF Centro Universitário",
+      "maintainer": "União Brasileira de Faculdades - UNIBF",
+      "cnpj": "07.481.324/0001-38",
+      "official_site": "https://www.unibf.com.br",
+      "official_email": "secretaria@unibf.com.br",
+      "headquarters": "Rua Olavo Bilac, 78 - Centro - Paraíso do Norte - PR",
+      "emec_status": "Ativa",
+      "academic_organization": "Centro Universitário",
+      "credential_type": "EaD / Presencial / Semipresencial",
+      "mec_reference_note": "Informações institucionais devem ser conferidas nos canais oficiais da UniBF e no sistema e-MEC.",
+      "usage_rule": "Usar apenas como referência institucional segura, sem criar promessas comerciais não autorizadas."
+    },
+    "validation_required": [
+      "Nome oficial exato do polo",
+      "Endereço final validado",
+      "WhatsApp principal",
+      "Instagram oficial do polo",
+      "Lista oficial de cursos autorizados para divulgação",
+      "Valores e promoções autorizadas",
+      "Fotos reais do polo",
+      "Autorização de uso de marca",
+      "Regras de divulgação da instituição"
+    ]
+  },
+  "compliance": {
+    "critical_rules": [
+      "Não inventar cursos.",
+      "Não inventar valores.",
+      "Não inventar descontos.",
+      "Não inventar bolsas.",
+      "Não prometer reconhecimento, diploma, emprego ou aprovação sem material oficial.",
+      "Não usar depoimentos falsos.",
+      "Não reutilizar vídeos de outros polos como se fossem próprios sem autorização.",
+      "Não misturar cursos gratuitos da XpeX Academy com cursos oficiais da UniBF como se fossem a mesma instituição.",
+      "Toda informação comercial deve orientar o usuário a confirmar com a equipe do polo.",
+      "Todo CTA deve levar para atendimento humano ou WhatsApp oficial."
+    ],
+    "safe_phrases": [
+      "Consulte as opções disponíveis com a equipe do polo.",
+      "Fale com nossa equipe para confirmar cursos, valores e condições.",
+      "As informações podem variar conforme disponibilidade e orientação oficial.",
+      "Nossa equipe orienta você sobre o melhor caminho para sua formação.",
+      "Condições e modalidades devem ser confirmadas no atendimento oficial."
+    ],
+    "footer_disclaimer": "Consulte cursos, valores, condições, modalidades e formas de ingresso diretamente com o atendimento oficial do Polo UniBF Campos Lindos."
+  },
+  "navigation": {
+    "header": {
+      "logo_position": "left",
+      "menu_position": "center",
+      "cta_position": "right",
+      "sticky": true,
+      "items": [
+        {
+          "label": "Início",
+          "href": "/"
+        },
+        {
+          "label": "Cursos",
+          "href": "/cursos"
+        },
+        {
+          "label": "Sobre o Polo",
+          "href": "/sobre"
+        },
+        {
+          "label": "Dúvidas",
+          "href": "/faq"
+        },
+        {
+          "label": "Contato",
+          "href": "/contato"
+        }
+      ],
+      "primary_cta": {
+        "label": "Fale conosco",
+        "href": "whatsapp:primary",
+        "style": "green_pill"
+      }
+    },
+    "footer": {
+      "columns": [
+        {
+          "title": "UniBF Campos Lindos",
+          "items": [
+            "Trazendo ensino superior de qualidade e orientação local para Cristalina-GO e região.",
+            "Consulte condições no atendimento oficial."
+          ]
+        },
+        {
+          "title": "Modalidades",
+          "items": [
+            {
+              "label": "Graduação",
+              "href": "/graduacao"
+            },
+            {
+              "label": "Pós-graduação",
+              "href": "/pos-graduacao"
+            },
+            {
+              "label": "Tecnólogo",
+              "href": "/tecnologo"
+            },
+            {
+              "label": "Extensão",
+              "href": "/extensao"
+            }
+          ]
+        },
+        {
+          "title": "Links rápidos",
+          "items": [
+            {
+              "label": "Catálogo de Cursos",
+              "href": "/cursos"
+            },
+            {
+              "label": "Sobre o Polo",
+              "href": "/sobre"
+            },
+            {
+              "label": "Contato",
+              "href": "/contato"
+            },
+            {
+              "label": "Links da Bio",
+              "href": "/links"
+            },
+            {
+              "label": "Perguntas Frequentes",
+              "href": "/faq"
+            }
+          ]
+        },
+        {
+          "title": "Contato",
+          "items": [
+            "(61) 9 8157-1394",
+            "(61) 8 236-7003",
+            "R. Sem Nome, Qd. 1, Lt. 25, Sala 2, Setor D, Campo Lindo, Cristalina-GO"
+          ]
+        }
+      ],
+      "social_links": [
+        {
+          "platform": "Instagram",
+          "href": "https://instagram.com/universidadeunibf",
+          "icon": "instagram"
+        },
+        {
+          "platform": "Facebook",
+          "href": "",
+          "icon": "facebook"
+        },
+        {
+          "platform": "WhatsApp",
+          "href": "whatsapp:primary",
+          "icon": "whatsapp"
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "route": "/",
+      "name": "Home",
+      "seo": {
+        "title": "Polo UniBF Campos Lindos | Graduação, Pós, Tecnólogo e Extensão",
+        "description": "Fale com o Polo UniBF Campos Lindos e receba orientação sobre cursos, modalidades e próximos passos para sua formação.",
+        "keywords": [
+          "Polo UniBF Campos Lindos",
+          "faculdade em Cristalina GO",
+          "graduação",
+          "pós-graduação",
+          "tecnólogo",
+          "extensão",
+          "ensino superior",
+          "WhatsApp"
+        ]
+      },
+      "sections": [
+        {
+          "id": "hero",
+          "type": "hero_premium",
+          "background": {
+            "type": "gradient",
+            "colors": [
+              "#002F4B",
+              "#003B5C"
+            ],
+            "image": "/assets/images/hero-estudantes-futuro.jpg",
+            "overlay": true
+          },
+          "badge": "Matrículas e informações em Cristalina-GO",
+          "title": "Seu futuro começa com uma decisão.",
+          "highlight": "uma decisão",
+          "subtitle": "Receba orientação do Polo UniBF Campos Lindos para encontrar uma formação alinhada ao seu momento, sua carreira e seus objetivos.",
+          "primary_cta": {
+            "label": "Falar com o Polo",
+            "action": "whatsapp",
+            "message": "Olá! Vim pelo site do Polo UniBF Campos Lindos e gostaria de receber orientação sobre cursos e modalidades."
+          },
+          "secondary_cta": {
+            "label": "Ver cursos",
+            "href": "/cursos"
+          },
+          "trust_items": [
+            "Atendimento local",
+            "Orientação pelo WhatsApp",
+            "Graduação, pós, tecnólogo e extensão",
+            "Informações confirmadas pela equipe do polo"
+          ]
+        },
+        {
+          "id": "assistant-kelly-card",
+          "type": "ai_assistant_intro",
+          "title": "Conheça a Assistente Kelly",
+          "subtitle": "Uma assistente virtual criada para orientar visitantes e facilitar o contato com a equipe do polo.",
+          "avatar": "/assets/avatars/assistente-kelly.png",
+          "assistant_name": "Assistente Kelly",
+          "message": "Olá! Eu posso te ajudar a escolher o melhor caminho para sua formação. Me diga o que você procura e eu te direciono para o atendimento certo.",
+          "quick_actions": [
+            {
+              "label": "Quero fazer graduação",
+              "message": "Olá, Kelly! Tenho interesse em cursos de graduação. Pode me orientar?"
+            },
+            {
+              "label": "Quero fazer pós-graduação",
+              "message": "Olá, Kelly! Tenho interesse em pós-graduação. Pode me orientar?"
+            },
+            {
+              "label": "Quero saber sobre tecnólogo",
+              "message": "Olá, Kelly! Quero saber mais sobre cursos tecnólogos. Pode me ajudar?"
+            },
+            {
+              "label": "Quero falar com atendimento",
+              "message": "Olá! Quero falar com a equipe do Polo UniBF Campos Lindos."
+            }
+          ]
+        },
+        {
+          "id": "modalities",
+          "type": "course_modalities_grid",
+          "title": "Escolha o caminho ideal para sua formação",
+          "subtitle": "Conheça as modalidades e fale com o polo para confirmar opções disponíveis.",
+          "cards": [
+            {
+              "title": "Graduação",
+              "icon": "graduation-cap",
+              "description": "Formação superior para quem deseja iniciar uma carreira com base sólida.",
+              "href": "/graduacao",
+              "cta": "Consultar graduação"
+            },
+            {
+              "title": "Pós-graduação",
+              "icon": "award",
+              "description": "Especialização para quem deseja crescer profissionalmente e ampliar oportunidades.",
+              "href": "/pos-graduacao",
+              "cta": "Consultar pós"
+            },
+            {
+              "title": "Tecnólogo",
+              "icon": "briefcase",
+              "description": "Formação voltada ao mercado para quem busca uma jornada prática e objetiva.",
+              "href": "/tecnologo",
+              "cta": "Consultar tecnólogo"
+            },
+            {
+              "title": "Extensão",
+              "icon": "book-open",
+              "description": "Cursos para desenvolver conhecimentos específicos e fortalecer seu currículo.",
+              "href": "/extensao",
+              "cta": "Consultar extensão"
+            }
+          ]
+        },
+        {
+          "id": "why-study",
+          "type": "benefits",
+          "title": "Por que estudar com atendimento local?",
+          "subtitle": "A conveniência do ensino moderno com o apoio de uma equipe próxima de você.",
+          "items": [
+            {
+              "title": "Polo físico local",
+              "description": "Atendimento presencial para tirar dúvidas e orientar sua jornada."
+            },
+            {
+              "title": "Suporte humanizado",
+              "description": "Você fala com pessoas reais que ajudam no próximo passo."
+            },
+            {
+              "title": "Orientação de curso",
+              "description": "A equipe ajuda você a entender modalidades e opções disponíveis."
+            },
+            {
+              "title": "Flexibilidade",
+              "description": "Receba informações sobre caminhos de estudo compatíveis com sua rotina."
+            }
+          ]
+        },
+        {
+          "id": "featured-courses",
+          "type": "course_carousel",
+          "title": "Cursos em destaque",
+          "subtitle": "Explore algumas áreas procuradas e consulte disponibilidade com o polo.",
+          "source": "courses.featured",
+          "cta": {
+            "label": "Ver catálogo completo",
+            "href": "/cursos"
+          }
+        },
+        {
+          "id": "institutional-authority",
+          "type": "authority_block",
+          "title": "Atendimento local conectado a uma instituição de ensino",
+          "subtitle": "O Polo UniBF Campos Lindos orienta interessados com base nas informações oficiais da instituição e nos canais autorizados.",
+          "items": [
+            {
+              "title": "Informações oficiais",
+              "description": "Cursos, condições e modalidades devem ser confirmados diretamente com a equipe do polo."
+            },
+            {
+              "title": "Referência institucional",
+              "description": "A UniBF Centro Universitário possui informações disponíveis nos canais institucionais e no e-MEC."
+            },
+            {
+              "title": "Orientação segura",
+              "description": "A comunicação do polo prioriza clareza, responsabilidade e atendimento humano."
+            }
+          ],
+          "cta": {
+            "label": "Consultar informações",
+            "action": "whatsapp",
+            "message": "Olá! Gostaria de confirmar informações oficiais sobre cursos e modalidades do Polo UniBF Campos Lindos."
+          }
+        },
+        {
+          "id": "senara-content",
+          "type": "digital_presenter_section",
+          "title": "Conteúdo moderno para orientar você",
+          "subtitle": "O polo utiliza recursos digitais, vídeos explicativos e comunicação inteligente para facilitar sua decisão.",
+          "avatar": "/assets/avatars/senara-presenter.png",
+          "description": "A apresentadora digital Senara auxilia na criação de conteúdos educativos, explicações simples e chamadas para atendimento, sempre respeitando informações autorizadas.",
+          "cta": {
+            "label": "Tirar dúvidas no WhatsApp",
+            "action": "whatsapp",
+            "message": "Olá! Vi os conteúdos do Polo UniBF Campos Lindos e gostaria de tirar dúvidas."
+          }
+        },
+        {
+          "id": "local-polo",
+          "type": "location_block",
+          "title": "Nosso polo em Cristalina",
+          "subtitle": "Estamos de portas abertas para receber você. Fale com a equipe, conheça a estrutura e tire suas dúvidas.",
+          "address": "R. Sem Nome, Qd. 1, Lt. 25, Sala 2, Setor D, Campo Lindo, Cristalina-GO",
+          "hours": "Segunda a sexta: 08h às 18h | Sábado: 08h às 12h",
+          "phones": [
+            "(61) 9 8157-1394",
+            "(61) 8 236-7003"
+          ],
+          "map_embed": "google_maps_embed_or_link",
+          "image": "/assets/polo/fachada.jpg",
+          "cta": {
+            "label": "Abrir no Google Maps",
+            "href": "https://www.google.com/maps/search/?api=1&query=R.+Sem+Nome,+Qd.+1,+Lt.+25,+Sala+2,+Setor+D,+Campo+Lindo,+Cristalina-GO"
+          }
+        },
+        {
+          "id": "testimonials",
+          "type": "testimonials_safe",
+          "title": "O que dizem nossos alunos",
+          "subtitle": "Depoimentos reais serão inseridos mediante autorização.",
+          "mode": "placeholder_until_authorized",
+          "items": [
+            {
+              "status": "pending_authorization",
+              "text": "Espaço reservado para depoimento real autorizado de aluno.",
+              "name": "Aluno do Polo",
+              "course": "Curso informado mediante autorização"
+            }
+          ]
+        },
+        {
+          "id": "faq-preview",
+          "type": "faq_preview",
+          "title": "Dúvidas frequentes",
+          "items": [
+            {
+              "question": "Como faço para saber quais cursos estão disponíveis?",
+              "answer": "Fale com a equipe do polo pelo WhatsApp para receber orientação atualizada sobre cursos e modalidades disponíveis."
+            },
+            {
+              "question": "O polo ajuda na escolha do curso?",
+              "answer": "Sim. A equipe pode orientar você sobre modalidades, áreas de interesse e próximos passos."
+            },
+            {
+              "question": "Como confirmo valores e condições?",
+              "answer": "Valores, condições e campanhas devem ser confirmados diretamente no atendimento oficial do polo."
+            }
+          ],
+          "cta": {
+            "label": "Ver todas as dúvidas",
+            "href": "/faq"
+          }
+        },
+        {
+          "id": "final-cta",
+          "type": "final_cta",
+          "title": "Pronto para dar o próximo passo?",
+          "subtitle": "Fale com nossa equipe agora mesmo e receba orientação sobre cursos, modalidades e próximos passos.",
+          "cta": {
+            "label": "Falar com atendimento oficial",
+            "action": "whatsapp",
+            "message": "Olá! Quero receber orientação do Polo UniBF Campos Lindos para começar minha formação."
+          },
+          "disclaimer": "Consulte condições no atendimento oficial do polo."
+        }
+      ]
+    },
+    {
+      "route": "/cursos",
+      "name": "Catálogo de Cursos",
+      "seo": {
+        "title": "Catálogo de Cursos | Polo UniBF Campos Lindos",
+        "description": "Consulte opções de graduação, pós-graduação, tecnólogo e extensão com atendimento do Polo UniBF Campos Lindos."
+      },
+      "sections": [
+        {
+          "id": "courses-hero",
+          "type": "page_header",
+          "title": "Catálogo de Cursos",
+          "subtitle": "Encontre a formação ideal para o seu momento de carreira. Consulte disponibilidade com nossa equipe."
+        },
+        {
+          "id": "course-search-filter",
+          "type": "course_search",
+          "search_placeholder": "Buscar por nome do curso ou área...",
+          "filters": [
+            "Todos",
+            "Graduação",
+            "Pós-graduação",
+            "Tecnólogo",
+            "Extensão"
+          ],
+          "sort_options": [
+            "Mais procurados",
+            "Ordem alfabética",
+            "Modalidade"
+          ]
+        },
+        {
+          "id": "course-grid",
+          "type": "course_grid",
+          "source": "courses.all",
+          "card_style": "premium_white_card",
+          "button_label": "Consultar disponibilidade",
+          "button_action": "whatsapp_course_message",
+          "disclaimer": "A disponibilidade de cursos, valores e condições deve ser confirmada com o atendimento oficial do polo."
+        }
+      ]
+    },
+    {
+      "route": "/sobre",
+      "name": "Sobre o Polo",
+      "seo": {
+        "title": "Sobre o Polo | Polo UniBF Campos Lindos",
+        "description": "Conheça o Polo UniBF Campos Lindos, seu atendimento local e como a equipe pode orientar sua formação."
+      },
+      "sections": [
+        {
+          "id": "about-hero",
+          "type": "page_header",
+          "title": "Nossa História",
+          "subtitle": "Acreditamos que a educação transforma comunidades. Conheça o Polo UniBF Campos Lindos."
+        },
+        {
+          "id": "about-text",
+          "type": "rich_text",
+          "content": [
+            "Nossa missão em Cristalina-GO é conectar pessoas a oportunidades reais de crescimento profissional por meio de orientação educacional acessível, clara e acolhedora.",
+            "Sabemos que a rotina de quem busca uma faculdade nem sempre é fácil. Trabalho, família e outras responsabilidades tomam tempo. Por isso, o atendimento local do polo existe para orientar você com clareza sobre cursos, modalidades e próximos passos.",
+            "Aqui no Polo UniBF Campos Lindos, você não fala apenas com sistemas automáticos. Nossa equipe está pronta para ajudar com informações, matrícula, dúvidas sobre o portal do aluno e orientações gerais, sempre com base em dados oficiais."
+          ]
+        },
+        {
+          "id": "about-values",
+          "type": "values_cards",
+          "items": [
+            {
+              "title": "Presença local",
+              "description": "Atendimento próximo para Cristalina-GO e região."
+            },
+            {
+              "title": "Acolhimento",
+              "description": "Tratamento humano, claro e direto."
+            },
+            {
+              "title": "Comunidade",
+              "description": "Educação como caminho para fortalecer pessoas e oportunidades."
+            }
+          ]
+        },
+        {
+          "id": "visit-us",
+          "type": "visit_cta",
+          "title": "Venha tomar um café conosco",
+          "subtitle": "Nossa equipe terá prazer em apresentar a estrutura, tirar dúvidas e orientar sobre cursos disponíveis.",
+          "cta": {
+            "label": "Agendar visita via WhatsApp",
+            "action": "whatsapp",
+            "message": "Olá! Gostaria de agendar uma visita ao Polo UniBF Campos Lindos."
+          }
+        }
+      ]
+    },
+    {
+      "route": "/contato",
+      "name": "Contato",
+      "seo": {
+        "title": "Contato | Polo UniBF Campos Lindos",
+        "description": "Fale com o Polo UniBF Campos Lindos pelo WhatsApp, formulário ou visite o atendimento local."
+      },
+      "sections": [
+        {
+          "id": "contact-hero",
+          "type": "page_header",
+          "title": "Contato",
+          "subtitle": "Fale com a equipe do Polo Campos Lindos. Estamos prontos para ajudar você a dar o próximo passo."
+        },
+        {
+          "id": "contact-form",
+          "type": "lead_form",
+          "title": "Fale com o Polo",
+          "fields": [
+            {
+              "name": "full_name",
+              "label": "Nome completo",
+              "type": "text",
+              "required": true,
+              "placeholder": "Seu nome"
+            },
+            {
+              "name": "phone",
+              "label": "Telefone",
+              "type": "tel",
+              "required": false,
+              "placeholder": "(61) 90000-0000"
+            },
+            {
+              "name": "whatsapp",
+              "label": "WhatsApp",
+              "type": "tel",
+              "required": true,
+              "placeholder": "(61) 90000-0000"
+            },
+            {
+              "name": "city",
+              "label": "Cidade",
+              "type": "text",
+              "required": false,
+              "placeholder": "Ex: Cristalina-GO"
+            },
+            {
+              "name": "modality_interest",
+              "label": "Modalidade de interesse",
+              "type": "select",
+              "required": true,
+              "options": [
+                "Graduação",
+                "Pós-graduação",
+                "Tecnólogo",
+                "Extensão",
+                "Segunda graduação",
+                "Ainda não sei"
+              ]
+            },
+            {
+              "name": "course_interest",
+              "label": "Curso de interesse",
+              "type": "text",
+              "required": false,
+              "placeholder": "Ex: Administração"
+            },
+            {
+              "name": "message",
+              "label": "Mensagem",
+              "type": "textarea",
+              "required": false,
+              "placeholder": "Como podemos ajudar?"
+            }
+          ],
+          "submit_label": "Enviar mensagem",
+          "submit_behavior": {
+            "primary": "save_lead",
+            "secondary": "open_whatsapp_with_prefilled_message",
+            "storage_mvp": "localStorage",
+            "future_storage": "Supabase"
+          }
+        },
+        {
+          "id": "contact-info",
+          "type": "contact_info_card",
+          "title": "Informações do Polo",
+          "items": [
+            {
+              "icon": "phone",
+              "title": "Telefones e WhatsApp",
+              "content": [
+                "(61) 8 236-7003",
+                "(61) 9 8157-1394"
+              ]
+            },
+            {
+              "icon": "map-pin",
+              "title": "Endereço",
+              "content": [
+                "R. Sem Nome, Qd. 1, Lt. 25, Sala 2, Setor D",
+                "Campo Lindo, Cristalina-GO",
+                "CEP 73850-000"
+              ]
+            },
+            {
+              "icon": "clock",
+              "title": "Horário de Funcionamento",
+              "content": [
+                "Segunda a sexta: 08h às 18h",
+                "Sábado: 08h às 12h"
+              ]
+            },
+            {
+              "icon": "instagram",
+              "title": "Redes sociais",
+              "content": [
+                "@universidadeunibf"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "map",
+          "type": "map_block",
+          "title": "Localização no mapa",
+          "button_label": "Abrir no Google Maps",
+          "href": "https://www.google.com/maps/search/?api=1&query=R.+Sem+Nome,+Qd.+1,+Lt.+25,+Sala+2,+Setor+D,+Campo+Lindo,+Cristalina-GO"
+        }
+      ]
+    },
+    {
+      "route": "/faq",
+      "name": "Perguntas Frequentes",
+      "seo": {
+        "title": "Perguntas Frequentes | Polo UniBF Campos Lindos",
+        "description": "Tire dúvidas sobre cursos, atendimento, modalidades, matrícula e contato com o Polo UniBF Campos Lindos."
+      },
+      "sections": [
+        {
+          "id": "faq-hero",
+          "type": "page_header",
+          "title": "Perguntas Frequentes",
+          "subtitle": "Encontre respostas rápidas ou fale diretamente com nossa equipe pelo WhatsApp."
+        },
+        {
+          "id": "faq-list",
+          "type": "accordion_faq",
+          "search_enabled": true,
+          "filters": [
+            "Todos",
+            "Graduação",
+            "Pós-graduação",
+            "Tecnólogo",
+            "Extensão",
+            "Atendimento"
+          ],
+          "items": [
+            {
+              "category": "Atendimento",
+              "question": "Como faço para saber quais cursos estão disponíveis?",
+              "answer": "Você pode falar com a equipe do polo pelo WhatsApp. A disponibilidade de cursos, valores e condições deve ser confirmada diretamente no atendimento oficial."
+            },
+            {
+              "category": "Atendimento",
+              "question": "O polo ajuda a escolher o curso?",
+              "answer": "Sim. A equipe do polo pode orientar você sobre modalidades, áreas de interesse e próximos passos para sua formação."
+            },
+            {
+              "category": "Graduação",
+              "question": "Como funciona a graduação?",
+              "answer": "A equipe do polo pode explicar as modalidades disponíveis, duração, documentação e formas de ingresso conforme informações oficiais."
+            },
+            {
+              "category": "Pós-graduação",
+              "question": "Como funciona a pós-graduação?",
+              "answer": "A pós-graduação é indicada para quem já possui graduação e busca especialização. Consulte a equipe para conhecer opções disponíveis."
+            },
+            {
+              "category": "Tecnólogo",
+              "question": "O que é um curso tecnólogo?",
+              "answer": "É uma formação superior mais direcionada ao mercado. Consulte a equipe para confirmar cursos, duração e condições disponíveis."
+            },
+            {
+              "category": "Extensão",
+              "question": "O que são cursos de extensão?",
+              "answer": "São cursos voltados ao desenvolvimento de conhecimentos específicos. A disponibilidade deve ser confirmada com o polo."
+            },
+            {
+              "category": "Atendimento",
+              "question": "Como confirmo valores e promoções?",
+              "answer": "Valores, promoções e condições comerciais devem ser confirmados diretamente com a equipe oficial do Polo UniBF Campos Lindos."
+            },
+            {
+              "category": "Atendimento",
+              "question": "Posso visitar o polo?",
+              "answer": "Sim. Você pode falar pelo WhatsApp para combinar um melhor horário de atendimento."
+            }
+          ]
+        },
+        {
+          "id": "faq-whatsapp-cta",
+          "type": "whatsapp_cta",
+          "title": "Ainda com dúvidas?",
+          "subtitle": "Fale agora com nossa equipe e receba orientação.",
+          "button": {
+            "label": "Tirar dúvidas no WhatsApp",
+            "message": "Olá! Tenho dúvidas sobre cursos e atendimento do Polo UniBF Campos Lindos."
+          }
+        }
+      ]
+    },
+    {
+      "route": "/links",
+      "name": "Links da Bio",
+      "seo": {
+        "title": "Links da Bio | Polo UniBF Campos Lindos",
+        "description": "Acesse os principais links do Polo UniBF Campos Lindos: WhatsApp, cursos, localização e redes sociais."
+      },
+      "sections": [
+        {
+          "id": "bio-links",
+          "type": "link_bio_page",
+          "logo": "/assets/logos/unibf-campos-lindos-logo.svg",
+          "title": "Polo UniBF Campos Lindos",
+          "subtitle": "Escolha uma opção e fale com nossa equipe.",
+          "links": [
+            {
+              "label": "Falar no WhatsApp",
+              "icon": "whatsapp",
+              "action": "whatsapp",
+              "message": "Olá! Vim pelo link da bio e quero informações sobre cursos."
+            },
+            {
+              "label": "Ver Catálogo de Cursos",
+              "icon": "book-open",
+              "href": "/cursos"
+            },
+            {
+              "label": "Graduação",
+              "icon": "graduation-cap",
+              "href": "/graduacao"
+            },
+            {
+              "label": "Pós-graduação",
+              "icon": "award",
+              "href": "/pos-graduacao"
+            },
+            {
+              "label": "Tecnólogo",
+              "icon": "briefcase",
+              "href": "/tecnologo"
+            },
+            {
+              "label": "Localização do Polo",
+              "icon": "map-pin",
+              "href": "https://www.google.com/maps/search/?api=1&query=R.+Sem+Nome,+Qd.+1,+Lt.+25,+Sala+2,+Setor+D,+Campo+Lindo,+Cristalina-GO"
+            },
+            {
+              "label": "Instagram",
+              "icon": "instagram",
+              "href": "https://instagram.com/universidadeunibf"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/admin",
+      "name": "Painel Administrativo",
+      "private": true,
+      "security": {
+        "mvp_auth": "VITE_ADMIN_PASSWORD",
+        "production_auth_required": true,
+        "production_recommendation": "Migrar para Supabase Auth ou autenticação segura antes de produção real."
+      },
+      "sections": [
+        {
+          "id": "lead-dashboard",
+          "type": "admin_leads_table",
+          "features": [
+            "listar leads",
+            "filtrar por modalidade",
+            "filtrar por status",
+            "atualizar status",
+            "exportar CSV",
+            "ver origem do lead",
+            "abrir WhatsApp do lead"
+          ]
+        }
+      ]
+    }
+  ],
+  "courses": {
+    "disclaimer": "Cursos abaixo são exemplos de estrutura. A lista final precisa ser validada com material oficial do polo antes da publicação.",
+    "categories": [
+      "Graduação",
+      "Pós-graduação",
+      "Tecnólogo",
+      "Extensão"
+    ],
+    "areas": [
+      "Gestão e Negócios",
+      "Educação",
+      "Jurídico",
+      "Saúde",
+      "Engenharia",
+      "Tecnologia",
+      "Direito",
+      "Saúde e Bem-estar"
+    ],
+    "featured": [
+      {
+        "id": "administracao",
+        "title": "Administração",
+        "modality": "Graduação",
+        "area": "Gestão e Negócios",
+        "description": "Formação para quem busca atuar em gestão, empresas, processos e liderança.",
+        "status": "needs_official_validation",
+        "cta_message": "Olá! Tenho interesse em Administração. Pode me passar informações?"
+      },
+      {
+        "id": "pedagogia",
+        "title": "Pedagogia",
+        "modality": "Graduação",
+        "area": "Educação",
+        "description": "Opção para quem deseja atuar na área educacional.",
+        "status": "needs_official_validation",
+        "cta_message": "Olá! Tenho interesse em Pedagogia. Pode me orientar?"
+      },
+      {
+        "id": "direito",
+        "title": "Direito",
+        "modality": "Graduação",
+        "area": "Jurídico",
+        "description": "Formação voltada para atuação na área jurídica e advocacia.",
+        "status": "needs_official_validation",
+        "cta_message": "Olá! Tenho interesse em Direito. Pode me passar informações?"
+      },
+      {
+        "id": "enfermagem",
+        "title": "Enfermagem",
+        "modality": "Graduação",
+        "area": "Saúde",
+        "description": "Para quem deseja fazer a diferença na vida das pessoas na área da saúde.",
+        "status": "needs_official_validation",
+        "cta_message": "Olá! Tenho interesse em Enfermagem. Pode me orientar?"
+      }
+    ],
+    "all": [
+      {
+        "id": "administracao",
+        "title": "Administração",
+        "modality": "Graduação",
+        "area": "Gestão e Negócios",
+        "description": "Formação para quem busca atuar em gestão, empresas, processos e liderança.",
+        "tags": [
+          "graduação",
+          "gestão",
+          "negócios"
+        ],
+        "status": "needs_official_validation"
+      },
+      {
+        "id": "pedagogia",
+        "title": "Pedagogia",
+        "modality": "Graduação",
+        "area": "Educação",
+        "description": "Opção para quem deseja atuar na área educacional.",
+        "tags": [
+          "graduação",
+          "educação"
+        ],
+        "status": "needs_official_validation"
+      },
+      {
+        "id": "direito",
+        "title": "Direito",
+        "modality": "Graduação",
+        "area": "Jurídico",
+        "description": "Formação voltada para atuação na área jurídica e advocacia.",
+        "tags": [
+          "graduação",
+          "jurídico"
+        ],
+        "status": "needs_official_validation"
+      },
+      {
+        "id": "enfermagem",
+        "title": "Enfermagem",
+        "modality": "Graduação",
+        "area": "Saúde",
+        "description": "Para quem deseja fazer a diferença na vida das pessoas na área da saúde.",
+        "tags": [
+          "graduação",
+          "saúde"
+        ],
+        "status": "needs_official_validation"
+      },
+      {
+        "id": "psicologia",
+        "title": "Psicologia",
+        "modality": "Graduação",
+        "area": "Saúde",
+        "description": "Formação completa para atuação clínica, organizacional e educacional.",
+        "tags": [
+          "graduação",
+          "saúde",
+          "comportamento"
+        ],
+        "status": "needs_official_validation"
+      },
+      {
+        "id": "engenharia-avaliacoes-pericias",
+        "title": "Engenharia de Avaliações e Perícias",
+        "modality": "Pós-graduação",
+        "area": "Engenharia",
+        "description": "Especialização para profissionais que desejam ampliar sua atuação técnica.",
+        "tags": [
+          "pós-graduação",
+          "engenharia",
+          "perícias"
+        ],
+        "status": "needs_official_validation"
+      },
+      {
+        "id": "direito-penal-processo-penal",
+        "title": "Direito Penal e Processo Penal",
+        "modality": "Pós-graduação",
+        "area": "Direito",
+        "description": "Especialização para aprofundamento jurídico.",
+        "tags": [
+          "pós-graduação",
+          "direito"
+        ],
+        "status": "needs_official_validation"
+      },
+      {
+        "id": "gestao-pessoas",
+        "title": "Gestão de Pessoas e Desenvolvimento Organizacional",
+        "modality": "Pós-graduação",
+        "area": "Gestão",
+        "description": "Especialização voltada para liderança e gestão de equipes.",
+        "tags": [
+          "pós-graduação",
+          "gestão",
+          "rh"
+        ],
+        "status": "needs_official_validation"
+      },
+      {
+        "id": "gestao-recursos-humanos",
+        "title": "Gestão de Recursos Humanos",
+        "modality": "Tecnólogo",
+        "area": "Gestão",
+        "description": "Formação voltada para pessoas, processos e gestão organizacional.",
+        "tags": [
+          "tecnólogo",
+          "rh",
+          "gestão"
+        ],
+        "status": "needs_official_validation"
+      },
+      {
+        "id": "logistica",
+        "title": "Logística",
+        "modality": "Tecnólogo",
+        "area": "Gestão e Negócios",
+        "description": "Formação rápida para atuar em cadeia de suprimentos e operações.",
+        "tags": [
+          "tecnólogo",
+          "logística"
+        ],
+        "status": "needs_official_validation"
+      },
+      {
+        "id": "cuidador-idosos",
+        "title": "Cuidador de Idosos",
+        "modality": "Extensão",
+        "area": "Saúde e Bem-estar",
+        "description": "Curso de extensão para profissionalização no cuidado à terceira idade.",
+        "tags": [
+          "extensão",
+          "saúde",
+          "cuidador"
+        ],
+        "status": "needs_official_validation"
+      },
+      {
+        "id": "informatica-negocios",
+        "title": "Informática para Negócios",
+        "modality": "Extensão",
+        "area": "Tecnologia",
+        "description": "Fundamentos de tecnologia aplicados ao dia a dia profissional.",
+        "tags": [
+          "extensão",
+          "tecnologia",
+          "negócios"
+        ],
+        "status": "needs_official_validation"
+      }
+    ]
+  },
+  "ai_assistant": {
+    "name": "Assistente Kelly",
+    "public_role": "Assistente virtual de orientação do Polo UniBF Campos Lindos",
+    "disclaimer": "A Assistente Kelly é uma assistente virtual de orientação e não substitui o atendimento humano oficial do polo.",
+    "avatar": "/assets/avatars/assistente-kelly.png",
+    "position": "bottom-right",
+    "behavior": {
+      "tone": "acolhedor, simples, educacional e direto",
+      "main_goal": "Levar o visitante para WhatsApp com mensagem contextualizada.",
+      "do_not": [
+        "inventar valores",
+        "inventar cursos",
+        "prometer bolsas",
+        "prometer reconhecimento sem fonte oficial",
+        "dar informações definitivas sem validação"
+      ]
+    },
+    "quick_buttons": [
+      {
+        "label": "Escolher um curso",
+        "message": "Olá, Kelly! Quero ajuda para escolher um curso."
+      },
+      {
+        "label": "Falar sobre graduação",
+        "message": "Olá, Kelly! Quero informações sobre graduação."
+      },
+      {
+        "label": "Falar sobre pós",
+        "message": "Olá, Kelly! Quero informações sobre pós-graduação."
+      },
+      {
+        "label": "Valores e condições",
+        "message": "Olá, Kelly! Quero consultar valores e condições disponíveis."
+      },
+      {
+        "label": "Visitar o polo",
+        "message": "Olá, Kelly! Quero saber como visitar o Polo UniBF Campos Lindos."
+      }
+    ],
+    "initial_message": "Oi! Eu sou a Assistente Kelly. Posso te ajudar a encontrar o melhor caminho para sua formação. O que você procura hoje?",
+    "fallback_message": "Para informações atualizadas, vou te direcionar para a equipe oficial do polo no WhatsApp."
+  },
+  "whatsapp": {
+    "primary_number": "5561981571394",
+    "floating_button": {
+      "enabled": true,
+      "position": "bottom-right",
+      "label": "WhatsApp",
+      "icon": "whatsapp",
+      "message": "Olá! Vim pelo site do Polo UniBF Campos Lindos e gostaria de receber atendimento."
+    },
+    "messages": {
+      "general": "Olá! Vim pelo site do Polo UniBF Campos Lindos e gostaria de receber atendimento.",
+      "graduacao": "Olá! Tenho interesse em cursos de graduação. Pode me orientar?",
+      "pos_graduacao": "Olá! Tenho interesse em pós-graduação. Pode me passar informações?",
+      "tecnologo": "Olá! Tenho interesse em cursos tecnólogos. Pode me orientar?",
+      "extensao": "Olá! Quero saber mais sobre cursos de extensão.",
+      "visit": "Olá! Gostaria de agendar uma visita ao Polo UniBF Campos Lindos.",
+      "course_template": "Olá! Tenho interesse no curso {{course_name}}. Pode me passar informações sobre disponibilidade, modalidade e condições?"
+    }
+  },
+  "lead_system": {
+    "mvp_storage": "localStorage",
+    "future_storage": "Supabase",
+    "lead_fields": [
+      "id",
+      "full_name",
+      "phone",
+      "whatsapp",
+      "city",
+      "modality_interest",
+      "course_interest",
+      "message",
+      "source_page",
+      "source_cta",
+      "status",
+      "created_at",
+      "updated_at"
+    ],
+    "statuses": [
+      "novo",
+      "contatado",
+      "em_atendimento",
+      "matricula_potencial",
+      "sem_resposta",
+      "convertido",
+      "descartado"
+    ],
+    "admin_features": [
+      "listar leads",
+      "buscar lead",
+      "filtrar por status",
+      "filtrar por modalidade",
+      "editar status",
+      "exportar CSV",
+      "abrir conversa no WhatsApp",
+      "ver histórico básico"
+    ]
+  },
+  "senara_integration": {
+    "module_name": "Senara Media Engine",
+    "status": "future_integration",
+    "role": "Criar mídia, roteiros, vídeos, criativos e campanhas para o Polo UniBF Campos Lindos.",
+    "media_database": {
+      "storage": "Supabase Storage ou Cloudinary",
+      "metadata_table": "media_assets",
+      "allowed_usage_types": [
+        "referência interna",
+        "conteúdo autorizado",
+        "criativo original gerado",
+        "prova social autorizada",
+        "material institucional oficial"
+      ],
+      "schema": {
+        "id": "uuid",
+        "title": "string",
+        "description": "string",
+        "source_platform": "instagram | tiktok | youtube | facebook | upload_manual",
+        "source_url": "string",
+        "source_profile": "string",
+        "file_url": "string",
+        "thumbnail_url": "string",
+        "media_type": "video | image | audio | document",
+        "format": "reels | shorts | story | post | banner | institucional",
+        "duration_seconds": "number",
+        "institution": "string",
+        "polo": "string",
+        "city": "string",
+        "category": "string",
+        "course_area": "string",
+        "tags": "array",
+        "transcript": "string",
+        "caption_text": "string",
+        "hook_text": "string",
+        "cta_text": "string",
+        "permission_status": "not_authorized | authorized | official_material | internal_reference",
+        "usage_type": "internal_reference | repost_allowed | derivative_allowed | original_generated",
+        "performance": {
+          "views": "number",
+          "likes": "number",
+          "comments": "number",
+          "shares": "number",
+          "leads_generated": "number"
+        },
+        "created_at": "timestamp",
+        "updated_at": "timestamp"
+      }
+    },
+    "content_generation_tasks": [
+      "Gerar roteiros de Reels para matrícula",
+      "Criar vídeos com Assistente Kelly",
+      "Criar vídeos com Senara apresentadora digital",
+      "Criar posts de FAQ",
+      "Criar carrosséis de cursos",
+      "Criar criativos para WhatsApp",
+      "Criar campanhas locais",
+      "Criar calendário editorial"
+    ]
+  },
+  "xpex_academy_bridge": {
+    "status": "future_module",
+    "role": "Atrair público com cursos gratuitos, trilhas de IA, tecnologia e carreira, encaminhando interessados em formação superior para o Polo.",
+    "safe_positioning": "Curadoria educacional gratuita e trilhas de aprendizado. Não misturar cursos gratuitos de terceiros com cursos oficiais da UniBF.",
+    "future_cta": {
+      "label": "Conheça trilhas gratuitas na XpeX Academy",
+      "href": "https://xpexacademy.com.br"
+    }
+  },
+  "technical_stack": {
+    "frontend": {
+      "framework": "Next.js ou React",
+      "language": "TypeScript",
+      "style": "Tailwind CSS",
+      "animations": "Framer Motion",
+      "icons": "Lucide React",
+      "routing": "App Router ou React Router"
+    },
+    "deployment": {
+      "mvp": "Replit",
+      "production_site": "Vercel",
+      "backend_future": "Railway",
+      "database_future": "Supabase",
+      "storage_future": "Supabase Storage ou Cloudinary"
+    },
+    "environment_variables": [
+      {
+        "key": "VITE_ADMIN_PASSWORD",
+        "required": true,
+        "description": "Senha temporária para painel admin MVP"
+      },
+      {
+        "key": "VITE_WHATSAPP_NUMBER",
+        "required": true,
+        "description": "Número principal do WhatsApp"
+      },
+      {
+        "key": "VITE_GOOGLE_MAPS_URL",
+        "required": false,
+        "description": "URL do mapa"
+      },
+      {
+        "key": "VITE_SUPABASE_URL",
+        "required": false,
+        "description": "Futura integração Supabase"
+      },
+      {
+        "key": "VITE_SUPABASE_ANON_KEY",
+        "required": false,
+        "description": "Futura integração Supabase"
+      }
+    ],
+    "security_notes": [
+      "Não expor dados sensíveis no frontend.",
+      "Não usar localStorage como banco definitivo em produção.",
+      "Proteger rota /admin.",
+      "Não publicar variáveis secretas no GitHub.",
+      "Remover badges do Replit antes do deploy final."
+    ]
+  },
+  "replit_codex_instruction": {
+    "main_prompt": "Refatore e evolua o site atual do Polo UniBF Campos Lindos para uma versão premium, institucional, moderna, responsiva e com foco em conversão via WhatsApp. Use este JSON como blueprint oficial. Mantenha a identidade visual inspirada no site oficial UniBF, com azul escuro, verde nos CTAs, cards arredondados, tipografia premium e experiência limpa. Adicione Assistente Kelly como widget visual e funcional, melhore o catálogo, padronize nome/endereço/contatos, insira FAQ, autoridade institucional segura, botões de WhatsApp em todas as páginas, página de links da bio e admin de leads. Não invente cursos, valores, promoções ou promessas. Onde faltar informação, use texto consultivo direcionando para o atendimento oficial.",
+    "must_do": [
+      "Padronizar nome como Polo UniBF Campos Lindos.",
+      "Padronizar endereço e WhatsApp.",
+      "Remover qualquer badge visual do Replit/build preview.",
+      "Criar Assistente Kelly no canto inferior direito.",
+      "Criar seção completa da Assistente Kelly na home.",
+      "Criar FAQ com accordion e busca.",
+      "Criar página Links da Bio.",
+      "Melhorar catálogo com filtros e busca.",
+      "Criar CTAs por modalidade.",
+      "Criar mensagens de WhatsApp personalizadas.",
+      "Criar estrutura de assets para logos, imagens, avatares e fotos reais.",
+      "Inserir disclaimers de compliance no footer e em páginas sensíveis.",
+      "Preparar projeto para deploy em Vercel.",
+      "Preparar dados para futura integração com Supabase e Senara."
+    ],
+    "must_not_do": [
+      "Não criar valores de mensalidade sem autorização.",
+      "Não afirmar quantidade de cursos sem material oficial.",
+      "Não inventar bolsas ou promoções.",
+      "Não publicar depoimentos falsos.",
+      "Não misturar XpeX Academy com UniBF como se fossem a mesma instituição.",
+      "Não deixar rota admin pública sem proteção.",
+      "Não deixar textos placeholder visíveis."
+    ]
+  },
+  "launch_checklist": [
+    "Validar nome oficial do polo",
+    "Validar endereço",
+    "Validar WhatsApp principal",
+    "Validar Instagram oficial",
+    "Adicionar logo final",
+    "Adicionar fotos reais do polo",
+    "Validar lista de cursos",
+    "Remover marcas do Replit",
+    "Testar responsividade mobile",
+    "Testar todos os botões de WhatsApp",
+    "Testar formulário de lead",
+    "Testar painel admin",
+    "Revisar textos de compliance",
+    "Subir para GitHub",
+    "Configurar deploy na Vercel",
+    "Conectar domínio",
+    "Instalar analytics",
+    "Criar backup do projeto",
+    "Preparar integração futura com Senara"
+  ]
+}

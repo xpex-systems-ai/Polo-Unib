@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "Polo UniBF Campos Lindos"
+version = "1.0.0"
+id = "artifacts/polo-unibf"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22894
+
+[services.development]
+run = "pnpm --filter @workspace/polo-unibf run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/polo-unibf", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/polo-unibf/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22894"
+BASE_PATH = "/"
