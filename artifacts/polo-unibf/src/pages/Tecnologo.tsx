@@ -9,7 +9,7 @@ export default function Tecnologo() {
   const benefits = [
     "Formação rápida (2 a 3 anos)",
     "Foco em disciplinas práticas",
-    "Alta empregabilidade",
+    "Orientação sobre possibilidades de atuação",
     "Diploma de nível superior",
     "Permite cursar pós-graduação depois"
   ];
@@ -26,7 +26,7 @@ export default function Tecnologo() {
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Tecnólogo</h1>
             <p className="text-lg text-white/80 max-w-xl mb-8 leading-relaxed">
-              Cursos superiores de curta duração focados na necessidade real do mercado de trabalho. A escolha perfeita para quem quer se formar rápido e entrar na área.
+              Cursos superiores de curta duração com foco em habilidades profissionais. Consulte a equipe oficial para confirmar opções disponíveis, condições e caminhos de atuação para o seu objetivo.
             </p>
             <div className="flex gap-4">
               <Button size="lg" className="bg-amber-500 hover:bg-amber-600 text-white border-none" onClick={() => openWhatsApp('Olá, quero saber mais sobre os cursos de Tecnólogo.')}>
@@ -54,7 +54,7 @@ export default function Tecnologo() {
           <div>
             <h2 className="text-3xl font-bold text-navy mb-6">Prático e direto ao ponto</h2>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Diferente da graduação tradicional, o tecnólogo corta disciplinas teóricas muito abrangentes e foca exatamente nas habilidades que as empresas estão buscando agora. É ensino superior com a agilidade que a vida moderna exige.
+              O tecnólogo costuma ter uma proposta mais objetiva e direcionada para competências profissionais. Fale com o atendimento oficial para entender carga horária, matriz, disponibilidade e aderência ao seu momento de carreira.
             </p>
             <h3 className="text-xl font-bold text-foreground mb-4 mt-8">Vantagens do Tecnólogo:</h3>
             <ul className="space-y-4">
