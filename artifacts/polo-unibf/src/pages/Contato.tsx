@@ -54,9 +54,9 @@ export default function Contato() {
                     <Phone className="text-primary w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="font-bold mb-1">Telefones e WhatsApp</h4>
-                    <p className="text-muted-foreground">(61) 9 8236-7003</p>
-                    <p className="text-muted-foreground">(61) 9 8157-1394</p>
+                    <h4 className="font-bold mb-1">WhatsApp oficial e telefone alternativo</h4>
+                    <p className="text-muted-foreground">WhatsApp oficial: (61) 9 8236-7003</p>
+                    <p className="text-muted-foreground">Telefone alternativo: (61) 9 8157-1394</p>
                   </div>
                 </li>
                 

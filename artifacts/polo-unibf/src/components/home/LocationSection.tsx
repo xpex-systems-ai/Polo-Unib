@@ -57,7 +57,7 @@ export function LocationSection() {
                 </div>
                 <div>
                   <h4 className="font-bold text-foreground text-sm mb-0.5">Contato</h4>
-                  <p className="text-muted-foreground text-sm">(61) 9 8157-1394 &nbsp;|&nbsp; (61) 9 8236-7003</p>
+                  <p className="text-muted-foreground text-sm">WhatsApp oficial: (61) 9 8236-7003 &nbsp;|&nbsp; Alternativo: (61) 9 8157-1394</p>
                 </div>
               </div>
             </div>
