@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { openWhatsApp } from '@/lib/whatsapp';
 import { motion } from 'framer-motion';
 
-const FACADE = '/assets/polo/fachada-unibf-cristalina-go.jpg';
+const FACADE = '/assets/fachada-unibf-cristalina-go.jpg';
 
 export default function Sobre() {
   const [imgError, setImgError] = useState(false);
@@ -51,7 +51,7 @@ export default function Sobre() {
                   <div className="w-full h-full bg-gradient-to-br from-navy to-[#002F4B] flex flex-col items-center justify-center text-white/60 gap-3 p-8 text-center">
                     <MapPin className="w-12 h-12 opacity-30" />
                     <p className="font-semibold text-white/80">Centro Universitário UniBF Cristalina-GO</p>
-                    <p className="text-sm text-white/50">Adicione a foto em /assets/polo/fachada-unibf-cristalina-go.jpg</p>
+                    <p className="text-sm text-white/50">Adicione a foto em /assets/fachada-unibf-cristalina-go.jpg</p>
                   </div>
                 )}
               </motion.div>

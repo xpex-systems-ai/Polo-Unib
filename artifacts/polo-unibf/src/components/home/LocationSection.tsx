@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { openWhatsApp } from '@/lib/whatsapp';
 import { motion } from 'framer-motion';
 
-const FACADE = '/assets/polo/fachada-unibf-cristalina-go.jpg';
+const FACADE = '/assets/fachada-unibf-cristalina-go.jpg';
 const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=Centro+Universit%C3%A1rio+UniBF+Cristalina+GO';
 
 export function LocationSection() {
@@ -103,7 +103,7 @@ export function LocationSection() {
                     Ver no Google Maps
                   </Button>
                 </a>
-                <p className="text-xs text-white/30 mt-2">Adicione a foto em /assets/polo/fachada-unibf-cristalina-go.jpg</p>
+                <p className="text-xs text-white/30 mt-2">Adicione a foto em /assets/fachada-unibf-cristalina-go.jpg</p>
               </div>
             )}
           </motion.div>

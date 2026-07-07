@@ -5,6 +5,7 @@ import { LeadForm } from '@/components/forms/LeadForm';
 import { MapPin, Phone, Instagram, Clock } from 'lucide-react';
 
 const LOGO = '/assets/logos/unibf-cristalina-go-logo.png';
+const FACADE = '/assets/fachada-unibf-cristalina-go.jpg';
 const FACADE = '/assets/polo/fachada-unibf-cristalina-go.jpg';
 
 export default function Contato() {
@@ -62,6 +63,7 @@ export default function Contato() {
                   <div className="h-full w-full bg-gradient-to-br from-navy to-[#002F4B] flex flex-col items-center justify-center gap-2 p-6 text-center text-white/70">
                     <MapPin className="h-10 w-10 text-primary/80" />
                     <p className="font-semibold text-white">Centro Universitário UniBF Cristalina-GO</p>
+                    <p className="text-xs text-white/50">Adicione a foto em /assets/fachada-unibf-cristalina-go.jpg</p>
                     <p className="text-xs text-white/50">Adicione a foto em /assets/polo/fachada-unibf-cristalina-go.jpg</p>
                   </div>
                 )}
