@@ -47,3 +47,21 @@ Thumbs.db
 # Replit
 .cache/
 .local/
+
+# Build outputs
+build/
+.next/
+
+# Environment files — never commit secrets
+.env
+.env.local
+.env.development
+.env.production
+.env.*.local
+
+# Deployment
+.vercel/
+
+# Logs
+logs/
+*.log
