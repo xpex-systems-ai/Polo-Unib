@@ -44,12 +44,12 @@ export function CourseCard({ course }: { course: Course }) {
 
   return (
     <article className="bg-white border border-border rounded-[24px] overflow-hidden flex flex-col h-full shadow-sm hover:shadow-2xl hover:-translate-y-1 hover:border-primary/30 transition-all duration-300 group">
-      <div className="relative aspect-video overflow-hidden bg-navy">
+      <div className="relative h-[150px] overflow-hidden bg-navy md:h-[190px]">
         {showImage ? (
           <img
             src={course.image}
             alt={`Imagem representativa do curso ${course.title}`}
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
             onError={() => setImageError(true)}
             loading="lazy"
           />
@@ -59,6 +59,15 @@ export function CourseCard({ course }: { course: Course }) {
             <Icon className={`relative w-14 h-14 ${config.text} mb-3 group-hover:scale-110 transition-transform duration-300`} />
             <span className="relative text-white/80 text-xs font-semibold uppercase tracking-[0.2em]">UniBF Cristalina-GO</span>
           </div>
+        )}
+        {showImage && (
+          <>
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,59,92,0.15),rgba(0,59,92,0.45))]" />
+            <Icon className="absolute right-4 top-4 w-9 h-9 text-white/90 drop-shadow transition-transform duration-300 group-hover:scale-110" />
+            <span className="absolute bottom-4 left-4 text-[11px] font-bold uppercase tracking-[0.22em] text-white/85 drop-shadow">
+              UNIBF Cristalina-GO
+            </span>
+          </>
         )}
         <div className="absolute left-4 top-4 flex flex-wrap gap-2">
           <span className={`text-[11px] font-bold px-3 py-1 rounded-full border backdrop-blur ${config.badge}`}>

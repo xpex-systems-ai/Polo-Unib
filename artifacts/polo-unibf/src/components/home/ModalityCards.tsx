@@ -8,6 +8,7 @@ const modalities = [
     title: 'Graduação',
     description: 'Formação superior para iniciar uma carreira com base sólida e ampla.',
     icon: GraduationCap,
+    image: '/assets/cards/modalidades/graduacao.jpg',
     href: '/graduacao',
     gradient: 'from-[#003B5C] via-[#004E7A] to-[#005580]',
     ctaMsg: 'Olá, Professora Kelle! Tenho interesse em graduação na UniBF Cristalina-GO. Pode me orientar?',
@@ -16,6 +17,7 @@ const modalities = [
     title: 'Pós-graduação',
     description: 'Especialização para quem quer crescer profissionalmente e se destacar.',
     icon: Award,
+    image: '/assets/cards/modalidades/pos-graduacao.jpg',
     href: '/pos-graduacao',
     gradient: 'from-[#2D1B69] via-[#3D2687] to-[#4A2F8A]',
     ctaMsg: 'Olá, Professora Kelle! Tenho interesse em pós-graduação na UniBF Cristalina-GO. Pode me orientar?',
@@ -24,6 +26,7 @@ const modalities = [
     title: 'Tecnólogo',
     description: 'Cursos práticos e objetivos, conectados diretamente ao mercado de trabalho.',
     icon: Briefcase,
+    image: '/assets/cards/modalidades/tecnologo.jpg',
     href: '/tecnologo',
     gradient: 'from-[#78350F] via-[#92400E] to-[#B45309]',
     ctaMsg: 'Olá, Professora Kelle! Quero saber mais sobre cursos tecnólogos na UniBF Cristalina-GO.',
@@ -32,6 +35,7 @@ const modalities = [
     title: 'Extensão',
     description: 'Cursos de curta duração para atualizar conhecimentos e fortalecer o currículo.',
     icon: BookOpen,
+    image: '/assets/cards/modalidades/extensao.jpg',
     href: '/extensao',
     gradient: 'from-[#064E3B] via-[#065F46] to-[#059669]',
     ctaMsg: 'Olá, Professora Kelle! Quero saber mais sobre cursos de extensão na UniBF Cristalina-GO.',
@@ -64,10 +68,26 @@ export function ModalityCards() {
                 transition={{ delay: i * 0.08 }}
                 className="group bg-white rounded-2xl overflow-hidden border border-border shadow-sm hover:shadow-xl hover:border-transparent transition-all duration-300 flex flex-col"
               >
-                {/* Gradient image panel */}
-                <div className={`bg-gradient-to-br ${mod.gradient} h-36 flex items-center justify-center relative overflow-hidden`}>
+                {/* Image cover with gradient fallback */}
+                <div className={`bg-gradient-to-br ${mod.gradient} h-[150px] md:h-[190px] flex items-center justify-center relative overflow-hidden`}>
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(255,255,255,0.12),_transparent)]" />
-                  <Icon className="w-14 h-14 text-white/80 group-hover:scale-110 transition-transform duration-300" />
+                  <img
+                    src={mod.image}
+                    alt={`Imagem profissional representando a modalidade ${mod.title} no Polo UniBF Cristalina-GO`}
+                    className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                    onError={(event) => {
+                      event.currentTarget.style.display = 'none';
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,59,92,0.15),rgba(0,59,92,0.45))]" />
+                  <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-[11px] font-bold text-navy shadow-sm backdrop-blur">
+                    {mod.title}
+                  </span>
+                  <Icon className="absolute right-4 top-4 w-9 h-9 text-white/90 drop-shadow group-hover:scale-110 transition-transform duration-300" />
+                  <span className="absolute bottom-4 left-4 text-[11px] font-bold uppercase tracking-[0.22em] text-white/85 drop-shadow">
+                    UNIBF Cristalina-GO
+                  </span>
                 </div>
 
                 {/* Content */}
