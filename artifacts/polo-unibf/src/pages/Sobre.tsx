@@ -38,13 +38,13 @@ export default function Sobre() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="rounded-3xl overflow-hidden border border-border shadow-xl aspect-[4/3]"
+                className="rounded-3xl overflow-hidden border border-border shadow-[0_24px_60px_rgba(0,31,51,0.18)] aspect-[4/3] min-h-[320px] sm:min-h-[420px]"
               >
                 {!imgError ? (
                   <img
                     src={FACADE}
                     alt="Fachada do Centro Universitário UniBF Cristalina-GO"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                     onError={() => setImgError(true)}
                   />
                 ) : (
