@@ -1,11 +1,12 @@
-# Polo UniBF Campos Lindos
+# UniBF Cristalina-GO
 
-Site oficial do Polo UniBF Campos Lindos (Cristalina-GO) — institucional premium, focado em captação de alunos via WhatsApp.
+Site institucional premium da **UniBF Cristalina-GO** — Centro Universitário UniBF em Cristalina-GO, com foco em captação responsável via WhatsApp, catálogo visual e assistente virtual Professora Kelle.
 
 ## Run & Operate
 
-- `pnpm --filter @workspace/polo-unibf run dev` — site frontend (porta configurada pelo workflow)
+- `pnpm --filter @workspace/polo-unibf run dev` — site frontend
 - `pnpm --filter @workspace/polo-unibf run typecheck` — checar tipos do site
+- `pnpm --filter @workspace/polo-unibf run build` — build de produção
 - Workflow gerenciado: `artifacts/polo-unibf: web`
 
 ## Stack
@@ -13,56 +14,61 @@ Site oficial do Polo UniBF Campos Lindos (Cristalina-GO) — institucional premi
 - pnpm workspaces, Node.js 24, TypeScript 5.9
 - React 18 + Vite
 - Tailwind CSS v4 + shadcn/ui
-- framer-motion (animações)
-- react-hook-form + zod (formulários)
-- wouter (roteamento SPA)
-- localStorage (armazenamento de leads no MVP)
+- framer-motion
+- react-hook-form + zod
+- wouter
+- localStorage para leads no MVP
 
 ## Pages
 
 | Rota | Página |
 |---|---|
-| `/` | Home — hero, cards de modalidades, benefícios, cursos em destaque, depoimentos, localização, CTA |
-| `/cursos` | Catálogo com busca e filtro por modalidade |
+| `/` | Home premium com hero, modalidades, cursos, Professora Kelle, institucional, localização, FAQ e CTA |
+| `/cursos` | Catálogo com busca, filtros, cards visuais, imagens locais e fallback premium |
 | `/graduacao` | Página institucional — Graduação |
 | `/pos-graduacao` | Página institucional — Pós-graduação |
 | `/tecnologo` | Página institucional — Tecnólogo |
 | `/extensao` | Página institucional — Extensão |
-| `/sobre` | Sobre o Polo |
-| `/contato` | Contato com formulário de leads |
-| `/links` | Links da Bio (estilo Linktree) |
+| `/sobre` | Sobre a UniBF Cristalina-GO |
+| `/contato` | Contato com formulário de leads e WhatsApp principal |
+| `/links` | Links da Bio |
 | `/admin` | Painel admin protegido por senha |
 
 ## Where things live
 
-- `artifacts/polo-unibf/src/pages/` — páginas (uma por rota)
-- `artifacts/polo-unibf/src/components/` — componentes organizados por domínio (home/, layout/, courses/, forms/, shared/)
+- `artifacts/polo-unibf/src/pages/` — páginas por rota
+- `artifacts/polo-unibf/src/components/` — componentes por domínio
 - `artifacts/polo-unibf/src/lib/leads.ts` — CRUD de leads no localStorage + exportar CSV
-- `artifacts/polo-unibf/src/lib/whatsapp.ts` — helpers para links WhatsApp
-- `artifacts/polo-unibf/src/data/courses.ts` — catálogo de cursos (editável)
-- `artifacts/polo-unibf/src/types/index.ts` — tipos `Course` e `Lead`
+- `artifacts/polo-unibf/src/lib/whatsapp.ts` — helpers para links WhatsApp; fallback principal `5561981571394`
+- `artifacts/polo-unibf/src/data/courses.ts` — catálogo editável com imagens e status de validação
+- `artifacts/polo-unibf/public/assets/` — imagens locais/autorizadas
 
 ## Architecture decisions
 
-- **Frontend-only MVP**: sem banco de dados; leads salvos em `localStorage` com chave `polo_leads`
-- **Admin gate**: requer variável de ambiente `VITE_ADMIN_PASSWORD`; sem ela o login fica desabilitado (sem fallback inseguro)
-- **Compliance**: nenhum valor, desconto, bolsa ou garantia de emprego é afirmado; todos os CTAs direcionam para consulta via WhatsApp
-- **Chat widget**: agente simulado sem IA externa; coleta nome/telefone/modalidade e encaminha para WhatsApp com mensagem pré-preenchida
+- **Frontend-only MVP**: sem banco de dados; leads salvos em `localStorage` com chave `polo_leads`.
+- **Admin gate**: requer `VITE_ADMIN_PASSWORD`; sem ela o login fica desabilitado.
+- **Compliance**: nenhum valor, desconto, bolsa, garantia de emprego ou disponibilidade automática deve ser afirmado.
+- **Professora Kelle**: assistente virtual de orientação; não substitui atendimento humano oficial.
+- **Replit plugins**: overlays visuais são condicionados a ambiente de desenvolvimento Replit e não entram no build de produção.
 
 ## User preferences
 
 - Idioma do site: Português Brasileiro
-- WhatsApp principal: 5561982367003
+- Marca pública: UniBF Cristalina-GO
+- WhatsApp principal: `5561981571394`
+- WhatsApp secundário: `5561982367003`
+- Campo Lindo deve aparecer apenas como setor/bairro do endereço.
 
 ## Gotchas
 
-- Para habilitar o painel `/admin`, configure `VITE_ADMIN_PASSWORD` nos Replit Secrets
-- Os depoimentos na Home são exemplos ilustrativos — substituir por depoimentos reais quando disponíveis
-- O mapa na Home e no Contato é um placeholder; substituir pelo embed real do Google Maps quando disponível
+- Para habilitar `/admin`, configure `VITE_ADMIN_PASSWORD` nos Secrets.
+- Depoimentos reais só devem ser publicados com autorização.
+- Imagens devem ser locais/autorizadas em `/public/assets`; não hotlinkar imagens do site oficial.
+- Cursos, valores, modalidades e condições devem ser validados no atendimento oficial.
 
 ## Future roadmap
 
-1. Substituir localStorage por Supabase para leads persistentes
-2. Adicionar agente IA real (OpenAI/OpenRouter) no widget
-3. Integrar pixel Meta e Google Analytics
-4. Deploy em domínio próprio via Vercel/Railway
+1. Substituir localStorage por Supabase ou API própria.
+2. Integrar agente IA real para a Professora Kelle quando houver backend autorizado.
+3. Adicionar pixel Meta e Google Analytics.
+4. Deploy em domínio próprio via Vercel/Railway.

@@ -6,6 +6,9 @@ import { ModalityCards } from '@/components/home/ModalityCards';
 import { WhyUsSection } from '@/components/home/WhyUsSection';
 import { CourseHighlights } from '@/components/home/CourseHighlights';
 import { AuthoritySection } from '@/components/home/AuthoritySection';
+import { AboutPreviewSection } from '@/components/home/AboutPreviewSection';
+import { NewsSection } from '@/components/home/NewsSection';
+import { TestimonialsSection } from '@/components/home/TestimonialsSection';
 import { LocationSection } from '@/components/home/LocationSection';
 import { FaqPreviewSection } from '@/components/home/FaqPreviewSection';
 import { FinalCTA } from '@/components/home/FinalCTA';
@@ -16,10 +19,13 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <HeroSection />
-        <KellyIntroSection />
         <ModalityCards />
-        <WhyUsSection />
         <CourseHighlights />
+        <KellyIntroSection />
+        <WhyUsSection />
+        <AboutPreviewSection />
+        <TestimonialsSection />
+        <NewsSection />
         <AuthoritySection />
         <LocationSection />
         <FaqPreviewSection />

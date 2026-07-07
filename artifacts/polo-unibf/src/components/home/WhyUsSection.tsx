@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 export function WhyUsSection() {
   const benefits = [
     {
-      title: 'Polo Físico Local',
+      title: 'Atendimento local',
       description: 'Atendimento presencial em Cristalina-GO para tirar dúvidas e oferecer todo suporte que você precisa durante o curso.',
       icon: MapPin
     },
@@ -14,8 +14,8 @@ export function WhyUsSection() {
       icon: Users
     },
     {
-      title: 'Qualidade Reconhecida',
-      description: 'Instituição consolidada com cursos reconhecidos e estrutura curricular voltada para a realidade do mercado.',
+      title: 'Orientação institucional',
+      description: 'Informações sobre cursos e modalidades são conduzidas com responsabilidade e confirmação nos canais oficiais.',
       icon: BookCheck
     },
     {
@@ -29,7 +29,7 @@ export function WhyUsSection() {
     <section className="py-24 bg-muted/50">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">Por que estudar no Polo UniBF?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">Por que estudar na UniBF Cristalina-GO?</h2>
           <p className="text-lg text-muted-foreground">
             A conveniência do ensino moderno combinada com o suporte e a segurança de um polo físico próximo a você.
           </p>

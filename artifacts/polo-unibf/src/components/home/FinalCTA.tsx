@@ -10,7 +10,7 @@ export function FinalCTA() {
       <div className="container mx-auto px-4 relative z-10 text-center">
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Pronto para dar o próximo passo?</h2>
         <p className="text-xl text-white/80 max-w-2xl mx-auto mb-10">
-          Não adie mais o seu futuro. Fale com nossa equipe agora mesmo e descubra como é fácil iniciar seus estudos no Polo UniBF.
+          Fale com nossa equipe e receba orientação sobre cursos, modalidades e atendimento na UniBF Cristalina-GO.
         </p>
         <Button 
           size="xl" 

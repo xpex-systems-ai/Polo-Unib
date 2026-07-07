@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER || '5561982367003';
+const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER || '5561981571394';
 
 export function getWhatsAppUrl(message?: string): string {
   const url = new URL(`https://wa.me/${WHATSAPP_NUMBER}`);

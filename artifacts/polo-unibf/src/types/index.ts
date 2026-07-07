@@ -6,6 +6,10 @@ export interface Course {
   description: string;
   cta: string;
   icon?: string;
+  image?: string;
+  status?: 'validado' | 'aguardando_validacao';
+  featured?: boolean;
+  sourceNote?: string;
   whatsappMessage?: string;
 }
 
