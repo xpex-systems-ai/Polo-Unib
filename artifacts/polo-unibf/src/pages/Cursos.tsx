@@ -1,9 +1,54 @@
-import { useState, useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { CourseSearch } from '@/components/courses/CourseSearch';
 import { CourseCard } from '@/components/courses/CourseCard';
 import { courses } from '@/data/courses';
+import { Button } from '@/components/ui/button';
+import { openWhatsApp } from '@/lib/whatsapp';
+
+function CoursesHeroBanner() {
+  const [hasImageError, setHasImageError] = useState(false);
+
+  return (
+    <section className="mb-10 overflow-hidden rounded-[18px] border border-border bg-white shadow-[0_24px_60px_rgba(0,31,51,0.16)] sm:rounded-[28px]">
+      <div className="grid items-stretch lg:grid-cols-[1.08fr_0.92fr]">
+        <div className="relative h-[clamp(220px,56.25vw,280px)] bg-[linear-gradient(135deg,#002F4B_0%,#003B5C_100%)] md:h-auto md:aspect-[1365/450] lg:aspect-auto">
+          {hasImageError ? (
+            <div className="flex h-full w-full items-center justify-center bg-[radial-gradient(circle_at_top_left,rgba(0,184,107,0.28),transparent_32%),linear-gradient(135deg,#002F4B_0%,#003B5C_100%)] p-8 text-center text-white">
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.28em] text-primary">Conheça nossos cursos</p>
+                <h2 className="mt-4 text-3xl font-bold md:text-5xl">Opções para todos os momentos da sua carreira.</h2>
+              </div>
+            </div>
+          ) : (
+            <img
+              src="/assets/hero/hero-1200-opcoes-dividido.png"
+              alt="Banner UniBF com opções de cursos dividido em áreas de estudo"
+              className="h-full w-full object-contain object-center"
+              loading="lazy"
+              onError={() => setHasImageError(true)}
+            />
+          )}
+        </div>
+        <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-10">
+          <span className="mb-3 text-sm font-bold uppercase tracking-[0.24em] text-primary">Conheça nossos cursos</span>
+          <h2 className="text-3xl font-bold leading-tight text-foreground md:text-4xl">Escolha sua formação com apoio do polo UniBF Cristalina-GO.</h2>
+          <p className="mt-4 text-muted-foreground">
+            Compare modalidades, áreas e possibilidades de estudo. Se preferir, fale direto no WhatsApp oficial para receber orientação personalizada.
+          </p>
+          <Button
+            size="lg"
+            className="mt-6 w-full rounded-full bg-primary hover:bg-primary/90 sm:w-fit"
+            onClick={() => openWhatsApp('Olá! Vim pelo site da UniBF Cristalina-GO e quero conhecer as opções de cursos disponíveis.')}
+          >
+            Falar sobre cursos no WhatsApp
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export default function Cursos() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -33,6 +78,8 @@ export default function Cursos() {
       </div>
 
       <main className="flex-1 container mx-auto px-4 -mt-12 mb-20 relative z-10">
+        <CoursesHeroBanner />
+
         <CourseSearch 
           searchTerm={searchTerm} 
           setSearchTerm={setSearchTerm} 
