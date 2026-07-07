@@ -5,8 +5,7 @@ import { LeadForm } from '@/components/forms/LeadForm';
 import { MapPin, Phone, Instagram, Clock } from 'lucide-react';
 
 const LOGO = '/assets/logos/unibf-cristalina-go-logo.png';
-const FACADE = '/assets/fachada-unibf-cristalina-go.jpg';
-const FACADE = '/assets/polo/fachada-unibf-cristalina-go.jpg';
+const FACADE = "/assets/fachada-unibf-cristalina-go.jpg";
 
 export default function Contato() {
   const [logoError, setLogoError] = useState(false);
