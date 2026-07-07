@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { MapPin, Phone, Clock } from 'lucide-react';
+import { MapPin, Phone, Clock, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { openWhatsApp } from '@/lib/whatsapp';
 import { motion } from 'framer-motion';
 
-const FACADE = '/assets/polo/fachada-unibf-cristalina-go.jpg';
+const FACADE = '/assets/fachada-unibf-cristalina-go.jpg';
 const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=Centro+Universit%C3%A1rio+UniBF+Cristalina+GO';
 
 export function LocationSection() {
@@ -62,11 +63,19 @@ export function LocationSection() {
               </div>
             </div>
 
-            <a href={MAPS_URL} target="_blank" rel="noreferrer" className="mt-8 inline-block">
-              <Button className="bg-navy hover:bg-navy/90 text-white rounded-full px-6">
-                Abrir no Google Maps
+            <div className="mt-8 flex flex-col sm:flex-row gap-3">
+              <Button
+                className="bg-primary hover:bg-primary/90 text-white rounded-full px-6"
+                onClick={() => openWhatsApp('Olá! Vim pelo site e gostaria de atendimento no Polo UniBF Cristalina-GO.')}
+              >
+                <MessageCircle className="w-4 h-4 mr-2" /> Falar no WhatsApp oficial
               </Button>
-            </a>
+              <a href={MAPS_URL} target="_blank" rel="noreferrer" className="inline-block">
+                <Button variant="outline" className="border-navy/20 text-navy hover:bg-navy/5 rounded-full px-6">
+                  Abrir no Google Maps
+                </Button>
+              </a>
+            </div>
           </motion.div>
 
           {/* Facade photo */}
@@ -75,13 +84,13 @@ export function LocationSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="rounded-3xl overflow-hidden border border-border shadow-xl aspect-[4/3] relative"
+            className="rounded-3xl overflow-hidden border border-border shadow-[0_24px_60px_rgba(0,31,51,0.18)] aspect-[4/3] min-h-[300px] sm:min-h-[420px] relative"
           >
             {!imgError ? (
               <img
                 src={FACADE}
-                alt="Fachada do Centro Universitário UniBF Cristalina-GO"
-                className="w-full h-full object-cover"
+                alt="Entrada do Polo UniBF Cristalina-GO"
+                className="w-full h-full object-cover object-top"
                 onError={() => setImgError(true)}
               />
             ) : (
@@ -94,7 +103,7 @@ export function LocationSection() {
                     Ver no Google Maps
                   </Button>
                 </a>
-                <p className="text-xs text-white/30 mt-2">Adicione a foto em /assets/polo/fachada-unibf-cristalina-go.jpg</p>
+                <p className="text-xs text-white/30 mt-2">Adicione a foto em /assets/fachada-unibf-cristalina-go.jpg</p>
               </div>
             )}
           </motion.div>

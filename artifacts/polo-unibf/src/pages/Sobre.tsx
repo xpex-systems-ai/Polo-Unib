@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { openWhatsApp } from '@/lib/whatsapp';
 import { motion } from 'framer-motion';
 
-const FACADE = '/assets/polo/fachada-unibf-cristalina-go.jpg';
+const FACADE = '/assets/fachada-unibf-cristalina-go.jpg';
 
 export default function Sobre() {
   const [imgError, setImgError] = useState(false);
@@ -38,20 +38,20 @@ export default function Sobre() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="rounded-3xl overflow-hidden border border-border shadow-xl aspect-[4/3]"
+                className="rounded-3xl overflow-hidden border border-border shadow-[0_24px_60px_rgba(0,31,51,0.18)] aspect-[4/3] min-h-[320px] sm:min-h-[420px]"
               >
                 {!imgError ? (
                   <img
                     src={FACADE}
                     alt="Fachada do Centro Universitário UniBF Cristalina-GO"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                     onError={() => setImgError(true)}
                   />
                 ) : (
                   <div className="w-full h-full bg-gradient-to-br from-navy to-[#002F4B] flex flex-col items-center justify-center text-white/60 gap-3 p-8 text-center">
                     <MapPin className="w-12 h-12 opacity-30" />
                     <p className="font-semibold text-white/80">Centro Universitário UniBF Cristalina-GO</p>
-                    <p className="text-sm text-white/50">Adicione a foto em /assets/polo/fachada-unibf-cristalina-go.jpg</p>
+                    <p className="text-sm text-white/50">Adicione a foto em /assets/fachada-unibf-cristalina-go.jpg</p>
                   </div>
                 )}
               </motion.div>

@@ -84,7 +84,7 @@ Os assets principais ficam em `artifacts/polo-unibf/public/assets`:
 - `/assets/logos/unibf-cristalina-go-logo-white.png`
 - `/assets/logos/favicon.png`
 - `/assets/avatars/professora-kelle-avatar.png`
-- `/assets/polo/fachada-unibf-cristalina-go.jpg`
+- `/assets/fachada-unibf-cristalina-go.jpg`
 - `/assets/social/unibf-cristalina-go-og.png`
 
 As imagens devem ser locais/autorizadas. Não importe imagens externas do site oficial e não copie imagens oficiais sem autorização. Componentes que exibem imagem devem manter fallback elegante; o `CourseCard` deve funcionar com ou sem imagem.

@@ -3,7 +3,7 @@ import { Link } from 'wouter';
 import { MapPin, Users, ShieldCheck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const FACADE = '/assets/polo/fachada-unibf-cristalina-go.jpg';
+const FACADE = '/assets/fachada-unibf-cristalina-go.jpg';
 
 export function AboutPreviewSection() {
   const [imageError, setImageError] = useState(false);
