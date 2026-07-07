@@ -8,8 +8,10 @@ const rawPort = process.env.PORT;
 const port = rawPort ? Number(rawPort) : 3000;
 
 // BASE_PATH defaults to '/' when not set (e.g. during CI build)
-const basePath = process.env.BASE_PATH ?? '/';
-const isReplitDev = process.env.NODE_ENV !== 'production' && process.env.REPL_ID !== undefined;
+const rawBasePath = process.env.BASE_PATH ?? '/';
+const basePath = rawBasePath.endsWith('/') ? rawBasePath : `${rawBasePath}/`;
+const isDevelopment = process.env.NODE_ENV === 'development';
+const isReplitDev = isDevelopment && process.env.REPL_ID !== undefined;
 
 export default defineConfig({
   base: basePath,

@@ -1,11 +1,12 @@
 const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER || '5561981571394';
 
 export function getWhatsAppUrl(message?: string): string {
-  const url = new URL(`https://wa.me/${WHATSAPP_NUMBER}`);
-  if (message) {
-    url.searchParams.set('text', message);
+  const baseUrl = `https://wa.me/${WHATSAPP_NUMBER}`;
+  if (!message) {
+    return baseUrl;
   }
-  return url.toString();
+
+  return `${baseUrl}?text=${encodeURIComponent(message)}`;
 }
 
 export function openWhatsApp(message?: string): void {
