@@ -6,6 +6,7 @@ import { MapPin, Phone, Instagram, Clock } from 'lucide-react';
 
 const LOGO = '/assets/logos/unibf-cristalina-go-logo.png';
 const FACADE = '/assets/fachada-unibf-cristalina-go.jpg';
+const FACADE = '/assets/polo/fachada-unibf-cristalina-go.jpg';
 
 export default function Contato() {
   const [logoError, setLogoError] = useState(false);
@@ -63,6 +64,7 @@ export default function Contato() {
                     <MapPin className="h-10 w-10 text-primary/80" />
                     <p className="font-semibold text-white">Centro Universitário UniBF Cristalina-GO</p>
                     <p className="text-xs text-white/50">Adicione a foto em /assets/fachada-unibf-cristalina-go.jpg</p>
+                    <p className="text-xs text-white/50">Adicione a foto em /assets/polo/fachada-unibf-cristalina-go.jpg</p>
                   </div>
                 )}
               </div>
