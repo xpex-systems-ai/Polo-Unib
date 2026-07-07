@@ -3,24 +3,22 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'vite';
 
-import runtimeErrorOverlay from '@replit/vite-plugin-runtime-error-modal';
-
 // PORT is only needed for the dev/preview server, not for `vite build`
 const rawPort = process.env.PORT;
 const port = rawPort ? Number(rawPort) : 3000;
 
 // BASE_PATH defaults to '/' when not set (e.g. during CI build)
 const basePath = process.env.BASE_PATH ?? '/';
+const isReplitDev = process.env.NODE_ENV !== 'production' && process.env.REPL_ID !== undefined;
 
 export default defineConfig({
   base: basePath,
   plugins: [
     react(),
     tailwindcss(),
-    runtimeErrorOverlay(),
-    ...(process.env.NODE_ENV !== 'production' &&
-    process.env.REPL_ID !== undefined
+    ...(isReplitDev
       ? [
+          await import('@replit/vite-plugin-runtime-error-modal').then((m) => m.default()),
           await import('@replit/vite-plugin-cartographer').then((m) =>
             m.cartographer({
               root: path.resolve(import.meta.dirname, '..'),
@@ -35,12 +33,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(import.meta.dirname, 'src'),
-      '@assets': path.resolve(
-        import.meta.dirname,
-        '..',
-        '..',
-        'attached_assets',
-      ),
+      '@assets': path.resolve(import.meta.dirname, '..', '..', 'attached_assets'),
     },
     dedupe: ['react', 'react-dom'],
   },
@@ -54,9 +47,7 @@ export default defineConfig({
     strictPort: true,
     host: '0.0.0.0',
     allowedHosts: true,
-    fs: {
-      strict: true,
-    },
+    fs: { strict: true },
   },
   preview: {
     port,

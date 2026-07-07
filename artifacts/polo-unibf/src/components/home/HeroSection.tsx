@@ -21,7 +21,7 @@ export function HeroSection() {
           className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-sm font-medium mb-8 backdrop-blur-sm"
         >
           <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-          Matrículas Abertas em Cristalina-GO
+          Matrículas e informações em Cristalina-GO
         </motion.div>
         
         <motion.h1 
@@ -39,8 +39,7 @@ export function HeroSection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-lg md:text-xl text-white/80 max-w-2xl mb-10 leading-relaxed"
         >
-          Ensino superior de qualidade no UniBF Cristalina-GO. 
-          Estude com orientação local, suporte personalizado e prepare-se para o mercado.
+          Ensino superior com orientação local em Cristalina-GO. Escolha sua formação e fale com nossa equipe para confirmar cursos, modalidades e condições.
         </motion.p>
         
         <motion.div 
@@ -61,6 +60,22 @@ export function HeroSection() {
               Ver cursos
             </Button>
           </Link>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.35 }}
+          className="mt-8 w-full max-w-3xl rounded-3xl border border-white/15 bg-white/10 p-4 backdrop-blur-md"
+        >
+          <p className="text-sm text-white/70 mb-3">O que você quer aprender hoje?</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+            {['Graduação', 'Pós-graduação', 'Tecnólogo', 'Extensão'].map((item) => (
+              <Link key={item} href={`/cursos?modalidade=${encodeURIComponent(item)}`}>
+                <span className="block rounded-full bg-white/10 border border-white/15 px-3 py-2 text-sm font-semibold hover:bg-white hover:text-navy transition-colors">{item}</span>
+              </Link>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>

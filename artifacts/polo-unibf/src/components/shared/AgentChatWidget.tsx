@@ -85,7 +85,7 @@ export function AgentChatWidget() {
               <div className="flex items-center gap-2 flex-wrap">
                 <span className="font-bold text-base leading-tight">Professora Kelle</span>
                 <span className="text-[10px] font-semibold bg-green-400/20 text-green-300 border border-green-400/30 rounded-full px-2 py-0.5 uppercase tracking-wide">
-                  Assistente IA
+                  Assistente virtual
                 </span>
               </div>
               <p className="text-xs text-white/60 mt-0.5">Assistente Virtual da UniBF Cristalina-GO</p>
@@ -163,7 +163,7 @@ export function AgentChatWidget() {
           <p className="text-sm text-foreground leading-snug font-medium">
             Oi! Eu sou a Professora Kelle 👋
           </p>
-          <p className="text-xs text-muted-foreground mt-1">Posso te ajudar a escolher o melhor caminho para sua formação.</p>
+          <p className="text-xs text-muted-foreground mt-1">Posso te ajudar a escolher seu curso?</p>
           <div className="absolute -bottom-2 right-5 w-4 h-4 bg-white border-r border-b border-border rotate-45" />
         </div>
       )}
