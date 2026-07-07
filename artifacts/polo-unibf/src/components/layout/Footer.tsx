@@ -62,6 +62,7 @@ export function Footer() {
               <li><Link href="/sobre" className="text-white/60 hover:text-white transition-colors text-sm">Sobre o Polo</Link></li>
               <li><Link href="/contato" className="text-white/60 hover:text-white transition-colors text-sm">Contato</Link></li>
               <li><Link href="/faq" className="text-white/60 hover:text-white transition-colors text-sm">Perguntas Frequentes</Link></li>
+              <li><Link href="/unibf-tv" className="text-white/60 hover:text-white transition-colors text-sm">UniBF TV</Link></li>
               <li><Link href="/links" className="text-white/60 hover:text-white transition-colors text-sm">Links da Bio</Link></li>
             </ul>
           </div>

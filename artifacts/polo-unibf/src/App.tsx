@@ -16,6 +16,7 @@ import Contato from '@/pages/Contato';
 import Links from '@/pages/Links';
 import Admin from '@/pages/Admin';
 import Faq from '@/pages/Faq';
+import UnibfTv from '@/pages/UnibfTv';
 
 // Shared Components
 import { FloatingWhatsApp } from '@/components/shared/FloatingWhatsApp';
@@ -36,6 +37,7 @@ function Router() {
       <Route path="/contato" component={Contato} />
       <Route path="/links" component={Links} />
       <Route path="/faq" component={Faq} />
+      <Route path="/unibf-tv" component={UnibfTv} />
       <Route path="/admin" component={Admin} />
       <Route component={NotFound} />
     </Switch>
