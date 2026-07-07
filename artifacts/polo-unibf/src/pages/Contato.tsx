@@ -2,12 +2,14 @@ import { useState } from 'react';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { LeadForm } from '@/components/forms/LeadForm';
-import { MapPin, Phone, Mail, Instagram, Clock } from 'lucide-react';
+import { MapPin, Phone, Instagram, Clock } from 'lucide-react';
 
 const LOGO = '/assets/logos/unibf-cristalina-go-logo.png';
+const FACADE = '/assets/polo/fachada-unibf-cristalina-go.jpg';
 
 export default function Contato() {
   const [logoError, setLogoError] = useState(false);
+  const [facadeError, setFacadeError] = useState(false);
   return (
     <div className="min-h-screen flex flex-col w-full">
       <Header />
@@ -47,6 +49,23 @@ export default function Contato() {
                 )}
               </div>
               <h3 className="text-2xl font-bold text-navy mb-6">Informações do Polo</h3>
+
+              <div className="mb-6 overflow-hidden rounded-2xl border border-border shadow-[0_16px_40px_rgba(0,31,51,0.14)] bg-navy aspect-[16/10]">
+                {!facadeError ? (
+                  <img
+                    src={FACADE}
+                    alt="Fachada do Centro Universitário UniBF Cristalina-GO"
+                    className="h-full w-full object-cover object-top"
+                    onError={() => setFacadeError(true)}
+                  />
+                ) : (
+                  <div className="h-full w-full bg-gradient-to-br from-navy to-[#002F4B] flex flex-col items-center justify-center gap-2 p-6 text-center text-white/70">
+                    <MapPin className="h-10 w-10 text-primary/80" />
+                    <p className="font-semibold text-white">Centro Universitário UniBF Cristalina-GO</p>
+                    <p className="text-xs text-white/50">Adicione a foto em /assets/polo/fachada-unibf-cristalina-go.jpg</p>
+                  </div>
+                )}
+              </div>
               
               <ul className="space-y-6">
                 <li className="flex items-start gap-4">
