@@ -1,11 +1,9 @@
-const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER || '5561981571394';
+export const WHATSAPP_NUMBER = '5561982367003';
+export const DEFAULT_WHATSAPP_MESSAGE =
+  'Olá! Vim pelo site da UniBF Cristalina-GO e gostaria de receber atendimento.';
 
-export function getWhatsAppUrl(message?: string): string {
+export function getWhatsAppUrl(message = DEFAULT_WHATSAPP_MESSAGE): string {
   const baseUrl = `https://wa.me/${WHATSAPP_NUMBER}`;
-  if (!message) {
-    return baseUrl;
-  }
-
   return `${baseUrl}?text=${encodeURIComponent(message)}`;
 }
 
