@@ -9,31 +9,31 @@ import { cn } from '@/lib/utils';
 const campaignEnabled = false;
 
 const fallbackGradient =
-  'bg-[radial-gradient(circle_at_top_left,rgba(0,184,107,0.35),transparent_32%),linear-gradient(135deg,hsl(var(--navy))_0%,#071b35_48%,#00B86B_140%)]';
+  'bg-[radial-gradient(circle_at_top_left,rgba(0,184,107,0.32),transparent_34%),linear-gradient(135deg,#002F4B_0%,#003B5C_100%)]';
 
 const heroSlides = [
   {
     title: 'Agora pode ser a sua vez de entrar na faculdade.',
     description:
-      'Dê o próximo passo com orientação local em Cristalina-GO e atendimento direto pelo WhatsApp oficial.',
+      'Fale com a UniBF Cristalina-GO pelo WhatsApp oficial e receba orientação sobre cursos e modalidades.',
     image: '/assets/hero/hero-agora-pode-ser-sua-vez.png',
-    alt: 'Banner UniBF com chamada Agora pode ser a sua vez',
-    cta: 'Quero falar com a UniBF',
+    alt: 'Banner oficial UniBF com chamada Agora pode ser a sua vez',
+    cta: 'Quero atendimento no WhatsApp',
   },
   {
     title: 'Mais opções para estudar do seu jeito.',
     description:
       'Conheça possibilidades em graduação, pós-graduação, tecnólogo e extensão com suporte do polo Cristalina-GO.',
     image: '/assets/hero/hero-1200-opcoes-aluno.png',
-    alt: 'Banner UniBF sobre opções de cursos para alunos',
+    alt: 'Banner oficial UniBF sobre opções de cursos para alunos',
     cta: 'Ver opções pelo WhatsApp',
   },
   {
     title: 'Imersões profissionais para impulsionar sua carreira.',
     description:
-      'Fale com nossa equipe para entender cursos, modalidades e caminhos de formação disponíveis.',
+      'Consulte a equipe do polo para entender cursos, modalidades e caminhos de formação disponíveis.',
     image: '/assets/hero/hero-imersoes-profissionais.png',
-    alt: 'Banner UniBF sobre imersões profissionais',
+    alt: 'Banner oficial UniBF sobre imersões profissionais',
     cta: 'Receber orientação',
   },
   ...(campaignEnabled
@@ -50,16 +50,29 @@ const heroSlides = [
     : []),
 ];
 
-function HeroImage({ slide }: { slide: (typeof heroSlides)[number] }) {
+type HeroSlide = (typeof heroSlides)[number];
+
+function getWhatsAppMessage(slide: HeroSlide) {
+  return `Olá! Vim pelo site da UniBF Cristalina-GO e gostaria de atendimento sobre: ${slide.title}`;
+}
+
+function HeroImage({ slide }: { slide: HeroSlide }) {
   const [hasError, setHasError] = useState(false);
 
   if (hasError) {
     return (
-      <div className={cn('flex h-full min-h-[280px] items-center justify-center p-8 text-center', fallbackGradient)}>
-        <div>
+      <div className={cn('flex h-full w-full items-center justify-center p-6 text-center sm:p-8', fallbackGradient)}>
+        <div className="mx-auto max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-[0.28em] text-primary">UniBF Cristalina-GO</p>
-          <h2 className="mt-4 text-3xl font-bold text-white md:text-5xl">{slide.title}</h2>
-          <p className="mx-auto mt-4 max-w-xl text-white/80">{slide.description}</p>
+          <h2 className="mt-4 text-2xl font-bold text-white sm:text-4xl">{slide.title}</h2>
+          <p className="mx-auto mt-4 max-w-xl text-sm text-white/80 sm:text-base">{slide.description}</p>
+          <Button
+            size="lg"
+            onClick={() => openWhatsApp(getWhatsAppMessage(slide))}
+            className="mt-6 rounded-full bg-primary hover:bg-primary/90"
+          >
+            {slide.cta}
+          </Button>
         </div>
       </div>
     );
@@ -69,7 +82,7 @@ function HeroImage({ slide }: { slide: (typeof heroSlides)[number] }) {
     <img
       src={slide.image}
       alt={slide.alt}
-      className="h-full w-full object-cover"
+      className="h-full w-full object-contain object-center"
       loading="eager"
       onError={() => setHasError(true)}
     />
@@ -89,7 +102,6 @@ export function HeroSection() {
   }, [slides.length]);
 
   const currentSlide = slides[activeSlide];
-  const whatsappMessage = `Olá! Vim pelo site da UniBF Cristalina-GO e gostaria de atendimento sobre: ${currentSlide.title}`;
 
   function goToSlide(index: number) {
     setActiveSlide((index + slides.length) % slides.length);
@@ -102,75 +114,59 @@ export function HeroSection() {
       <div className="absolute bottom-0 right-[-8%] h-96 w-96 rounded-full bg-white/10 blur-[120px]" />
 
       <div className="container relative z-10 mx-auto px-4 py-10 md:py-16">
-        <div className="grid items-center gap-8 lg:grid-cols-[0.95fr_1.05fr]">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center lg:text-left"
-          >
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-sm font-medium backdrop-blur-sm">
-              <span className="h-2 w-2 rounded-full bg-primary" />
-              Matrículas e informações em Cristalina-GO
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mx-auto flex max-w-[1180px] flex-col items-center text-center"
+        >
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-sm font-medium backdrop-blur-sm">
+            <span className="h-2 w-2 rounded-full bg-primary" />
+            Matrículas e informações em Cristalina-GO
+          </div>
+
+          <div className="relative w-full overflow-hidden rounded-[18px] border border-white/15 bg-[linear-gradient(135deg,#002F4B_0%,#003B5C_100%)] shadow-[0_24px_60px_rgba(0,31,51,0.25)] sm:rounded-[28px]">
+            <div className="h-[clamp(220px,56.25vw,280px)] w-full md:h-auto md:aspect-[1365/450]">
+              <HeroImage slide={currentSlide} />
             </div>
+          </div>
 
-            <h1 className="text-4xl font-bold leading-tight tracking-tight md:text-6xl">
-              {currentSlide.title}
-            </h1>
-            <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/80 md:text-xl lg:mx-0">
-              {currentSlide.description}
-            </p>
+          <div className="mt-5 flex items-center justify-center gap-3">
+            <Button type="button" size="icon" variant="outline" className="rounded-full border-white/20 bg-white/10 text-white hover:bg-white/20" onClick={() => goToSlide(activeSlide - 1)} aria-label="Banner anterior">
+              <ArrowLeft className="h-4 w-4" />
+            </Button>
+            <div className="flex gap-2" aria-label="Selecionar banner">
+              {slides.map((slide, index) => (
+                <button
+                  key={slide.image}
+                  type="button"
+                  onClick={() => goToSlide(index)}
+                  className={cn('h-2.5 rounded-full transition-all', index === activeSlide ? 'w-8 bg-primary' : 'w-2.5 bg-white/40 hover:bg-white/70')}
+                  aria-label={`Ir para o banner ${index + 1}`}
+                  aria-current={index === activeSlide}
+                />
+              ))}
+            </div>
+            <Button type="button" size="icon" variant="outline" className="rounded-full border-white/20 bg-white/10 text-white hover:bg-white/20" onClick={() => goToSlide(activeSlide + 1)} aria-label="Próximo banner">
+              <ArrowRight className="h-4 w-4" />
+            </Button>
+          </div>
 
-            <div className="mt-8 flex w-full flex-col items-center gap-4 sm:flex-row lg:justify-start">
-              <Button
-                size="xl"
-                onClick={() => openWhatsApp(whatsappMessage)}
-                className="w-full rounded-full bg-primary shadow-lg shadow-primary/25 hover:bg-primary/90 sm:w-auto"
-              >
-                {currentSlide.cta}
+          <div className="mt-7 flex w-full flex-col items-center justify-center gap-4 sm:flex-row">
+            <Button
+              size="xl"
+              onClick={() => openWhatsApp(getWhatsAppMessage(currentSlide))}
+              className="w-full rounded-full bg-primary shadow-lg shadow-primary/25 hover:bg-primary/90 sm:w-auto"
+            >
+              {currentSlide.cta}
+            </Button>
+            <Link href="/cursos" className="w-full sm:w-auto">
+              <Button size="xl" variant="outline" className="w-full rounded-full border-white/30 bg-transparent text-white hover:bg-white/10 sm:w-auto">
+                Conheça nossos cursos
               </Button>
-              <Link href="/cursos" className="w-full sm:w-auto">
-                <Button size="xl" variant="outline" className="w-full rounded-full border-white/30 bg-transparent text-white hover:bg-white/10 sm:w-auto">
-                  Conheça nossos cursos
-                </Button>
-              </Link>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.98 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="relative"
-          >
-            <div className="overflow-hidden rounded-[2rem] border border-white/15 bg-white/10 shadow-2xl shadow-black/30 backdrop-blur-sm">
-              <div className="aspect-[4/5] sm:aspect-[16/10] lg:aspect-[1200/628]">
-                <HeroImage slide={currentSlide} />
-              </div>
-            </div>
-
-            <div className="mt-5 flex items-center justify-center gap-3">
-              <Button type="button" size="icon" variant="outline" className="rounded-full border-white/20 bg-white/10 text-white hover:bg-white/20" onClick={() => goToSlide(activeSlide - 1)} aria-label="Banner anterior">
-                <ArrowLeft className="h-4 w-4" />
-              </Button>
-              <div className="flex gap-2" aria-label="Selecionar banner">
-                {slides.map((slide, index) => (
-                  <button
-                    key={slide.image}
-                    type="button"
-                    onClick={() => goToSlide(index)}
-                    className={cn('h-2.5 rounded-full transition-all', index === activeSlide ? 'w-8 bg-primary' : 'w-2.5 bg-white/40 hover:bg-white/70')}
-                    aria-label={`Ir para o banner ${index + 1}`}
-                    aria-current={index === activeSlide}
-                  />
-                ))}
-              </div>
-              <Button type="button" size="icon" variant="outline" className="rounded-full border-white/20 bg-white/10 text-white hover:bg-white/20" onClick={() => goToSlide(activeSlide + 1)} aria-label="Próximo banner">
-                <ArrowRight className="h-4 w-4" />
-              </Button>
-            </div>
-          </motion.div>
-        </div>
+            </Link>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

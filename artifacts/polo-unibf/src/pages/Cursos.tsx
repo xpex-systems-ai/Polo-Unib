@@ -11,11 +11,11 @@ function CoursesHeroBanner() {
   const [hasImageError, setHasImageError] = useState(false);
 
   return (
-    <section className="mb-10 overflow-hidden rounded-[2rem] border border-border bg-white shadow-xl shadow-navy/10">
+    <section className="mb-10 overflow-hidden rounded-[18px] border border-border bg-white shadow-[0_24px_60px_rgba(0,31,51,0.16)] sm:rounded-[28px]">
       <div className="grid items-stretch lg:grid-cols-[1.08fr_0.92fr]">
-        <div className="relative min-h-[260px] bg-navy">
+        <div className="relative h-[clamp(220px,56.25vw,280px)] bg-[linear-gradient(135deg,#002F4B_0%,#003B5C_100%)] md:h-auto md:aspect-[1365/450] lg:aspect-auto">
           {hasImageError ? (
-            <div className="flex h-full min-h-[260px] items-center justify-center bg-[radial-gradient(circle_at_top_left,rgba(0,184,107,0.28),transparent_32%),linear-gradient(135deg,hsl(var(--navy))_0%,#071b35_55%,#00B86B_145%)] p-8 text-center text-white">
+            <div className="flex h-full w-full items-center justify-center bg-[radial-gradient(circle_at_top_left,rgba(0,184,107,0.28),transparent_32%),linear-gradient(135deg,#002F4B_0%,#003B5C_100%)] p-8 text-center text-white">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.28em] text-primary">Conheça nossos cursos</p>
                 <h2 className="mt-4 text-3xl font-bold md:text-5xl">Opções para todos os momentos da sua carreira.</h2>
@@ -25,7 +25,7 @@ function CoursesHeroBanner() {
             <img
               src="/assets/hero/hero-1200-opcoes-dividido.png"
               alt="Banner UniBF com opções de cursos dividido em áreas de estudo"
-              className="h-full w-full object-cover"
+              className="h-full w-full object-contain object-center"
               loading="lazy"
               onError={() => setHasImageError(true)}
             />
