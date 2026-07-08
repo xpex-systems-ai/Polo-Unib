@@ -48,10 +48,12 @@ pnpm run build
 O build de produção é gerado em:
 
 ```text
-artifacts/polo-unibf/dist/public
+artifacts/polo-unibf/dist
 ```
 
-## Configuração da Vercel
+## Deploy Vercel correto
+
+> **Importante:** o deploy oficial deve usar o app em `artifacts/polo-unibf` como **Root Directory**. Não aponte a Vercel para a raiz do monorepo, porque o `package.json` raiz executa builds recursivos do workspace e pode tentar buildar artefatos externos ao site público.
 
 Use as seguintes opções no projeto `unibf-cristalina-go`:
 
@@ -61,11 +63,11 @@ Use as seguintes opções no projeto `unibf-cristalina-go`:
 | Root Directory | `artifacts/polo-unibf` |
 | Install Command | `pnpm install` |
 | Build Command | `pnpm run build` |
-| Output Directory | `dist/public` |
+| Output Directory | `dist` |
 | Production Branch | `main` |
 | Node.js | `20.x` |
 
-O arquivo `artifacts/polo-unibf/vercel.json` já define o build, o diretório de saída, cache de assets e rewrite de SPA para que rotas como `/cursos`, `/sobre`, `/faq`, `/contato` e `/links` recarreguem sem 404.
+O arquivo `artifacts/polo-unibf/vercel.json` já define o framework Vite, install command, build command, output directory `dist` e rewrite de SPA para que rotas como `/cursos`, `/sobre`, `/faq`, `/contato` e `/links` recarreguem sem 404.
 
 ## Variáveis de ambiente
 
@@ -73,7 +75,7 @@ Copie `artifacts/polo-unibf/.env.example` para `.env.local` no desenvolvimento, 
 
 | Variável | Obrigatória | Ambientes | Descrição |
 | --- | --- | --- | --- |
-| `VITE_WHATSAPP_NUMBER` | Sim | Production, Preview, Development | Número principal dos CTAs. Valor padrão seguro: `5561981571394`. |
+| `VITE_WHATSAPP_NUMBER` | Sim | Production, Preview, Development | Número principal dos CTAs. Valor oficial: `5561982367003`. |
 | `VITE_ADMIN_PASSWORD` | Não | Production, Preview | Senha do painel admin MVP. Configure manualmente na Vercel e nunca publique no GitHub. |
 
 ## Assets obrigatórios

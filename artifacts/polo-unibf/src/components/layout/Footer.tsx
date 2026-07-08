@@ -1,5 +1,6 @@
 import { Link } from 'wouter';
 import { Facebook, Instagram, MapPin, Phone } from 'lucide-react';
+import { getWhatsAppUrl } from '@/lib/whatsapp';
 import { useState } from 'react';
 
 const LOGO = '/assets/logos/unibf-cristalina-go-logo.png';
@@ -74,7 +75,7 @@ export function Footer() {
                 <Phone size={18} className="shrink-0 text-primary mt-0.5" />
                 <div className="flex flex-col gap-1">
                   <a href="tel:+5561982367003" className="hover:text-white">(61) 9 8236-7003</a>
-                  <a href="tel:+5561981571394" className="hover:text-white">(61) 9 8157-1394 (alternativo)</a>
+                  <a href={getWhatsAppUrl('Olá! Vim pelo rodapé do site da UniBF Cristalina-GO e gostaria de atendimento oficial.')} target="_blank" rel="noreferrer" className="hover:text-white">WhatsApp oficial</a>
                 </div>
               </li>
               <li className="flex items-start gap-3 text-sm text-white/60">
