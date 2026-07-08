@@ -55,7 +55,9 @@ artifacts/polo-unibf/dist
 
 > **Importante:** o deploy oficial deve usar o app em `artifacts/polo-unibf` como **Root Directory**. Não aponte a Vercel para a raiz do monorepo, porque o `package.json` raiz executa builds recursivos do workspace e pode tentar buildar artefatos externos ao site público.
 
-Use as seguintes opções no projeto `unibf-cristalina-go`:
+O projeto Vercel production-ready é **`polo-unib-polo-unibf`**. Após o merge do PR #15 na `main`, considere esse como o único projeto oficial para produção e mantenha o build verde nele.
+
+Use as seguintes opções no projeto `polo-unib-polo-unibf`:
 
 | Campo | Valor |
 | --- | --- |
@@ -68,6 +70,12 @@ Use as seguintes opções no projeto `unibf-cristalina-go`:
 | Node.js | `20.x` |
 
 O arquivo `artifacts/polo-unibf/vercel.json` já define o framework Vite, install command, build command, output directory `dist` e rewrite de SPA para que rotas como `/cursos`, `/sobre`, `/faq`, `/contato` e `/links` recarreguem sem 404.
+
+### Projetos Vercel duplicados ou legados
+
+Projetos Vercel antigos ou duplicados, como `polo-unib`, `polo-unibf` e `polo-unib-api-server`, podem falhar quando apontam para a raiz do monorepo ou para artefatos que não são o site público oficial. Essas falhas não devem ser corrigidas alterando o código do app oficial apenas para apagar alertas de projetos legados.
+
+Para limpar a Vercel, remova, arquive ou desconecte os projetos duplicados/legados no painel da Vercel e mantenha somente `polo-unib-polo-unibf` conectado à branch `main` com **Root Directory** `artifacts/polo-unibf`.
 
 ## Variáveis de ambiente
 
