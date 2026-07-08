@@ -1,8 +1,9 @@
 {
+  "version": 2,
+  "framework": "vite",
+  "installCommand": "pnpm install",
   "buildCommand": "pnpm run build",
   "outputDirectory": "dist",
-  "installCommand": "pnpm install",
-  "framework": "vite",
   "rewrites": [
     {
       "source": "/(.*)",
