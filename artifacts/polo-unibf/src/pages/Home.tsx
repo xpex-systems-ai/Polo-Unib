@@ -12,6 +12,7 @@ import { TestimonialsSection } from '@/components/home/TestimonialsSection';
 import { LocationSection } from '@/components/home/LocationSection';
 import { FaqPreviewSection } from '@/components/home/FaqPreviewSection';
 import { FinalCTA } from '@/components/home/FinalCTA';
+import { DigitalEcosystemSection } from '@/components/home/DigitalEcosystemSection';
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <ModalityCards />
         <CourseHighlights />
         <KellyIntroSection />
+        <DigitalEcosystemSection />
         <WhyUsSection />
         <AboutPreviewSection />
         <TestimonialsSection />

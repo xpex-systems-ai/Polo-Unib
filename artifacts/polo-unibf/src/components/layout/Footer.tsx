@@ -1,12 +1,14 @@
 import { Link } from 'wouter';
-import { Facebook, Instagram, MapPin, Phone } from 'lucide-react';
+import { Facebook, Instagram, MapPin, Phone, MessageCircle, Linkedin, Music2, BriefcaseBusiness } from 'lucide-react';
 import { getWhatsAppUrl } from '@/lib/whatsapp';
+import { socialChannels } from '@/data/socialChannels';
 import { useState } from 'react';
 
 const LOGO = '/assets/logos/unibf-cristalina-go-logo.png';
 
 export function Footer() {
   const [logoError, setLogoError] = useState(false);
+  const activeSocials = socialChannels.filter((channel) => channel.external && channel.status === 'Ativo');
 
   return (
     <footer className="bg-navy text-white pt-16 pb-8">
@@ -36,13 +38,15 @@ export function Footer() {
             <p className="text-white/60 text-sm leading-relaxed mb-6">
               Ensino superior acessível e de qualidade em Cristalina-GO e região. Dê o próximo passo na sua carreira.
             </p>
-            <div className="flex gap-4">
-              <a href="https://instagram.com/universidadeunibf" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
-                <Instagram size={20} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
-                <Facebook size={20} />
-              </a>
+            <div className="flex flex-wrap gap-3">
+              {activeSocials.map((channel) => {
+                const Icon = channel.id === 'instagram' ? Instagram : channel.id === 'whatsapp' ? MessageCircle : channel.id === 'google-business' ? BriefcaseBusiness : channel.id === 'linkedin' ? Linkedin : channel.id === 'tiktok' ? Music2 : Facebook;
+                return (
+                  <a key={channel.id} href={channel.href} target="_blank" rel="noreferrer" aria-label={channel.name} className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
+                    <Icon size={20} />
+                  </a>
+                );
+              })}
             </div>
           </div>
 
@@ -64,6 +68,9 @@ export function Footer() {
               <li><Link href="/contato" className="text-white/60 hover:text-white transition-colors text-sm">Contato</Link></li>
               <li><Link href="/faq" className="text-white/60 hover:text-white transition-colors text-sm">Perguntas Frequentes</Link></li>
               <li><Link href="/unibf-tv" className="text-white/60 hover:text-white transition-colors text-sm">UniBF TV</Link></li>
+              <li><Link href="/midias" className="text-white/60 hover:text-white transition-colors text-sm">Mídias</Link></li>
+              <li><Link href="/blog" className="text-white/60 hover:text-white transition-colors text-sm">Blog</Link></li>
+              <li><Link href="/newsletter" className="text-white/60 hover:text-white transition-colors text-sm">Newsletter</Link></li>
               <li><Link href="/links" className="text-white/60 hover:text-white transition-colors text-sm">Links da Bio</Link></li>
             </ul>
           </div>

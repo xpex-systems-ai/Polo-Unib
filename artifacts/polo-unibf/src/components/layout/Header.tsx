@@ -18,6 +18,8 @@ export function Header() {
     { href: '/cursos', label: 'Cursos' },
     { href: '/sobre', label: 'Sobre o Polo' },
     { href: '/faq', label: 'Dúvidas' },
+    { href: '/midias', label: 'Mídias' },
+    { href: '/blog', label: 'Blog' },
     { href: '/unibf-tv', label: 'UniBF TV' },
     { href: '/contato', label: 'Contato' },
   ];
@@ -48,7 +50,7 @@ export function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-6 lg:gap-8">
+        <nav className="hidden md:flex items-center gap-4 lg:gap-6">
           {navLinks.map((link) => (
             <Link
               key={link.href}
