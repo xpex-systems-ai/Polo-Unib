@@ -1,8 +1,9 @@
 import { Link } from 'wouter';
-import { Facebook, Instagram, MapPin, Phone, MessageCircle, Linkedin, Music2, BriefcaseBusiness } from 'lucide-react';
+import { MapPin, Phone } from 'lucide-react';
 import { getWhatsAppUrl } from '@/lib/whatsapp';
 import { socialChannels } from '@/data/socialChannels';
 import { useState } from 'react';
+import { SocialBrandIcon } from '@/components/shared/SocialBrandIcon';
 
 const LOGO = '/assets/logos/unibf-cristalina-go-logo.png';
 
@@ -39,14 +40,11 @@ export function Footer() {
               Ensino superior acessível e de qualidade em Cristalina-GO e região. Dê o próximo passo na sua carreira.
             </p>
             <div className="flex flex-wrap gap-3">
-              {activeSocials.map((channel) => {
-                const Icon = channel.id === 'instagram' ? Instagram : channel.id === 'whatsapp' ? MessageCircle : channel.id === 'google-business' ? BriefcaseBusiness : channel.id === 'linkedin' ? Linkedin : channel.id === 'tiktok' ? Music2 : Facebook;
-                return (
-                  <a key={channel.id} href={channel.href} target="_blank" rel="noreferrer" aria-label={channel.name} className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
-                    <Icon size={20} />
-                  </a>
-                );
-              })}
+              {activeSocials.map((channel) => (
+                <a key={channel.id} href={channel.href} target="_blank" rel="noreferrer" aria-label={`Acessar ${channel.name}`} className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-navy transition-colors">
+                  <SocialBrandIcon channelId={channel.id} className="h-5 w-5" />
+                </a>
+              ))}
             </div>
           </div>
 

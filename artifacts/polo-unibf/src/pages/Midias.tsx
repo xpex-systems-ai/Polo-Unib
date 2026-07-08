@@ -5,6 +5,7 @@ import { socialChannels } from '@/data/socialChannels';
 import { getWhatsAppUrl } from '@/lib/whatsapp';
 import { Link } from 'wouter';
 import { MessageCircle, Radio, ShieldCheck } from 'lucide-react';
+import { SocialBrandIcon } from '@/components/shared/SocialBrandIcon';
 
 export default function Midias() {
   return (
@@ -20,6 +21,7 @@ export default function Midias() {
             <h1 className="text-4xl md:text-6xl font-bold mb-5">Ecossistema digital UniBF Cristalina-GO</h1>
             <p className="text-lg md:text-xl text-white/80 max-w-3xl">
               Canais preparados para atendimento, conteúdo, relacionamento e presença local em Campos Lindos.
+              Canais digitais preparados para apresentação, aprovação e ativação gradual do Polo UniBF Cristalina-GO em Campos Lindos.
             </p>
           </div>
         </section>
@@ -31,8 +33,8 @@ export default function Midias() {
               const card = (
                 <div className="h-full rounded-3xl border border-border bg-white p-6 shadow-sm hover:shadow-xl transition-shadow">
                   <div className="flex items-start justify-between gap-4 mb-5">
-                    <div className="h-12 w-12 rounded-2xl bg-navy text-primary flex items-center justify-center font-bold">
-                      {channel.name.slice(0, 2).toUpperCase()}
+                    <div className="h-12 w-12 rounded-2xl bg-navy text-primary flex items-center justify-center shadow-inner shadow-white/10">
+                      <SocialBrandIcon channelId={channel.id} className="h-6 w-6" />
                     </div>
                     <span className={`rounded-full px-3 py-1 text-xs font-semibold ${isPending ? 'bg-muted text-muted-foreground' : 'bg-primary/10 text-primary'}`}>
                       {channel.status}

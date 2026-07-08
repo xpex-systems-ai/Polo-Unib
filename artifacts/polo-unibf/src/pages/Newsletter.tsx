@@ -7,7 +7,8 @@ import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Checkbox } from '@/components/ui/checkbox';
 import { getWhatsAppUrl } from '@/lib/whatsapp';
-import { MailCheck, MessageCircle } from 'lucide-react';
+import { Home, MailCheck, MessageCircle } from 'lucide-react';
+import { Link } from 'wouter';
 
 type NewsletterLead = { name: string; whatsapp: string; interest: string; createdAt: string };
 
@@ -15,11 +16,23 @@ export default function Newsletter() {
   const [submitted, setSubmitted] = useState(false);
   const [consent, setConsent] = useState(false);
   const [form, setForm] = useState({ name: '', whatsapp: '', interest: '' });
+  const [error, setError] = useState('');
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (!consent) return;
-    const lead: NewsletterLead = { ...form, createdAt: new Date().toISOString() };
+    const name = form.name.trim();
+    const whatsapp = form.whatsapp.trim();
+    const interest = form.interest.trim();
+    if (!name || !whatsapp || !interest) {
+      setError('Preencha nome, WhatsApp e interesse para continuar.');
+      return;
+    }
+    if (!consent) {
+      setError('Confirme o consentimento LGPD simples para enviar o cadastro.');
+      return;
+    }
+    setError('');
+    const lead: NewsletterLead = { name, whatsapp, interest, createdAt: new Date().toISOString() };
     const current = JSON.parse(localStorage.getItem('unibf_newsletter_leads') ?? '[]') as NewsletterLead[];
     localStorage.setItem('unibf_newsletter_leads', JSON.stringify([lead, ...current].slice(0, 100)));
     setSubmitted(true);
@@ -34,6 +47,7 @@ export default function Newsletter() {
             <MailCheck className="mx-auto mb-5 h-12 w-12 text-primary" />
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Receba novidades da UniBF Cristalina-GO</h1>
             <p className="text-white/80 text-lg max-w-2xl mx-auto">Cadastre seu interesse para receber orientações educacionais e atualizações do polo.</p>
+            <p className="mt-4 text-sm text-white/60">Cadastro inicial de interesse. Para atendimento imediato, fale pelo WhatsApp oficial.</p>
           </div>
         </section>
         <section className="container mx-auto max-w-3xl px-4 py-16">
@@ -43,9 +57,14 @@ export default function Newsletter() {
                 <MailCheck className="mx-auto mb-5 h-14 w-14 text-primary" />
                 <h2 className="text-2xl font-bold text-navy mb-3">Cadastro recebido com sucesso.</h2>
                 <p className="text-muted-foreground mb-6">Obrigado! Para atendimento imediato, fale com a equipe pelo WhatsApp oficial.</p>
-                <a href={getWhatsAppUrl('Olá! Cadastrei meu interesse na newsletter da UniBF Cristalina-GO e gostaria de atendimento oficial.')} target="_blank" rel="noreferrer">
-                  <Button className="rounded-full bg-primary hover:bg-primary/90"><MessageCircle className="mr-2 h-5 w-5" /> Falar no WhatsApp</Button>
-                </a>
+                <div className="flex flex-col sm:flex-row justify-center gap-3">
+                  <a href={getWhatsAppUrl('Olá! Cadastrei meu interesse na newsletter da UniBF Cristalina-GO e gostaria de atendimento oficial.')} target="_blank" rel="noreferrer">
+                    <Button className="w-full rounded-full bg-primary hover:bg-primary/90"><MessageCircle className="mr-2 h-5 w-5" /> Falar no WhatsApp</Button>
+                  </a>
+                  <Link href="/">
+                    <Button variant="outline" className="w-full rounded-full"><Home className="mr-2 h-5 w-5" /> Voltar para o site</Button>
+                  </Link>
+                </div>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
@@ -68,7 +87,8 @@ export default function Newsletter() {
                   <Checkbox checked={consent} onCheckedChange={(checked) => setConsent(Boolean(checked))} className="mt-0.5" />
                   <span>Ao enviar, você autoriza o contato do polo para orientações educacionais. Seus dados não serão vendidos.</span>
                 </label>
-                <Button type="submit" disabled={!consent} className="w-full rounded-full bg-navy hover:bg-navy/90">Enviar cadastro</Button>
+                {error && <p className="rounded-2xl bg-destructive/10 p-3 text-sm text-destructive">{error}</p>}
+                <Button type="submit" className="w-full rounded-full bg-navy hover:bg-navy/90">Enviar cadastro</Button>
               </form>
             )}
           </div>
