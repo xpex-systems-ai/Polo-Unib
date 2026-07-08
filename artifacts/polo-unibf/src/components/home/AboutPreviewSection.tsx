@@ -13,12 +13,12 @@ export function AboutPreviewSection() {
       <div className="container mx-auto max-w-6xl grid lg:grid-cols-2 gap-10 items-center">
         <div className="relative rounded-[32px] overflow-hidden border border-border shadow-2xl aspect-[4/3] bg-navy">
           {!imageError ? (
-            <img src={FACADE} alt="Fachada da UniBF Cristalina-GO" className="w-full h-full object-cover" onError={() => setImageError(true)} />
+            <img src={FACADE} alt="Fachada da UniBF Cristalina-GO" className="w-full h-full object-contain object-center bg-navy" onError={() => setImageError(true)} />
           ) : (
             <div className="w-full h-full bg-gradient-to-br from-[#003B5C] via-[#002F4B] to-[#001F33] flex flex-col items-center justify-center p-8 text-center text-white">
               <MapPin className="w-16 h-16 text-[#7CFF2B] mb-5" />
               <p className="text-2xl font-bold">UniBF Cristalina-GO</p>
-              <p className="text-white/70 mt-2">Foto da fachada em breve</p>
+              <p className="text-white/70 mt-2">Atendimento local em Cristalina-GO</p>
             </div>
           )}
         </div>

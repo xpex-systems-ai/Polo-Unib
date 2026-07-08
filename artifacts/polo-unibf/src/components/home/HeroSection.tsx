@@ -82,7 +82,7 @@ function HeroImage({ slide }: { slide: HeroSlide }) {
     <img
       src={slide.image}
       alt={slide.alt}
-      className="h-full w-full object-contain object-center"
+      className="h-full w-full object-contain object-center bg-navy"
       loading="eager"
       onError={() => setHasError(true)}
     />
@@ -125,8 +125,8 @@ export function HeroSection() {
             Matrículas e informações em Cristalina-GO
           </div>
 
-          <div className="relative w-full overflow-hidden rounded-[18px] border border-white/15 bg-[linear-gradient(135deg,#002F4B_0%,#003B5C_100%)] shadow-[0_24px_60px_rgba(0,31,51,0.25)] sm:rounded-[28px]">
-            <div className="h-[clamp(220px,56.25vw,280px)] w-full md:h-auto md:aspect-[1365/450]">
+          <div className="relative w-full overflow-hidden rounded-[18px] border border-white/15 bg-navy shadow-[0_24px_60px_rgba(0,31,51,0.25)] sm:rounded-[28px]">
+            <div className="aspect-[16/9] w-full sm:aspect-[1365/450]">
               <HeroImage slide={currentSlide} />
             </div>
           </div>

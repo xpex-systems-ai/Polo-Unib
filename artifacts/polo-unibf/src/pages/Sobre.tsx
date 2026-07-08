@@ -38,20 +38,20 @@ export default function Sobre() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="rounded-3xl overflow-hidden border border-border shadow-[0_24px_60px_rgba(0,31,51,0.18)] aspect-[4/3] min-h-[320px] sm:min-h-[420px]"
+                className="rounded-3xl overflow-hidden border border-border bg-navy shadow-[0_24px_60px_rgba(0,31,51,0.18)] aspect-[4/3] min-h-[280px] sm:min-h-[420px]"
               >
                 {!imgError ? (
                   <img
                     src={FACADE}
                     alt="Fachada do Centro Universitário UniBF Cristalina-GO"
-                    className="w-full h-full object-cover object-top"
+                    className="w-full h-full object-contain object-center bg-navy"
                     onError={() => setImgError(true)}
                   />
                 ) : (
                   <div className="w-full h-full bg-gradient-to-br from-navy to-[#002F4B] flex flex-col items-center justify-center text-white/60 gap-3 p-8 text-center">
                     <MapPin className="w-12 h-12 opacity-30" />
                     <p className="font-semibold text-white/80">Centro Universitário UniBF Cristalina-GO</p>
-                    <p className="text-sm text-white/50">Adicione a foto em /assets/fachada-unibf-cristalina-go.jpg</p>
+                    <p className="text-sm text-white/50">Fachada do Polo UniBF Cristalina-GO</p>
                   </div>
                 )}
               </motion.div>
@@ -121,7 +121,7 @@ export default function Sobre() {
               <h2 className="text-3xl font-bold mb-4">Venha tomar um café conosco</h2>
               <p className="text-white/70 mb-8 max-w-lg mx-auto">
                 Nossa equipe terá prazer em apresentar a estrutura, tirar dúvidas e orientar sobre cursos disponíveis.
-                Estamos em Campo Lindo, Cristalina-GO.
+                Estamos em Campos Lindos, Cristalina-GO.
               </p>
               <Button
                 size="lg"

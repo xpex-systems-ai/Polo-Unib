@@ -55,15 +55,15 @@ export default function Contato() {
                   <img
                     src={FACADE}
                     alt="Fachada do Centro Universitário UniBF Cristalina-GO"
-                    className="h-full w-full object-cover object-top"
+                    className="h-full w-full object-contain object-center bg-navy"
                     onError={() => setFacadeError(true)}
                   />
                 ) : (
                   <div className="h-full w-full bg-gradient-to-br from-navy to-[#002F4B] flex flex-col items-center justify-center gap-2 p-6 text-center text-white/70">
                     <MapPin className="h-10 w-10 text-primary/80" />
                     <p className="font-semibold text-white">Centro Universitário UniBF Cristalina-GO</p>
-                    <p className="text-xs text-white/50">Adicione a foto em /assets/fachada-unibf-cristalina-go.jpg</p>
-                    <p className="text-xs text-white/50">Adicione a foto em /assets/polo/fachada-unibf-cristalina-go.jpg</p>
+                    <p className="text-xs text-white/50">Fachada do Polo UniBF Cristalina-GO</p>
+                    <p className="text-xs text-white/50">Atendimento presencial em Campos Lindos</p>
                   </div>
                 )}
               </div>
@@ -86,7 +86,7 @@ export default function Contato() {
                   </div>
                   <div>
                     <h4 className="font-bold mb-1">Endereço</h4>
-                    <p className="text-muted-foreground">R. Sem Nome, Qd. 1, Lt. 25, Sala 2, Setor D<br/>Campo Lindo, Cristalina-GO<br/>CEP 73850-000</p>
+                    <p className="text-muted-foreground">R. Sem Nome, Qd. 1, Lt. 25, Sala 2, Setor D<br/>Campos Lindos, Cristalina-GO<br/>CEP 73850-000</p>
                   </div>
                 </li>
 
