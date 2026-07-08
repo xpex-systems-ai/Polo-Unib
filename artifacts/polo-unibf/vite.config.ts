@@ -7,9 +7,8 @@ import { defineConfig } from 'vite';
 const rawPort = process.env.PORT;
 const port = rawPort ? Number(rawPort) : 3000;
 
-// BASE_PATH defaults to '/' when not set (e.g. during CI build)
-const rawBasePath = process.env.BASE_PATH ?? '/';
-const basePath = rawBasePath.endsWith('/') ? rawBasePath : `${rawBasePath}/`;
+// Production assets are served from the domain root on Vercel.
+const basePath = '/';
 const isDevelopment = process.env.NODE_ENV === 'development';
 const isReplitDev = isDevelopment && process.env.REPL_ID !== undefined;
 
@@ -41,7 +40,7 @@ export default defineConfig({
   },
   root: path.resolve(import.meta.dirname),
   build: {
-    outDir: path.resolve(import.meta.dirname, 'dist/public'),
+    outDir: path.resolve(import.meta.dirname, 'dist'),
     emptyOutDir: true,
   },
   server: {
