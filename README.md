@@ -141,3 +141,25 @@ Regras obrigatórias para conteúdo, atendimento e campanhas:
 - Integrar Senara para automações de atendimento e acompanhamento comercial, quando aprovado.
 - Integrar XpeX Academy para trilhas, capacitações e evolução do ecossistema educacional.
 - Substituir placeholders por domínio final, assets reais/autorizados e analytics/pixels aprovados.
+
+## Checklist final para apresentação
+
+- **Site:** validar páginas institucionais, navegação principal, CTAs e responsividade antes da apresentação.
+- **Cursos:** conferir catálogo, modalidades e textos responsáveis, sempre sem prometer valores, descontos ou condições não confirmadas.
+- **Contato:** manter telefone e WhatsApp oficial `5561982367003` em todos os CTAs principais.
+- **Mídias:** revisar canais ativos, modelos em implantação e presença visual premium dos ícones oficiais.
+- **Blog:** confirmar posts orientativos, sem rotas complexas, com reforço de validação pelo atendimento oficial.
+- **Newsletter:** usar como MVP de cadastro inicial de interesse com consentimento simples e encaminhamento para WhatsApp.
+- **UniBF TV:** validar rota, cards de vídeo e links seguros antes da demonstração.
+- **WhatsApp oficial:** número oficial para apresentação e atendimento: `5561982367003` / `(61) 9 8236-7003`.
+- **Google Business Profile:** manter link ativo e seguro para localização/consulta pública do polo.
+- **Vercel:** o deploy correto usa **Root Directory** `artifacts/polo-unibf`.
+
+Comandos finais recomendados:
+
+```bash
+pnpm install
+pnpm run audit:assets
+pnpm run typecheck
+pnpm run build
+```
