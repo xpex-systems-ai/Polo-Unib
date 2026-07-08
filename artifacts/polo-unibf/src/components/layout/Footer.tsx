@@ -80,7 +80,7 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-3 text-sm text-white/60">
                 <MapPin size={18} className="shrink-0 text-primary mt-0.5" />
-                <span>R. Sem Nome, Qd. 1, Lt. 25, Sala 2, Setor D, Campo Lindo, Cristalina-GO, 73850-000</span>
+                <span>R. Sem Nome, Qd. 1, Lt. 25, Sala 2, Setor D, Campos Lindos, Cristalina-GO, 73850-000</span>
               </li>
             </ul>
           </div>

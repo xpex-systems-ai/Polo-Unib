@@ -198,7 +198,7 @@ export default function Graduacao() {
           <div className="grid md:grid-cols-3 gap-4">
             {[
               ['Os cursos e valores são definitivos?', safeDisclaimer],
-              ['Posso consultar pelo WhatsApp?', 'Sim. Cada card abre uma conversa com o WhatsApp oficial 5561982367003 com o curso escolhido.'],
+              ['Posso consultar pelo WhatsApp?', 'Sim. Cada card abre uma conversa com o WhatsApp oficial (61) 9 8236-7003 com o curso escolhido.'],
               ['A lista substitui o portal oficial?', 'Não. Esta página é uma vitrine local orientativa para facilitar seu atendimento com o Polo UniBF Cristalina-GO.'],
             ].map(([question, answer]) => (
               <div key={question} className="rounded-2xl bg-slate-50 border border-border p-5">

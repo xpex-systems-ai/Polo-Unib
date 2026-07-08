@@ -38,7 +38,7 @@ export function LocationSection() {
                 </div>
                 <div>
                   <h4 className="font-bold text-foreground text-sm mb-0.5">Endereço</h4>
-                  <p className="text-muted-foreground text-sm">R. Sem Nome, Qd. 1, Lt. 25, Sala 2, Setor D<br />Campo Lindo, Cristalina-GO — CEP 73850-000</p>
+                  <p className="text-muted-foreground text-sm">R. Sem Nome, Qd. 1, Lt. 25, Sala 2, Setor D<br />Campos Lindos, Cristalina-GO — CEP 73850-000</p>
                 </div>
               </div>
 
@@ -84,26 +84,26 @@ export function LocationSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="rounded-3xl overflow-hidden border border-border shadow-[0_24px_60px_rgba(0,31,51,0.18)] aspect-[4/3] min-h-[300px] sm:min-h-[420px] relative"
+            className="rounded-3xl overflow-hidden border border-border bg-navy shadow-[0_24px_60px_rgba(0,31,51,0.18)] aspect-[4/3] min-h-[280px] sm:min-h-[420px] relative"
           >
             {!imgError ? (
               <img
                 src={FACADE}
                 alt="Entrada do Polo UniBF Cristalina-GO"
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-contain object-center bg-navy"
                 onError={() => setImgError(true)}
               />
             ) : (
               <div className="w-full h-full bg-gradient-to-br from-navy to-[#002F4B] flex flex-col items-center justify-center text-white/60 gap-4 p-8 text-center">
                 <MapPin className="w-16 h-16 opacity-30" />
                 <p className="font-semibold text-white/80">Centro Universitário UniBF Cristalina-GO</p>
-                <p className="text-sm">R. Sem Nome, Qd. 1, Lt. 25 — Campo Lindo</p>
+                <p className="text-sm">R. Sem Nome, Qd. 1, Lt. 25 — Campos Lindos</p>
                 <a href={MAPS_URL} target="_blank" rel="noreferrer" className="mt-2">
                   <Button size="sm" variant="outline" className="border-white/30 text-white hover:bg-white/10 rounded-full">
                     Ver no Google Maps
                   </Button>
                 </a>
-                <p className="text-xs text-white/30 mt-2">Adicione a foto em /assets/fachada-unibf-cristalina-go.jpg</p>
+                <p className="text-xs text-white/30 mt-2">Fachada do Polo UniBF Cristalina-GO</p>
               </div>
             )}
           </motion.div>

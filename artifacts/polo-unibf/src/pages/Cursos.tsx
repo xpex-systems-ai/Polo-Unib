@@ -12,8 +12,8 @@ function CoursesHeroBanner() {
 
   return (
     <section className="mb-10 overflow-hidden rounded-[18px] border border-border bg-white shadow-[0_24px_60px_rgba(0,31,51,0.16)] sm:rounded-[28px]">
-      <div className="grid items-stretch lg:grid-cols-[1.08fr_0.92fr]">
-        <div className="relative h-[clamp(220px,56.25vw,280px)] bg-[linear-gradient(135deg,#002F4B_0%,#003B5C_100%)] md:h-auto md:aspect-[1365/450] lg:aspect-auto">
+      <div>
+        <div className="relative aspect-[16/9] bg-navy sm:aspect-[1365/450]">
           {hasImageError ? (
             <div className="flex h-full w-full items-center justify-center bg-[radial-gradient(circle_at_top_left,rgba(0,184,107,0.28),transparent_32%),linear-gradient(135deg,#002F4B_0%,#003B5C_100%)] p-8 text-center text-white">
               <div>
@@ -25,7 +25,7 @@ function CoursesHeroBanner() {
             <img
               src="/assets/hero/hero-1200-opcoes-dividido.png"
               alt="Banner UniBF com opções de cursos dividido em áreas de estudo"
-              className="h-full w-full object-contain object-center"
+              className="h-full w-full object-contain object-center bg-navy"
               loading="lazy"
               onError={() => setHasImageError(true)}
             />

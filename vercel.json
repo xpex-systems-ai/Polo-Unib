@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "installCommand": "pnpm install",
+  "buildCommand": "pnpm --filter @workspace/polo-unibf run build",
+  "outputDirectory": "artifacts/polo-unibf/dist",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

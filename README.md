@@ -77,6 +77,13 @@ Projetos Vercel antigos ou duplicados, como `polo-unib`, `polo-unibf` e `polo-un
 
 Para limpar a Vercel, remova, arquive ou desconecte os projetos duplicados/legados no painel da Vercel e mantenha somente `polo-unib-polo-unibf` conectado à branch `main` com **Root Directory** `artifacts/polo-unibf`.
 
+
+### Deploy na Vercel
+
+- **Root Directory recomendado:** `artifacts/polo-unibf`.
+- Caso o projeto seja importado usando a raiz do repositório, o `vercel.json` da raiz já força o build correto do site do polo com `pnpm install`, `pnpm --filter @workspace/polo-unibf run build` e saída em `artifacts/polo-unibf/dist`.
+- O rewrite SPA direciona as rotas internas para `/index.html`, mantendo a navegação do app estável em produção.
+
 ## Variáveis de ambiente
 
 Copie `artifacts/polo-unibf/.env.example` para `.env.local` no desenvolvimento, se necessário. Não versione `.env`, senhas, tokens ou dados sensíveis.
