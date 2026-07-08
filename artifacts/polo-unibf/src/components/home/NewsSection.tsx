@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { BookOpen, Briefcase, GraduationCap } from 'lucide-react';
 
 const posts = [
-  { title: 'Como escolher o curso ideal para seu momento?', category: 'Orientação', image: '/assets/news/escolher-curso.jpg', icon: GraduationCap },
-  { title: 'Graduação, pós ou tecnólogo: entenda a diferença', category: 'Educação', image: '/assets/news/modalidades.jpg', icon: BookOpen },
-  { title: 'Voltar a estudar pode abrir novas possibilidades', category: 'Carreira', image: '/assets/news/carreira.jpg', icon: Briefcase },
+  { title: 'Como escolher o curso ideal para seu momento?', category: 'Orientação', image: '/assets/cards/modalidades/graduacao.svg', icon: GraduationCap },
+  { title: 'Graduação, pós ou tecnólogo: entenda a diferença', category: 'Educação', image: '/assets/cards/modalidades/pos-graduacao.svg', icon: BookOpen },
+  { title: 'Voltar a estudar pode abrir novas possibilidades', category: 'Carreira', image: '/assets/cards/modalidades/tecnologo.svg', icon: Briefcase },
 ];
 
 function NewsCard({ post }: { post: (typeof posts)[number] }) {
