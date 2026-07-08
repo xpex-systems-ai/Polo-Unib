@@ -17,6 +17,9 @@ import Links from '@/pages/Links';
 import Admin from '@/pages/Admin';
 import Faq from '@/pages/Faq';
 import UnibfTv from '@/pages/UnibfTv';
+import Midias from '@/pages/Midias';
+import Blog from '@/pages/Blog';
+import Newsletter from '@/pages/Newsletter';
 
 // Shared Components
 import { FloatingWhatsApp } from '@/components/shared/FloatingWhatsApp';
@@ -38,6 +41,9 @@ function Router() {
       <Route path="/links" component={Links} />
       <Route path="/faq" component={Faq} />
       <Route path="/unibf-tv" component={UnibfTv} />
+      <Route path="/midias" component={Midias} />
+      <Route path="/blog" component={Blog} />
+      <Route path="/newsletter" component={Newsletter} />
       <Route path="/admin" component={Admin} />
       <Route component={NotFound} />
     </Switch>

@@ -51,6 +51,21 @@ O build de produção é gerado em:
 artifacts/polo-unibf/dist
 ```
 
+
+## Módulos finais de apresentação
+
+O site institucional está organizado para a apresentação final com os seguintes módulos integrados:
+
+- **Site institucional:** páginas públicas, catálogo de cursos, dúvidas frequentes, contato e links da bio.
+- **WhatsApp oficial:** CTAs principais direcionados para o atendimento oficial no número `5561982367003`.
+- **Mídias:** página de ecossistema digital com canais ativos e modelos em implantação.
+- **Blog:** cards editoriais orientativos, sem promessa comercial, com confirmação pelo atendimento oficial.
+- **Newsletter:** formulário MVP com consentimento simples e armazenamento local para captação inicial de interesse.
+- **UniBF TV:** rota dedicada para conteúdos em vídeo.
+- **Professora Kelle IA:** assistente virtual para triagem e orientação inicial, com encaminhamento ao atendimento oficial.
+
+As redes sociais locais podem iniciar como modelos/apresentação e serem ativadas após aprovação da professora.
+
 ## Deploy Vercel correto
 
 > **Importante:** o deploy oficial deve usar o app em `artifacts/polo-unibf` como **Root Directory**. Não aponte a Vercel para a raiz do monorepo, porque o `package.json` raiz executa builds recursivos do workspace e pode tentar buildar artefatos externos ao site público.
