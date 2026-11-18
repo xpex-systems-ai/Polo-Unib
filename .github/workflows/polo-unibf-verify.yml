@@ -26,6 +26,8 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Contratos de privacidade (dados sinteticos)
         run: pnpm --filter @workspace/polo-unibf run test:privacy
+      - name: Contratos visuais (dados sinteticos)
+        run: pnpm --filter @workspace/polo-unibf run test:design
       - name: TypeScript
         run: pnpm --filter @workspace/polo-unibf run typecheck
       - name: Build isolado
