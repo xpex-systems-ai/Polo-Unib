@@ -1,13 +1,10 @@
-import { useState } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { Link } from 'wouter';
 import { ArrowRight, GraduationCap, MessageCircle, Sparkles } from 'lucide-react';
 import { openWhatsApp } from '@/lib/whatsapp';
 
-/** Arte licenciada/autorizada deve ser incluída em public/assets/hero/polo-ai-earth.webp.
- * Até lá, o banner institucional existente é usado como fallback. */
-const ROBOT_ASSET = '/assets/hero/polo-ai-earth.webp';
-const FALLBACK_ASSET = '/assets/hero/hero-agora-pode-ser-sua-vez.png';
+/** Banner institucional preservado conforme referência visual aprovada. */
+const HERO_BANNER = '/assets/hero/hero-agora-pode-ser-sua-vez.png';
 
 const highlights = [
   { label: 'Graduação', href: '/graduacao' },
@@ -17,8 +14,6 @@ const highlights = [
 ];
 
 export function HeroSection() {
-  const [image, setImage] = useState(ROBOT_ASSET);
-  const [imageUnavailable, setImageUnavailable] = useState(false);
   const reduceMotion = useReducedMotion();
 
   return (
@@ -50,9 +45,7 @@ export function HeroSection() {
         <div className="relative min-h-[260px] sm:min-h-[330px] md:min-h-[540px]">
           <motion.div aria-hidden="true" className="absolute inset-0 rounded-full bg-[#00B86B]/15 blur-[100px]" animate={reduceMotion ? undefined : {opacity:[.45,.8,.45],scale:[.96,1.05,.96]}} transition={{duration:7,repeat:Infinity,ease:'easeInOut'}}/>
           <motion.div className="relative flex h-full min-h-[260px] items-center justify-center sm:min-h-[330px] md:min-h-[540px]" animate={reduceMotion ? undefined : {y:[0,-10,0]}} transition={{duration:6,repeat:Infinity,ease:'easeInOut'}}>
-            <img src={image} alt={imageUnavailable ? 'Banner institucional do Polo UniBF' : 'Robô futurista segurando a Terra, símbolo visual de educação e tecnologia'} onError={() => {
-              if (image !== FALLBACK_ASSET) { setImage(FALLBACK_ASSET); setImageUnavailable(true); }
-            }} className="max-h-[620px] w-full rounded-xl object-contain [mask-image:linear-gradient(to_right,transparent_0%,black_12%,black_100%)]" loading="eager" decoding="async" fetchPriority="high" />
+            <img src={HERO_BANNER} alt="Banner institucional do Polo UniBF Cristalina-GO" className="max-h-[620px] w-full rounded-xl object-contain [mask-image:linear-gradient(to_right,transparent_0%,black_12%,black_100%)]" loading="eager" decoding="async" fetchPriority="high" />
           </motion.div>
           {!reduceMotion && <div aria-hidden="true" className="pointer-events-none absolute left-[25%] top-[20%] h-[46%] w-[46%] animate-[spin_28s_linear_infinite] rounded-full border border-[#00B86B]/30 motion-reduce:animate-none" />}
         </div>
