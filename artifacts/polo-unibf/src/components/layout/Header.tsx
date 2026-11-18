@@ -41,7 +41,7 @@ export function Header() {
     );
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white shadow-sm">
+    <header className="sticky top-0 z-50 w-full border-b border-[#003B5C]/10 bg-white/95 backdrop-blur-xl shadow-[0_3px_18px_rgba(0,59,92,.06)]">
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
 
         {/* Logo */}
@@ -64,7 +64,7 @@ export function Header() {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-4 shrink-0">
-          <Button onClick={() => openWhatsApp()} className="bg-primary hover:bg-primary/90 rounded-full">
+          <Button onClick={() => openWhatsApp()} className="bg-primary hover:bg-primary/90 rounded-lg">
             Fale conosco
           </Button>
         </div>
