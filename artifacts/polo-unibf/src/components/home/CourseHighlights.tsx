@@ -25,7 +25,7 @@ export function CourseHighlights() {
     <section className="py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-4 mb-10 flex flex-col md:flex-row justify-between items-end gap-6">
         <div className="max-w-2xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">Cursos em Destaque</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">Explore áreas de formação</h2>
           <p className="text-lg text-muted-foreground">
             Confira algumas áreas procuradas e fale com a equipe para confirmar disponibilidade, valores e condições.
           </p>
@@ -47,14 +47,14 @@ export function CourseHighlights() {
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {featuredCourses.map(course => (
-            <div key={course.id} className="min-w-[320px] max-w-[320px] snap-start">
+            <div key={course.id} className="min-w-[320px] max-w-[320px] snap-start rounded-2xl ring-1 ring-[#003B5C]/10 shadow-[0_12px_36px_rgba(0,59,92,.07)] transition-transform hover:-translate-y-1">
               <CourseCard course={course} />
             </div>
           ))}
-          <div className="min-w-[320px] max-w-[320px] snap-start flex items-center justify-center p-6 border-2 border-dashed border-border rounded-2xl bg-muted/30">
+          <div className="min-w-[320px] max-w-[320px] snap-start flex items-center justify-center p-6 border border-[#00B86B]/35 rounded-2xl bg-[#EAF7F0]">
             <div className="text-center">
               <h3 className="font-bold text-lg mb-2">Quer ver mais?</h3>
-              <p className="text-sm text-muted-foreground mb-4">Temos dezenas de outras opções para você.</p>
+              <p className="text-sm text-muted-foreground mb-4">Confira outras possibilidades de formação e confirme a oferta com a equipe.</p>
               <Link href="/cursos">
                 <Button>Ver todos os cursos</Button>
               </Link>
