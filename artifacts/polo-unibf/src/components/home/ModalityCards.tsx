@@ -19,7 +19,7 @@ const modalities = [
     icon: Award,
     image: '/assets/cards/modalidades/pos-graduacao.svg',
     href: '/pos-graduacao',
-    gradient: 'from-[#2D1B69] via-[#3D2687] to-[#4A2F8A]',
+    gradient: 'from-[#003B5C] via-[#00537A] to-[#007B75]',
     ctaMsg: 'Olá, Professora Kelle! Tenho interesse em pós-graduação na UniBF Cristalina-GO. Pode me orientar?',
   },
   {
@@ -28,7 +28,7 @@ const modalities = [
     icon: Briefcase,
     image: '/assets/cards/modalidades/tecnologo.svg',
     href: '/tecnologo',
-    gradient: 'from-[#78350F] via-[#92400E] to-[#B45309]',
+    gradient: 'from-[#002F4B] via-[#005E73] to-[#00A276]',
     ctaMsg: 'Olá, Professora Kelle! Quero saber mais sobre cursos tecnólogos na UniBF Cristalina-GO.',
   },
   {
@@ -37,14 +37,14 @@ const modalities = [
     icon: BookOpen,
     image: '/assets/cards/modalidades/extensao.svg',
     href: '/extensao',
-    gradient: 'from-[#064E3B] via-[#065F46] to-[#059669]',
+    gradient: 'from-[#003B5C] via-[#00665F] to-[#00B86B]',
     ctaMsg: 'Olá, Professora Kelle! Quero saber mais sobre cursos de extensão na UniBF Cristalina-GO.',
   },
 ];
 
 export function ModalityCards() {
   return (
-    <section className="py-20 px-4 bg-soft-gray">
+    <section className="py-24 px-4 bg-[#f3f8fa]">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
           <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-2">Modalidades</p>
@@ -66,7 +66,7 @@ export function ModalityCards() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                className="group bg-white rounded-2xl overflow-hidden border border-border shadow-sm hover:shadow-xl hover:border-transparent transition-all duration-300 flex flex-col"
+                className="group bg-white rounded-2xl overflow-hidden border border-[#d8e7ed] shadow-[0_10px_32px_rgba(0,59,92,.07)] hover:shadow-[0_20px_50px_rgba(0,59,92,.16)] hover:-translate-y-1 hover:border-[#00B86B]/50 transition-all duration-300 flex flex-col"
               >
                 {/* Image cover with gradient fallback */}
                 <div className={`bg-gradient-to-br ${mod.gradient} h-[150px] md:h-[190px] flex items-center justify-center relative overflow-hidden`}>

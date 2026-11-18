@@ -22,7 +22,7 @@ A raiz do repositório contém o workspace PNPM, documentação e artefatos auxi
 - shadcn/ui
 - wouter
 - pnpm workspace
-- localStorage para leads no MVP
+- Fluxo de contato por WhatsApp na branch de revisão; persistência de leads depende de backend aprovado
 
 ## Comandos locais
 
@@ -60,7 +60,7 @@ O site institucional está organizado para a apresentação final com os seguint
 - **WhatsApp oficial:** CTAs principais direcionados para o atendimento oficial no número `5561982367003`.
 - **Mídias:** página de ecossistema digital com canais ativos e modelos em implantação.
 - **Blog:** cards editoriais orientativos, sem promessa comercial, com confirmação pelo atendimento oficial.
-- **Newsletter:** formulário MVP com consentimento simples e armazenamento local para captação inicial de interesse.
+- **Newsletter:** formulário com consentimento e encaminhamento ao WhatsApp; sem cadastro persistente nesta revisão.
 - **UniBF TV:** rota dedicada para conteúdos em vídeo.
 - **Professora Kelle IA:** assistente virtual para triagem e orientação inicial, com encaminhamento ao atendimento oficial.
 
@@ -106,7 +106,7 @@ Copie `artifacts/polo-unibf/.env.example` para `.env.local` no desenvolvimento, 
 | Variável | Obrigatória | Ambientes | Descrição |
 | --- | --- | --- | --- |
 | `VITE_WHATSAPP_NUMBER` | Sim | Production, Preview, Development | Número principal dos CTAs. Valor oficial: `5561982367003`. |
-| `VITE_ADMIN_PASSWORD` | Não | Production, Preview | Senha do painel admin MVP. Configure manualmente na Vercel e nunca publique no GitHub. |
+| `VITE_ADMIN_PASSWORD` | Não utilizar | Nenhum | Método legado descontinuado; autenticação administrativa futura deve ser server-side. |
 
 ## Assets obrigatórios
 
@@ -137,9 +137,8 @@ Regras obrigatórias para conteúdo, atendimento e campanhas:
 
 ## Roadmap
 
-- Integrar Supabase para persistência de leads, autenticação e painel administrativo.
+- Avaliar backend dedicado e autorizado para persistência de leads, autenticação e painel administrativo.
 - Integrar Senara para automações de atendimento e acompanhamento comercial, quando aprovado.
-- Integrar XpeX Academy para trilhas, capacitações e evolução do ecossistema educacional.
 - Substituir placeholders por domínio final, assets reais/autorizados e analytics/pixels aprovados.
 
 ## Checklist final para apresentação
@@ -149,7 +148,7 @@ Regras obrigatórias para conteúdo, atendimento e campanhas:
 - **Contato:** manter telefone e WhatsApp oficial `5561982367003` em todos os CTAs principais.
 - **Mídias:** revisar canais ativos, modelos em implantação e presença visual premium dos ícones oficiais.
 - **Blog:** confirmar posts orientativos, sem rotas complexas, com reforço de validação pelo atendimento oficial.
-- **Newsletter:** usar como MVP de cadastro inicial de interesse com consentimento simples e encaminhamento para WhatsApp.
+- **Newsletter:** testar encaminhamento com consentimento e confirmar que o visitante enviou a mensagem no WhatsApp; sem armazenamento central nesta revisão.
 - **UniBF TV:** validar rota, cards de vídeo e links seguros antes da demonstração.
 - **WhatsApp oficial:** número oficial para apresentação e atendimento: `5561982367003` / `(61) 9 8236-7003`.
 - **Google Business Profile:** manter link ativo e seguro para localização/consulta pública do polo.

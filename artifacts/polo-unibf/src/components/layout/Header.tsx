@@ -10,7 +10,7 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [logoError, setLogoError] = useState(false);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleMenu = () => setIsOpen((previous) => !previous);
   const closeMenu = () => setIsOpen(false);
 
   const navLinks = [
@@ -41,7 +41,7 @@ export function Header() {
     );
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white shadow-sm">
+    <header className="sticky top-0 z-50 w-full border-b border-[#003B5C]/10 bg-white/95 backdrop-blur-xl shadow-[0_3px_18px_rgba(0,59,92,.06)]">
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
 
         {/* Logo */}
@@ -64,20 +64,20 @@ export function Header() {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-4 shrink-0">
-          <Button onClick={() => openWhatsApp()} className="bg-primary hover:bg-primary/90 rounded-full">
+          <Button onClick={() => openWhatsApp()} className="bg-primary hover:bg-primary/90 rounded-lg">
             Fale conosco
           </Button>
         </div>
 
         {/* Mobile Hamburger */}
-        <button className="md:hidden p-2 text-foreground" onClick={toggleMenu} aria-label="Toggle menu">
+        <button className="md:hidden p-2 text-foreground" onClick={toggleMenu} type="button" aria-label={isOpen ? "Fechar menu" : "Abrir menu"} aria-expanded={isOpen} aria-controls="polo-mobile-navigation">
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {/* Mobile Nav */}
       {isOpen && (
-        <div className="md:hidden absolute top-20 w-full bg-white border-b shadow-lg flex flex-col py-4 px-4 space-y-4 z-50">
+        <nav id="polo-mobile-navigation" aria-label="Navegação móvel" className="md:hidden absolute top-20 w-full bg-white border-b shadow-lg flex flex-col py-4 px-4 space-y-4 z-50">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -95,7 +95,7 @@ export function Header() {
           >
             Fale conosco pelo WhatsApp
           </Button>
-        </div>
+        </nav>
       )}
     </header>
   );

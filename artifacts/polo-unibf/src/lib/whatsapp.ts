@@ -1,3 +1,5 @@
+import { recordPoloEvent } from './conversion-events';
+
 export const WHATSAPP_NUMBER = '5561982367003';
 export const DEFAULT_WHATSAPP_MESSAGE =
   'Olá! Vim pelo site da UniBF Cristalina-GO e gostaria de receber atendimento.';
@@ -7,8 +9,9 @@ export function getWhatsAppUrl(message = DEFAULT_WHATSAPP_MESSAGE): string {
   return `${baseUrl}?text=${encodeURIComponent(message)}`;
 }
 
-export function openWhatsApp(message?: string): void {
-  window.open(getWhatsAppUrl(message), '_blank');
+export function openWhatsApp(message?: string, source = 'site'): void {
+  recordPoloEvent('whatsapp_click', source);
+  window.open(getWhatsAppUrl(message), '_blank', 'noopener,noreferrer');
 }
 
 export function getCourseMessage(courseName: string): string {

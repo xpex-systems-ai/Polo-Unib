@@ -12,9 +12,9 @@ export function Footer() {
   const activeSocials = socialChannels.filter((channel) => channel.external && channel.status === 'Ativo');
 
   return (
-    <footer className="bg-navy text-white pt-16 pb-8">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+    <footer className="bg-[#001c2e] text-white pt-16 pb-8 border-t-2 border-[#00B86B]">
+      <div className="container mx-auto px-4 max-w-[1440px]">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12 rounded-2xl border border-white/10 bg-white/[.025] p-6 md:p-10">
 
           <div className="md:col-span-1">
             {/* Logo in white container so it pops on navy */}
@@ -37,7 +37,7 @@ export function Footer() {
               )}
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
-              Ensino superior acessível e de qualidade em Cristalina-GO e região. Dê o próximo passo na sua carreira.
+              Orientação sobre formação e modalidades em Cristalina-GO e região. Consulte a equipe do polo para informações oficiais.
             </p>
             <div className="flex flex-wrap gap-3">
               {activeSocials.map((channel) => (
