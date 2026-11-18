@@ -25,7 +25,7 @@ export function HeroSection() {
     <section className="relative isolate overflow-hidden bg-[#002b46] text-white">
       <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_74%_42%,rgba(0,184,107,.22),transparent_36%),linear-gradient(110deg,#00253d_4%,#003b5c_62%,#001a2d_100%)]" />
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-30 [background-image:radial-gradient(rgba(255,255,255,.32)_1px,transparent_1px)] [background-size:32px_32px]" />
-      <div className="relative mx-auto grid min-h-[620px] max-w-[1440px] items-center gap-10 px-5 py-16 md:grid-cols-[.94fr_1.06fr] md:px-10 lg:min-h-[710px] lg:px-16">
+      <div className="relative mx-auto grid min-h-[560px] max-w-[1440px] items-center gap-8 px-5 py-14 md:grid-cols-[.94fr_1.06fr] md:px-10 lg:min-h-[710px] lg:px-16">
         <motion.div initial={reduceMotion ? false : {opacity:0,y:22}} animate={{opacity:1,y:0}} transition={{duration:.65}} className="relative z-10 max-w-[650px]">
           <div className="mb-7 inline-flex items-center gap-2 border-l-2 border-[#00B86B] pl-3 text-xs font-semibold uppercase tracking-[.22em] text-[#9bf5c6]">
             <Sparkles size={15} /> Educação, tecnologia e atendimento humano
@@ -47,14 +47,14 @@ export function HeroSection() {
           </div>
           <p className="mt-5 text-xs text-white/55">Informações e disponibilidade sujeitas à confirmação da equipe responsável.</p>
         </motion.div>
-        <div className="relative min-h-[330px] md:min-h-[540px]">
+        <div className="relative min-h-[260px] sm:min-h-[330px] md:min-h-[540px]">
           <motion.div aria-hidden="true" className="absolute inset-0 rounded-full bg-[#00B86B]/15 blur-[100px]" animate={reduceMotion ? undefined : {opacity:[.45,.8,.45],scale:[.96,1.05,.96]}} transition={{duration:7,repeat:Infinity,ease:'easeInOut'}}/>
-          <motion.div className="relative flex h-full min-h-[330px] items-center justify-center md:min-h-[540px]" animate={reduceMotion ? undefined : {y:[0,-10,0]}} transition={{duration:6,repeat:Infinity,ease:'easeInOut'}}>
+          <motion.div className="relative flex h-full min-h-[260px] items-center justify-center sm:min-h-[330px] md:min-h-[540px]" animate={reduceMotion ? undefined : {y:[0,-10,0]}} transition={{duration:6,repeat:Infinity,ease:'easeInOut'}}>
             <img src={image} alt={imageUnavailable ? 'Banner institucional do Polo UniBF' : 'Robô futurista segurando a Terra, símbolo visual de educação e tecnologia'} onError={() => {
               if (image !== FALLBACK_ASSET) { setImage(FALLBACK_ASSET); setImageUnavailable(true); }
-            }} className="max-h-[620px] w-full rounded-xl object-contain [mask-image:linear-gradient(to_right,transparent_0%,black_12%,black_100%)]" />
+            }} className="max-h-[620px] w-full rounded-xl object-contain [mask-image:linear-gradient(to_right,transparent_0%,black_12%,black_100%)]" loading="eager" decoding="async" fetchPriority="high" />
           </motion.div>
-          {!reduceMotion && <div aria-hidden="true" className="pointer-events-none absolute left-[25%] top-[20%] h-[46%] w-[46%] animate-[spin_28s_linear_infinite] rounded-full border border-[#00B86B]/30" />}
+          {!reduceMotion && <div aria-hidden="true" className="pointer-events-none absolute left-[25%] top-[20%] h-[46%] w-[46%] animate-[spin_28s_linear_infinite] rounded-full border border-[#00B86B]/30 motion-reduce:animate-none" />}
         </div>
       </div>
       <div className="relative z-10 border-t border-white/10 bg-[#001f34]/80">
