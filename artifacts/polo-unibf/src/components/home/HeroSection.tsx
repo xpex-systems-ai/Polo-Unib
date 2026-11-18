@@ -38,7 +38,7 @@ export function HeroSection() {
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
             <button type="button" onClick={() => openWhatsApp('Olá! Vim pelo site do Polo UniBF Cristalina-GO e gostaria de orientação sobre cursos.', 'hero')}
-              className="inline-flex min-h-12 items-center gap-2 rounded-lg bg-[#00B86B] px-6 py-3 font-semibold text-white transition hover:bg-[#00a65f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
+              className="inline-flex min-h-12 items-center gap-2 rounded-lg bg-[#00B86B] px-6 py-3 font-semibold text-[#003B5C] transition hover:bg-[#00a65f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
               <MessageCircle size={19} /> Falar com o Polo <ArrowRight size={17}/>
             </button>
             <Link href="/cursos" className="inline-flex min-h-12 items-center gap-2 rounded-lg border border-white/35 bg-white/5 px-6 py-3 font-semibold text-white transition hover:bg-white/10">
