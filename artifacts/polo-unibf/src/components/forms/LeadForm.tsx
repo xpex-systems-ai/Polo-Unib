@@ -3,7 +3,8 @@ import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Button } from '@/components/ui/button';
-import { saveLeadToStorage } from '@/lib/leads';
+import { openWhatsApp } from '@/lib/whatsapp';
+import { recordPoloEvent } from '@/lib/conversion-events';
 import { CheckCircle2 } from 'lucide-react';
 
 const leadSchema = z.object({
@@ -19,7 +20,9 @@ const leadSchema = z.object({
 type LeadFormValues = z.infer<typeof leadSchema>;
 
 export function LeadForm() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [consent, setConsent] = useState(false);
+  const [handoff, setHandoff] = useState(false);
+  const [error, setError] = useState('');
 
   const form = useForm<LeadFormValues>({
     resolver: zodResolver(leadSchema),
@@ -35,34 +38,26 @@ export function LeadForm() {
   });
 
   const onSubmit = (data: LeadFormValues) => {
-    saveLeadToStorage({
-      nome: data.nome,
-      telefone: data.telefone,
-      whatsapp: data.whatsapp,
-      cidade: data.cidade,
-      modalidade: data.modalidade,
-      cursoInteresse: data.cursoInteresse,
-      mensagem: data.mensagem || 'Sem mensagem',
-    });
-    setIsSubmitted(true);
+    recordPoloEvent('lead_submit_attempt', 'contact_form');
+    if (!consent) {
+      setError('Confirme que deseja encaminhar seus dados ao atendimento pelo WhatsApp.');
+      return;
+    }
+    setError('');
+    const message = [
+      'Olá! Quero atendimento do Polo UniBF Cristalina-GO.',
+      'Nome: ' + data.nome,
+      'Telefone: ' + data.telefone,
+      'WhatsApp: ' + data.whatsapp,
+      'Cidade: ' + data.cidade,
+      'Modalidade: ' + data.modalidade,
+      'Curso: ' + data.cursoInteresse,
+      'Mensagem: ' + (data.mensagem || 'Sem mensagem'),
+    ].join('\\n');
+    openWhatsApp(message, 'contact_form');
+    recordPoloEvent('lead_handoff_whatsapp', 'contact_form');
+    setHandoff(true);
   };
-
-  if (isSubmitted) {
-    return (
-      <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 text-center flex flex-col items-center">
-        <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 text-primary">
-          <CheckCircle2 className="w-8 h-8" />
-        </div>
-        <h3 className="text-2xl font-bold text-navy mb-2">Mensagem Enviada!</h3>
-        <p className="text-muted-foreground mb-6">
-          Nossa equipe do UniBF Cristalina-GO entrará em contato em breve pelo WhatsApp.
-        </p>
-        <Button onClick={() => setIsSubmitted(false)} variant="outline">
-          Enviar nova mensagem
-        </Button>
-      </div>
-    );
-  }
 
   return (
     <div className="bg-white p-8 rounded-2xl shadow-xl border border-border">
@@ -146,8 +141,14 @@ export function LeadForm() {
           />
         </div>
 
+        <label className="flex items-start gap-2 text-sm text-muted-foreground">
+          <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} className="mt-1" />
+          <span>Autorizo o encaminhamento dos dados informados ao WhatsApp oficial do Polo para atendimento sobre cursos. A mensagem será aberta no WhatsApp para minha confirmação; este formulário não registra o cadastro em banco de dados.</span>
+        </label>
+        {error && <p role="alert" className="text-destructive text-sm">{error}</p>}
+        {handoff && <p role="status" className="text-sm text-muted-foreground">WhatsApp aberto para você revisar e enviar sua mensagem. O contato só será recebido após o envio no aplicativo.</p>}
         <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-white" size="lg">
-          Enviar Mensagem
+          Continuar pelo WhatsApp
         </Button>
       </form>
     </div>
