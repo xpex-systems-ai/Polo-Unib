@@ -4,7 +4,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 
 export function FinalCTA() {
   return (
-    <section className="bg-navy py-24 relative overflow-hidden">
+    <section className="bg-[#002b46] py-24 relative overflow-hidden border-y border-[#00B86B]/25">
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/20 rounded-full blur-[120px] translate-x-1/3 -translate-y-1/2"></div>
       
       <div className="container mx-auto px-4 relative z-10 text-center">
@@ -15,7 +15,7 @@ export function FinalCTA() {
         <Button 
           size="xl" 
           onClick={() => openWhatsApp('Olá! Estou no site e gostaria de saber como faço para me matricular.')}
-          className="rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-xl shadow-[#25D366]/20 border-none"
+          className="rounded-lg bg-[#00B86B] hover:bg-[#009b5a] text-white shadow-xl shadow-[#00B86B]/20 border-none"
         >
           <FaWhatsapp className="w-6 h-6 mr-2" />
           Falar com atendimento oficial
