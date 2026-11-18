@@ -26,3 +26,11 @@ Testes de contrato são inspeções do código e não provam layout real, carreg
 
 ## Decisão
 **NO-GO produção**. Não foi realizado merge nem deploy manual de produção.
+
+## Atualização de evidências — Missão seguinte
+- CI no commit `fecafeca6a4506bbf1253973312ab87cd0cdff1a`: GitHub Actions execução #13, ID `44233504528`, `completed/success`.
+- Quatro statuses Vercel do mesmo commit: `failure`, URL com `upgradeToPro=build-rate-limit`. Não há novo preview comprovado.
+- Arquivo WebP original reaberto e validado localmente: 1672×941, 108200 bytes, SHA-256 `16e64eb4d62c8226ba1d235ee0d843036fe5f81d29e3bd97f349c1c406c1940c`; SHA-1 de blob Git esperado `04423cfc877818f858e12328c04d46c8a76747ab`.
+- Pacote ZIP local preparado com o caminho de destino correto para aplicação na branch. A ferramenta GitHub não aceita referência direta ao arquivo binário local, e o executor não resolve github.com; **upload ainda não comprovado**.
+- HTTP 200 da arte, visualização de preview, responsividade real e acessibilidade de navegador **não testados**.
+- **NO-GO produção**. Nenhum merge ou deploy manual solicitado.
