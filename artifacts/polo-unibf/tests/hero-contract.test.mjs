@@ -10,10 +10,9 @@ test('hero usa paleta institucional', () => {
   assert.match(hero, /#00B86B/i);
 });
 
-test('arte do robô tem fallback institucional', () => {
-  assert.match(hero, /\/assets\/hero\/polo-ai-earth\.webp/);
-  assert.match(hero, /onError=\{/);
-  assert.match(hero, /setImage\(FALLBACK_ASSET\)/);
+test('hero preserva banner institucional aprovado sem robô automático', () => {
+  assert.match(hero, /\/assets\/hero\/hero-agora-pode-ser-sua-vez\.png/);
+  assert.doesNotMatch(hero, /polo-ai-earth\.webp/);
 });
 
 test('hero tem comportamento responsivo e movimento reduzido', () => {
@@ -26,7 +25,7 @@ test('hero tem comportamento responsivo e movimento reduzido', () => {
 test('CTA e acessibilidade básica', () => {
   assert.match(hero, /text-\[#003B5C\]/);
   assert.match(hero, /focus-visible:outline/);
-  assert.match(hero, /alt=\{/);
+  assert.match(hero, /alt="Banner institucional/);
 });
 
 test('imagem principal usa prioridade de carregamento', () => {
