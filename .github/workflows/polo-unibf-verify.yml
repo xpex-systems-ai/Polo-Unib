@@ -1,0 +1,32 @@
+name: Polo UniBF - verificacao isolada
+on:
+  pull_request:
+    paths:
+      - 'artifacts/polo-unibf/**'
+      - '.github/workflows/polo-unibf-verify.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  privacy-and-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: pnpm
+      - name: Instalar dependencias
+        run: pnpm install --frozen-lockfile
+      - name: Contratos de privacidade (dados sinteticos)
+        run: pnpm --filter @workspace/polo-unibf run test:privacy
+      - name: TypeScript
+        run: pnpm --filter @workspace/polo-unibf run typecheck
+      - name: Build isolado
+        run: pnpm --filter @workspace/polo-unibf run build
