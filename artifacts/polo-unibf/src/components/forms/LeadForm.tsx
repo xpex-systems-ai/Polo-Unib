@@ -5,7 +5,6 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { Button } from '@/components/ui/button';
 import { openWhatsApp } from '@/lib/whatsapp';
 import { recordPoloEvent } from '@/lib/conversion-events';
-import { CheckCircle2 } from 'lucide-react';
 
 const leadSchema = z.object({
   nome: z.string().min(2, 'Nome é obrigatório'),
@@ -146,7 +145,7 @@ export function LeadForm() {
           <span>Autorizo o encaminhamento dos dados informados ao WhatsApp oficial do Polo para atendimento sobre cursos. A mensagem será aberta no WhatsApp para minha confirmação; este formulário não registra o cadastro em banco de dados.</span>
         </label>
         {error && <p role="alert" className="text-destructive text-sm">{error}</p>}
-        {handoff && <p role="status" className="text-sm text-muted-foreground">WhatsApp aberto para você revisar e enviar sua mensagem. O contato só será recebido após o envio no aplicativo.</p>}
+        {handoff && <p role="status" className="text-sm text-muted-foreground">Se o WhatsApp abriu, revise e envie sua mensagem. O contato só será recebido após o envio no aplicativo.</p>}
         <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-white" size="lg">
           Continuar pelo WhatsApp
         </Button>
