@@ -34,3 +34,12 @@ Testes de contrato são inspeções do código e não provam layout real, carreg
 - Pacote ZIP local preparado com o caminho de destino correto para aplicação na branch. A ferramenta GitHub não aceita referência direta ao arquivo binário local, e o executor não resolve github.com; **upload ainda não comprovado**.
 - HTTP 200 da arte, visualização de preview, responsividade real e acessibilidade de navegador **não testados**.
 - **NO-GO produção**. Nenhum merge ou deploy manual solicitado.
+
+## Nova inspeção e portão de integridade do asset
+- ZIP fornecido pelo operador reaberto: WebP `artifacts/polo-unibf/public/assets/hero/polo-ai-earth.webp`, 108.200 bytes, SHA-256 `16e64eb4d62c8226ba1d235ee0d843036fe5f81d29e3bd97f349c1c406c1940c`, SHA de blob Git esperado `04423cfc877818f858e12328c04d46c8a76747ab`.
+- No HEAD anterior `0dffc23ef088ca6432880c61e2b79bd8c9ed3497`, GitHub Actions execução #14 `44234275009` = success; quatro statuses Vercel = failure (build-rate-limit).
+- Leitura GitHub do WebP no caminho solicitado retornou 404: **arquivo ainda não transferido**.
+- Criado `tests/verify-hero-asset.mjs` e comando `pnpm --filter @workspace/polo-unibf run verify:hero-asset`, que valida existência, assinatura WebP, tamanho e SHA-256 exato. **Comando manual não integrado ao CI**, pois o asset ainda está ausente; não declarar que passou.
+- Caminho operacional para concluir upload: no GitHub, selecionar branch `feat/polo-m03-privacy-leads-review`, abrir `artifacts/polo-unibf/public/assets/hero`, usar **Add file → Upload files**, enviar apenas o WebP extraído do ZIP, confirmar branch e commit. Em seguida comparar SHA retornado com `04423cfc877818f858e12328c04d46c8a76747ab` e executar verificação do asset.
+- HTTP 200 e testes 375/768/1280 px, movimento reduzido e acessibilidade no navegador ainda pendentes devido à ausência de arquivo/preview.
+- Produção: NO-GO; não houve merge nem deploy manual.
