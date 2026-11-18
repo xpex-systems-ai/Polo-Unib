@@ -8,8 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Checkbox } from '@/components/ui/checkbox';
-import { getWhatsAppUrl } from '@/lib/whatsapp';
-import { Home, MailCheck, MessageCircle } from 'lucide-react';
+import { Home, MailCheck } from 'lucide-react';
 import { Link } from 'wouter';
 
 
@@ -29,7 +28,7 @@ export default function Newsletter() {
       return;
     }
     if (!consent) {
-      setError('Confirme o consentimento LGPD simples para enviar o cadastro.');
+      setError('Confirme que deseja encaminhar seus dados ao atendimento pelo WhatsApp.');
       return;
     }
     setError('');
@@ -46,7 +45,7 @@ export default function Newsletter() {
           <div className="container mx-auto max-w-5xl text-center">
             <MailCheck className="mx-auto mb-5 h-12 w-12 text-primary" />
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Receba novidades da UniBF Cristalina-GO</h1>
-            <p className="text-white/80 text-lg max-w-2xl mx-auto">Cadastre seu interesse para receber orientações educacionais e atualizações do polo.</p>
+            <p className="text-white/80 text-lg max-w-2xl mx-auto">Informe seu interesse e continue a conversa com a equipe pelo WhatsApp oficial.</p>
             <p className="mt-4 text-sm text-white/60">Cadastro inicial de interesse. Para atendimento imediato, fale pelo WhatsApp oficial.</p>
           </div>
         </section>
@@ -56,11 +55,9 @@ export default function Newsletter() {
               <div className="text-center py-8">
                 <MailCheck className="mx-auto mb-5 h-14 w-14 text-primary" />
                 <h2 className="text-2xl font-bold text-navy mb-3">Continue seu cadastro no WhatsApp.</h2>
-                <p className="text-muted-foreground mb-6">A mensagem foi preparada no WhatsApp. Revise e envie para que o polo receba seu interesse. Nenhum cadastro foi armazenado neste navegador.</p>
+                <p className="text-muted-foreground mb-6">Se o WhatsApp abriu, revise e envie a mensagem para que o polo receba seu interesse. Nenhum cadastro foi armazenado neste navegador.</p>
                 <div className="flex flex-col sm:flex-row justify-center gap-3">
-                  <a href={getWhatsAppUrl('Olá! Cadastrei meu interesse na newsletter da UniBF Cristalina-GO e gostaria de atendimento oficial.')} target="_blank" rel="noreferrer">
-                    <Button className="w-full rounded-full bg-primary hover:bg-primary/90"><MessageCircle className="mr-2 h-5 w-5" /> Falar no WhatsApp</Button>
-                  </a>
+                  
                   <Link href="/">
                     <Button variant="outline" className="w-full rounded-full"><Home className="mr-2 h-5 w-5" /> Voltar para o site</Button>
                   </Link>
