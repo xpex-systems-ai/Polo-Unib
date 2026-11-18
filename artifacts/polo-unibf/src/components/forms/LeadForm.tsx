@@ -53,7 +53,7 @@ export function LeadForm() {
       'Modalidade: ' + data.modalidade,
       'Curso: ' + data.cursoInteresse,
       'Mensagem: ' + (data.mensagem || 'Sem mensagem'),
-    ].join('\\n');
+    ].join('\n');
     openWhatsApp(message, 'contact_form');
     recordPoloEvent('lead_handoff_whatsapp', 'contact_form');
     setHandoff(true);
