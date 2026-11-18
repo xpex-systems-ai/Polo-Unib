@@ -1,172 +1,66 @@
-import { useEffect, useMemo, useState } from 'react';
-import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { motion, useReducedMotion } from 'framer-motion';
 import { Link } from 'wouter';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { ArrowRight, GraduationCap, MessageCircle, Sparkles } from 'lucide-react';
 import { openWhatsApp } from '@/lib/whatsapp';
-import { cn } from '@/lib/utils';
 
-const campaignEnabled = false;
+/** Arte licenciada/autorizada deve ser incluída em public/assets/hero/polo-ai-earth.webp.
+ * Até lá, o banner institucional existente é usado como fallback. */
+const ROBOT_ASSET = '/assets/hero/polo-ai-earth.webp';
+const FALLBACK_ASSET = '/assets/hero/hero-agora-pode-ser-sua-vez.png';
 
-const fallbackGradient =
-  'bg-[radial-gradient(circle_at_top_left,rgba(0,184,107,0.32),transparent_34%),linear-gradient(135deg,#002F4B_0%,#003B5C_100%)]';
-
-const heroSlides = [
-  {
-    title: 'Agora pode ser a sua vez de entrar na faculdade.',
-    description:
-      'Fale com a UniBF Cristalina-GO pelo WhatsApp oficial e receba orientação sobre cursos e modalidades.',
-    image: '/assets/hero/hero-agora-pode-ser-sua-vez.png',
-    alt: 'Banner oficial UniBF com chamada Agora pode ser a sua vez',
-    cta: 'Quero atendimento no WhatsApp',
-  },
-  {
-    title: 'Mais opções para estudar do seu jeito.',
-    description:
-      'Conheça possibilidades em graduação, pós-graduação, tecnólogo e extensão com suporte do polo Cristalina-GO.',
-    image: '/assets/hero/hero-1200-opcoes-aluno.png',
-    alt: 'Banner oficial UniBF sobre opções de cursos para alunos',
-    cta: 'Ver opções pelo WhatsApp',
-  },
-  {
-    title: 'Imersões profissionais para impulsionar sua carreira.',
-    description:
-      'Consulte a equipe do polo para entender cursos, modalidades e caminhos de formação disponíveis.',
-    image: '/assets/hero/hero-imersoes-profissionais.png',
-    alt: 'Banner oficial UniBF sobre imersões profissionais',
-    cta: 'Receber orientação',
-  },
-  ...(campaignEnabled
-    ? [
-        {
-          title: 'Condição especial de graduação.',
-          description:
-            'Campanha promocional exibida somente quando a flag estiver ativa.',
-          image: '/assets/hero/hero-graduacao-promocao-89.png',
-          alt: 'Banner promocional UniBF de graduação',
-          cta: 'Consultar campanha',
-        },
-      ]
-    : []),
+const highlights = [
+  { label: 'Graduação', href: '/graduacao' },
+  { label: 'Pós-graduação', href: '/pos-graduacao' },
+  { label: 'Tecnólogo', href: '/tecnologo' },
+  { label: 'Extensão', href: '/extensao' },
 ];
 
-type HeroSlide = (typeof heroSlides)[number];
-
-function getWhatsAppMessage(slide: HeroSlide) {
-  return `Olá! Vim pelo site da UniBF Cristalina-GO e gostaria de atendimento sobre: ${slide.title}`;
-}
-
-function HeroImage({ slide }: { slide: HeroSlide }) {
-  const [hasError, setHasError] = useState(false);
-
-  if (hasError) {
-    return (
-      <div className={cn('flex h-full w-full items-center justify-center p-6 text-center sm:p-8', fallbackGradient)}>
-        <div className="mx-auto max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-primary">UniBF Cristalina-GO</p>
-          <h2 className="mt-4 text-2xl font-bold text-white sm:text-4xl">{slide.title}</h2>
-          <p className="mx-auto mt-4 max-w-xl text-sm text-white/80 sm:text-base">{slide.description}</p>
-          <Button
-            size="lg"
-            onClick={() => openWhatsApp(getWhatsAppMessage(slide))}
-            className="mt-6 rounded-full bg-primary hover:bg-primary/90"
-          >
-            {slide.cta}
-          </Button>
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <img
-      src={slide.image}
-      alt={slide.alt}
-      className="h-full w-full object-contain object-center bg-navy"
-      loading="eager"
-      onError={() => setHasError(true)}
-    />
-  );
-}
-
 export function HeroSection() {
-  const [activeSlide, setActiveSlide] = useState(0);
-  const slides = useMemo(() => heroSlides, []);
-
-  useEffect(() => {
-    const timer = window.setInterval(() => {
-      setActiveSlide((current) => (current + 1) % slides.length);
-    }, 6500);
-
-    return () => window.clearInterval(timer);
-  }, [slides.length]);
-
-  const currentSlide = slides[activeSlide];
-
-  function goToSlide(index: number) {
-    setActiveSlide((index + slides.length) % slides.length);
-  }
+  const [image, setImage] = useState(ROBOT_ASSET);
+  const [imageUnavailable, setImageUnavailable] = useState(false);
+  const reduceMotion = useReducedMotion();
 
   return (
-    <section className="relative overflow-hidden bg-navy pt-20 text-white">
-      <div className="absolute inset-0 bg-gradient-to-b from-navy/95 via-navy/90 to-foreground/95" />
-      <div className="absolute left-[-10%] top-24 h-72 w-72 rounded-full bg-primary/25 blur-[100px]" />
-      <div className="absolute bottom-0 right-[-8%] h-96 w-96 rounded-full bg-white/10 blur-[120px]" />
-
-      <div className="container relative z-10 mx-auto px-4 py-10 md:py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mx-auto flex max-w-[1180px] flex-col items-center text-center"
-        >
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-sm font-medium backdrop-blur-sm">
-            <span className="h-2 w-2 rounded-full bg-primary" />
-            Matrículas e informações em Cristalina-GO
+    <section className="relative isolate overflow-hidden bg-[#002b46] text-white">
+      <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_74%_42%,rgba(0,184,107,.22),transparent_36%),linear-gradient(110deg,#00253d_4%,#003b5c_62%,#001a2d_100%)]" />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-30 [background-image:radial-gradient(rgba(255,255,255,.32)_1px,transparent_1px)] [background-size:32px_32px]" />
+      <div className="relative mx-auto grid min-h-[620px] max-w-[1440px] items-center gap-10 px-5 py-16 md:grid-cols-[.94fr_1.06fr] md:px-10 lg:min-h-[710px] lg:px-16">
+        <motion.div initial={reduceMotion ? false : {opacity:0,y:22}} animate={{opacity:1,y:0}} transition={{duration:.65}} className="relative z-10 max-w-[650px]">
+          <div className="mb-7 inline-flex items-center gap-2 border-l-2 border-[#00B86B] pl-3 text-xs font-semibold uppercase tracking-[.22em] text-[#9bf5c6]">
+            <Sparkles size={15} /> Educação, tecnologia e atendimento humano
           </div>
-
-          <div className="relative w-full overflow-hidden rounded-[18px] border border-white/15 bg-navy shadow-[0_24px_60px_rgba(0,31,51,0.25)] sm:rounded-[28px]">
-            <div className="aspect-[16/9] w-full sm:aspect-[1365/450]">
-              <HeroImage slide={currentSlide} />
-            </div>
-          </div>
-
-          <div className="mt-5 flex items-center justify-center gap-3">
-            <Button type="button" size="icon" variant="outline" className="rounded-full border-white/20 bg-white/10 text-white hover:bg-white/20" onClick={() => goToSlide(activeSlide - 1)} aria-label="Banner anterior">
-              <ArrowLeft className="h-4 w-4" />
-            </Button>
-            <div className="flex gap-2" aria-label="Selecionar banner">
-              {slides.map((slide, index) => (
-                <button
-                  key={slide.image}
-                  type="button"
-                  onClick={() => goToSlide(index)}
-                  className={cn('h-2.5 rounded-full transition-all', index === activeSlide ? 'w-8 bg-primary' : 'w-2.5 bg-white/40 hover:bg-white/70')}
-                  aria-label={`Ir para o banner ${index + 1}`}
-                  aria-current={index === activeSlide}
-                />
-              ))}
-            </div>
-            <Button type="button" size="icon" variant="outline" className="rounded-full border-white/20 bg-white/10 text-white hover:bg-white/20" onClick={() => goToSlide(activeSlide + 1)} aria-label="Próximo banner">
-              <ArrowRight className="h-4 w-4" />
-            </Button>
-          </div>
-
-          <div className="mt-7 flex w-full flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button
-              size="xl"
-              onClick={() => openWhatsApp(getWhatsAppMessage(currentSlide))}
-              className="w-full rounded-full bg-primary shadow-lg shadow-primary/25 hover:bg-primary/90 sm:w-auto"
-            >
-              {currentSlide.cta}
-            </Button>
-            <Link href="/cursos" className="w-full sm:w-auto">
-              <Button size="xl" variant="outline" className="w-full rounded-full border-white/30 bg-transparent text-white hover:bg-white/10 sm:w-auto">
-                Conheça nossos cursos
-              </Button>
+          <h1 className="text-[clamp(2.65rem,5.6vw,5.7rem)] font-extrabold leading-[1.04] tracking-[-.055em]">
+            Seu futuro começa <span className="text-[#4de29b]">aqui.</span>
+          </h1>
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
+            Conheça possibilidades de formação e receba orientação da equipe do Polo UniBF Cristalina-GO sobre cursos e modalidades disponíveis.
+          </p>
+          <div className="mt-9 flex flex-wrap gap-3">
+            <button type="button" onClick={() => openWhatsApp('Olá! Vim pelo site do Polo UniBF Cristalina-GO e gostaria de orientação sobre cursos.', 'hero')}
+              className="inline-flex min-h-12 items-center gap-2 rounded-lg bg-[#00B86B] px-6 py-3 font-semibold text-white transition hover:bg-[#00a65f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
+              <MessageCircle size={19} /> Falar com o Polo <ArrowRight size={17}/>
+            </button>
+            <Link href="/cursos" className="inline-flex min-h-12 items-center gap-2 rounded-lg border border-white/35 bg-white/5 px-6 py-3 font-semibold text-white transition hover:bg-white/10">
+              <GraduationCap size={19} /> Explorar cursos
             </Link>
           </div>
+          <p className="mt-5 text-xs text-white/55">Informações e disponibilidade sujeitas à confirmação da equipe responsável.</p>
         </motion.div>
+        <div className="relative min-h-[330px] md:min-h-[540px]">
+          <motion.div aria-hidden="true" className="absolute inset-0 rounded-full bg-[#00B86B]/15 blur-[100px]" animate={reduceMotion ? undefined : {opacity:[.45,.8,.45],scale:[.96,1.05,.96]}} transition={{duration:7,repeat:Infinity,ease:'easeInOut'}}/>
+          <motion.div className="relative flex h-full min-h-[330px] items-center justify-center md:min-h-[540px]" animate={reduceMotion ? undefined : {y:[0,-10,0]}} transition={{duration:6,repeat:Infinity,ease:'easeInOut'}}>
+            <img src={image} alt={imageUnavailable ? 'Banner institucional do Polo UniBF' : 'Robô futurista segurando a Terra, símbolo visual de educação e tecnologia'} onError={() => {
+              if (image !== FALLBACK_ASSET) { setImage(FALLBACK_ASSET); setImageUnavailable(true); }
+            }} className="max-h-[620px] w-full rounded-xl object-contain [mask-image:linear-gradient(to_right,transparent_0%,black_12%,black_100%)]" />
+          </motion.div>
+          {!reduceMotion && <div aria-hidden="true" className="pointer-events-none absolute left-[25%] top-[20%] h-[46%] w-[46%] animate-[spin_28s_linear_infinite] rounded-full border border-[#00B86B]/30" />}
+        </div>
+      </div>
+      <div className="relative z-10 border-t border-white/10 bg-[#001f34]/80">
+        <div className="mx-auto grid max-w-[1440px] grid-cols-2 gap-px px-5 py-4 md:grid-cols-4 md:px-10 lg:px-16">
+          {highlights.map(({label,href}) => <Link key={href} href={href} className="group flex items-center justify-between gap-2 border-r border-white/10 px-3 py-3 text-sm font-medium text-white/85 transition hover:text-[#4de29b] sm:px-5">{label}<ArrowRight size={15} className="opacity-50 transition group-hover:translate-x-1"/></Link>)}
+        </div>
       </div>
     </section>
   );
